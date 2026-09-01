@@ -159,6 +159,14 @@ header.site{
   transition:background .45s var(--ease),box-shadow .45s var(--ease),backdrop-filter .45s;
 }
 header.site.stuck{background:rgba(246,245,242,.92);backdrop-filter:blur(16px) saturate(1.2);box-shadow:0 1px 0 var(--line)}
+/* over the dark hero, before the bar sticks, the brand and links go light */
+header.site:not(.stuck) .brand .wm b{color:#fff}
+header.site:not(.stuck) .brand .wm i{color:rgba(233,240,250,.72)}
+header.site:not(.stuck) .nav-links a{color:rgba(233,240,250,.86)}
+header.site:not(.stuck) .nav-links a:hover,header.site:not(.stuck) .nav-links a.active{color:#fff}
+header.site:not(.stuck) .nav-links a::after{background:var(--sky)}
+header.site:not(.stuck) .burger{border-color:rgba(233,240,250,.45);background:rgba(18,41,79,.35)}
+header.site:not(.stuck) .burger span,header.site:not(.stuck) .burger span::before,header.site:not(.stuck) .burger span::after{background:#fff}
 .nav-in{width:min(1240px,90%);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
 .brand{display:flex;align-items:center;gap:.7rem;flex:none}
 .brand img{width:42px;height:42px;flex:none;transition:transform .6s var(--ease)}
