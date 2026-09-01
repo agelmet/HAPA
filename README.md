@@ -1,26 +1,43 @@
 # HAPA — Hellenic American Psychiatric Association
 
-A single-page website for HAPA, built by [Advon Media](https://advonmedia.com).
+A bilingual (English / Greek) single-page website for HAPA, built by [Advon Media](https://advonmedia.com).
 
 ## Files
 
 | File | What it is |
 |---|---|
 | `index.html` | The whole public website. Layout, styling and behaviour — no build step, no dependencies. |
-| `content.json` | **Every word on the site.** News, officers, committees, links, membership details. |
-| `admin.html` | The admin panel. Edits `content.json` in a friendly interface. |
-| `assets/` | The HAPA emblem, the Acropolis header image and the favicons. |
+| `content.json` | **Every word on the site, in both languages.** News, officers, committees, links, membership. |
+| `admin.html` | The admin panel. Edits `content.json` in a friendly interface, with English and Greek side by side. |
+| `assets/` | The HAPA emblem, the hero photograph, the news photographs and the favicons. |
 
 ## Editing the site
 
 1. Open `admin.html` on the live site (e.g. `https://…/admin.html`).
 2. Enter the panel passcode. The default is `hapa2026` — change it under **Publishing → Panel passcode**.
-3. Edit anything. News items are on the first tab.
+3. Edit anything. News is the first tab; every text field has an **EN** and a **ΕΛ** box.
 4. Press **Publish to the website**.
+
+### Bilingual content
+
+Translatable values in `content.json` are objects:
+
+```json
+"heading": { "en": "Welcome", "el": "Καλωσόρισμα" }
+```
+
+The page reads whichever language the visitor has selected and falls back to English if a Greek
+string is empty. Names, emails, URLs and dates are shared between the two languages.
+The visitor's choice is remembered in their browser.
+
+### Adding a photo to a news item
+
+Put the image in `assets/` and set the item's **Image** field to `assets/your-file.webp`.
+Officers can carry a portrait the same way, through the **Photo** field.
 
 ### Publishing
 
-There are two ways to save changes:
+Two ways to save changes:
 
 - **Download `content.json`** and upload it to this repository yourself. Always works.
 - **Publish directly.** Under **Publishing**, paste a GitHub *fine-grained personal access token* with
@@ -38,4 +55,6 @@ The real protection is that changing the site requires the GitHub token.
 - The site is in **preview indexing state**: `noindex,nofollow` plus `Disallow: /` in `robots.txt`.
   Remove both, and update `sitemap.xml`, when the real domain goes live.
 - The contact form opens the visitor's own email client — no server, no third-party form service.
-  Swap the `<form>` handler for a Formspree endpoint if a server-side inbox is wanted later.
+- The hero photograph is a generated image of the Parthenon, used because the original site's
+  banner was only 1000 × 200 px. Swap `assets/acropolis-parthenon-hero.webp` for a licensed
+  photograph at any time; nothing else needs to change.

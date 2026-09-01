@@ -87,6 +87,13 @@ input[type=text],input[type=url],input[type=email],input[type=date],input[type=p
 textarea{resize:vertical;min-height:96px;line-height:1.6}
 input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);background:var(--white);box-shadow:0 0 0 3px rgba(51,95,176,.12)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+.bi{display:grid;grid-template-columns:1fr 1fr;gap:0 .8rem;margin-bottom:.95rem}
+.bi>label.f{margin-bottom:0}
+.bi .tagl{display:inline-flex;align-items:center;gap:.3rem}
+.tagl::before{content:"";width:14px;height:10px;border-radius:2px;background:var(--line-2);flex:none}
+.tagl.en::before{background:linear-gradient(#012169 34%,#C8102E 34% 66%,#012169 66%)}
+.tagl.el::before{background:repeating-linear-gradient(#0d5eaf 0 3px,#fff 3px 6px)}
+@media(max-width:900px){ .bi{grid-template-columns:1fr} }
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 1rem}
 
 .item{border:1px solid var(--line);border-radius:12px;margin-bottom:.7rem;background:var(--marble);overflow:hidden}
@@ -180,6 +187,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     <section class="panel active" data-panel="news">
       <div class="card">
         <h2>News &amp; announcements</h2>
+<div class="bi"><label class="f"><span class="tagl en">Section heading · EN</span><input type="text" data-k="newsHeading.en"></label><label class="f"><span class="tagl el">Section heading · ΕΛ</span><input type="text" data-k="newsHeading.el"></label></div>
         <p class="hint">Newest items appear first on the website. Add an item, fill in the title and a one-line summary, then publish.</p>
         <div class="addbar" style="margin-top:0;margin-bottom:1rem">
           <button class="btn primary" id="addNews" type="button">+ Add a news item</button>
@@ -193,17 +201,21 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
       <div class="card">
         <h2>Home page</h2>
         <p class="hint">The headline, the line underneath it, and the four figures in the blue strip.</p>
-        <label class="f"><span>Association name</span><input type="text" data-k="site.name"></label>
-        <label class="f"><span>Tagline</span><input type="text" data-k="site.tagline"></label>
-        <label class="f"><span>Hero headline</span><input type="text" data-k="site.heroTitle"></label>
-        <label class="f"><span>Hero paragraph</span><textarea data-k="site.heroLead"></textarea></label>
         <div class="grid2">
-          <label class="f"><span>Primary button label</span><input type="text" data-k="site.heroCtaPrimary.label"></label>
+          <label class="f"><span>Association name (English)</span><input type="text" data-k="site.name"></label>
+          <label class="f"><span>Association name (Greek)</span><input type="text" data-k="site.nameEl"></label>
+        </div>
+<div class="bi"><label class="f"><span class="tagl en">Tagline · EN</span><input type="text" data-k="site.tagline.en"></label><label class="f"><span class="tagl el">Tagline · ΕΛ</span><input type="text" data-k="site.tagline.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Hero headline · EN</span><textarea data-k="site.heroTitle.en"></textarea></label><label class="f"><span class="tagl el">Hero headline · ΕΛ</span><textarea data-k="site.heroTitle.el"></textarea></label></div><div class="bi"><label class="f"><span class="tagl en">Hero paragraph · EN</span><textarea data-k="site.heroLead.en" style="min-height:110px"></textarea></label><label class="f"><span class="tagl el">Hero paragraph · ΕΛ</span><textarea data-k="site.heroLead.el" style="min-height:110px"></textarea></label></div>
+        <div class="grid2">
+          <label class="f"><span>Primary button — EN</span><input type="text" data-k="site.heroCtaPrimary.label.en"></label>
+          <label class="f"><span>Primary button — ΕΛ</span><input type="text" data-k="site.heroCtaPrimary.label.el"></label>
           <label class="f"><span>Primary button link</span><input type="text" data-k="site.heroCtaPrimary.href"></label>
-          <label class="f"><span>Secondary button label</span><input type="text" data-k="site.heroCtaSecondary.label"></label>
+          <label class="f"><span>&nbsp;</span><span></span></label>
+          <label class="f"><span>Secondary button — EN</span><input type="text" data-k="site.heroCtaSecondary.label.en"></label>
+          <label class="f"><span>Secondary button — ΕΛ</span><input type="text" data-k="site.heroCtaSecondary.label.el"></label>
           <label class="f"><span>Secondary button link</span><input type="text" data-k="site.heroCtaSecondary.href"></label>
         </div>
-        <label class="f"><span>Founded</span><input type="text" data-k="site.founded"></label>
+<div class="bi"><label class="f"><span class="tagl en">Founded · EN</span><input type="text" data-k="site.founded.en"></label><label class="f"><span class="tagl el">Founded · ΕΛ</span><input type="text" data-k="site.founded.el"></label></div>
       </div>
 
       <div class="card">
@@ -215,11 +227,11 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
 
       <div class="card">
         <h2>Welcome letter</h2>
-        <div class="grid2">
-          <label class="f"><span>Heading</span><input type="text" data-k="welcome.heading"></label>
+<div class="bi"><label class="f"><span class="tagl en">Heading · EN</span><input type="text" data-k="welcome.heading.en"></label><label class="f"><span class="tagl el">Heading · ΕΛ</span><input type="text" data-k="welcome.heading.el"></label></div>        <div class="grid2">
           <label class="f"><span>Author</span><input type="text" data-k="welcome.author"></label>
+          <label class="f"><span>Author (Greek spelling)</span><input type="text" data-k="welcome.authorEl"></label>
         </div>
-        <label class="f"><span>Author role</span><input type="text" data-k="welcome.authorRole"></label>
+<div class="bi"><label class="f"><span class="tagl en">Author role · EN</span><input type="text" data-k="welcome.authorRole.en"></label><label class="f"><span class="tagl el">Author role · ΕΛ</span><input type="text" data-k="welcome.authorRole.el"></label></div>
         <p class="hint" style="margin:0 0 .6rem">Paragraphs — one box each.</p>
         <div id="welcomeList"></div>
         <div class="addbar"><button class="btn" id="addWelcome" type="button">+ Add a paragraph</button></div>
@@ -230,12 +242,11 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     <section class="panel" data-panel="about">
       <div class="card">
         <h2>Mission</h2>
-        <label class="f"><span>Mission statement</span><textarea data-k="mission" style="min-height:150px"></textarea></label>
+<div class="bi"><label class="f"><span class="tagl en">Mission statement · EN</span><textarea data-k="mission.en" style="min-height:150px"></textarea></label><label class="f"><span class="tagl el">Mission statement · ΕΛ</span><textarea data-k="mission.el" style="min-height:150px"></textarea></label></div><div class="bi"><label class="f"><span class="tagl en">Mission heading · EN</span><input type="text" data-k="missionHeading.en"></label><label class="f"><span class="tagl el">Mission heading · ΕΛ</span><input type="text" data-k="missionHeading.el"></label></div>
       </div>
       <div class="card">
         <h2>Goals</h2>
-        <label class="f"><span>Introduction</span><textarea data-k="goalsIntro"></textarea></label>
-        <div id="goalsList"></div>
+<div class="bi"><label class="f"><span class="tagl en">Goals heading · EN</span><input type="text" data-k="goalsHeading.en"></label><label class="f"><span class="tagl el">Goals heading · ΕΛ</span><input type="text" data-k="goalsHeading.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Introduction · EN</span><textarea data-k="goalsIntro.en"></textarea></label><label class="f"><span class="tagl el">Introduction · ΕΛ</span><textarea data-k="goalsIntro.el"></textarea></label></div>        <div id="goalsList"></div>
         <div class="addbar"><button class="btn" id="addGoal" type="button">+ Add a goal</button></div>
       </div>
     </section>
@@ -244,13 +255,14 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     <section class="panel" data-panel="officers">
       <div class="card">
         <h2>Current officers</h2>
-        <label class="f"><span>Section heading (e.g. “Current HAPA Officers · 2022 – 2025”)</span><input type="text" data-k="officersTerm"></label>
+<div class="bi"><label class="f"><span class="tagl en">Section heading · EN</span><input type="text" data-k="officersTerm.en"></label><label class="f"><span class="tagl el">Section heading · ΕΛ</span><input type="text" data-k="officersTerm.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Intro paragraph · EN</span><textarea data-k="officersIntro.en"></textarea></label><label class="f"><span class="tagl el">Intro paragraph · ΕΛ</span><textarea data-k="officersIntro.el"></textarea></label></div>
         <div id="officersList"></div>
         <div class="addbar"><button class="btn primary" id="addOfficer" type="button">+ Add an officer</button></div>
       </div>
       <div class="card">
         <h2>Past boards</h2>
         <p class="hint">Shown in the collapsible list underneath the current board.</p>
+<div class="bi"><label class="f"><span class="tagl en">Collapsible heading · EN</span><input type="text" data-k="pastOfficersHeading.en"></label><label class="f"><span class="tagl el">Collapsible heading · ΕΛ</span><input type="text" data-k="pastOfficersHeading.el"></label></div>
         <div id="pastList"></div>
         <div class="addbar"><button class="btn" id="addPast" type="button">+ Add a past board</button></div>
       </div>
@@ -260,8 +272,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     <section class="panel" data-panel="committees">
       <div class="card">
         <h2>Committees</h2>
-        <label class="f"><span>Introduction</span><textarea data-k="committeesIntro"></textarea></label>
-        <label class="f"><span>Committee survey link</span><input type="text" data-k="committeeSurvey"></label>
+<div class="bi"><label class="f"><span class="tagl en">Section heading · EN</span><input type="text" data-k="committeesHeading.en"></label><label class="f"><span class="tagl el">Section heading · ΕΛ</span><input type="text" data-k="committeesHeading.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Introduction · EN</span><textarea data-k="committeesIntro.en"></textarea></label><label class="f"><span class="tagl el">Introduction · ΕΛ</span><textarea data-k="committeesIntro.el"></textarea></label></div>        <label class="f"><span>Committee survey link</span><input type="text" data-k="committeeSurvey"></label>
         <div id="comList"></div>
         <div class="addbar"><button class="btn primary" id="addCom" type="button">+ Add a committee</button></div>
       </div>
@@ -271,14 +282,11 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     <section class="panel" data-panel="membership">
       <div class="card">
         <h2>Membership</h2>
-        <label class="f"><span>Introduction</span><textarea data-k="membership.intro"></textarea></label>
-        <label class="f"><span>Dues note</span><textarea data-k="membership.duesNote"></textarea></label>
-        <label class="f"><span>Postal note</span><textarea data-k="membership.postalNote"></textarea></label>
+<div class="bi"><label class="f"><span class="tagl en">Section heading · EN</span><input type="text" data-k="membership.heading.en"></label><label class="f"><span class="tagl el">Section heading · ΕΛ</span><input type="text" data-k="membership.heading.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Introduction · EN</span><textarea data-k="membership.intro.en"></textarea></label><label class="f"><span class="tagl el">Introduction · ΕΛ</span><textarea data-k="membership.intro.el"></textarea></label></div><div class="bi"><label class="f"><span class="tagl en">Dues card heading · EN</span><input type="text" data-k="membership.duesHeading.en"></label><label class="f"><span class="tagl el">Dues card heading · ΕΛ</span><input type="text" data-k="membership.duesHeading.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Dues note · EN</span><textarea data-k="membership.duesNote.en"></textarea></label><label class="f"><span class="tagl el">Dues note · ΕΛ</span><textarea data-k="membership.duesNote.el"></textarea></label></div><div class="bi"><label class="f"><span class="tagl en">Postal note · EN</span><textarea data-k="membership.postalNote.en"></textarea></label><label class="f"><span class="tagl el">Postal note · ΕΛ</span><textarea data-k="membership.postalNote.el"></textarea></label></div><div class="bi"><label class="f"><span class="tagl en">Pay button · EN</span><input type="text" data-k="membership.payLabel.en"></label><label class="f"><span class="tagl el">Pay button · ΕΛ</span><input type="text" data-k="membership.payLabel.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Form button · EN</span><input type="text" data-k="membership.formLabel.en"></label><label class="f"><span class="tagl el">Form button · ΕΛ</span><input type="text" data-k="membership.formLabel.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Contact label · EN</span><input type="text" data-k="membership.contactLabel.en"></label><label class="f"><span class="tagl el">Contact label · ΕΛ</span><input type="text" data-k="membership.contactLabel.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Contact name · EN</span><input type="text" data-k="membership.contactName.en"></label><label class="f"><span class="tagl el">Contact name · ΕΛ</span><input type="text" data-k="membership.contactName.el"></label></div>
         <div class="grid2">
           <label class="f"><span>Pay-dues link</span><input type="text" data-k="membership.payUrl"></label>
           <label class="f"><span>Membership form link</span><input type="text" data-k="membership.formUrl"></label>
           <label class="f"><span>Donate link</span><input type="text" data-k="membership.donateUrl"></label>
-          <label class="f"><span>Committee contact name</span><input type="text" data-k="membership.contactName"></label>
           <label class="f"><span>Address</span><input type="text" data-k="membership.contactAddress"></label>
           <label class="f"><span>Phone</span><input type="text" data-k="membership.contactPhone"></label>
           <label class="f"><span>Fax</span><input type="text" data-k="membership.contactFax"></label>
@@ -290,11 +298,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
       </div>
       <div class="card">
         <h2>Support HAPA</h2>
-        <div class="grid2">
-          <label class="f"><span>Heading</span><input type="text" data-k="support.heading"></label>
-          <label class="f"><span>Button label</span><input type="text" data-k="support.cta"></label>
-        </div>
-        <label class="f"><span>Text</span><textarea data-k="support.text"></textarea></label>
+<div class="bi"><label class="f"><span class="tagl en">Heading · EN</span><input type="text" data-k="support.heading.en"></label><label class="f"><span class="tagl el">Heading · ΕΛ</span><input type="text" data-k="support.heading.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Button label · EN</span><input type="text" data-k="support.cta.en"></label><label class="f"><span class="tagl el">Button label · ΕΛ</span><input type="text" data-k="support.cta.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Text · EN</span><textarea data-k="support.text.en"></textarea></label><label class="f"><span class="tagl el">Text · ΕΛ</span><textarea data-k="support.text.el"></textarea></label></div>
       </div>
     </section>
 
@@ -303,6 +307,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
       <div class="card">
         <h2>Meeting minutes</h2>
         <p class="hint">Leave the link empty and the site shows “On request”.</p>
+<div class="bi"><label class="f"><span class="tagl en">Section heading · EN</span><input type="text" data-k="archiveHeading.en"></label><label class="f"><span class="tagl el">Section heading · ΕΛ</span><input type="text" data-k="archiveHeading.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Introduction · EN</span><textarea data-k="archiveIntro.en"></textarea></label><label class="f"><span class="tagl el">Introduction · ΕΛ</span><textarea data-k="archiveIntro.el"></textarea></label></div>
         <div id="minList"></div>
         <div class="addbar"><button class="btn primary" id="addMin" type="button">+ Add minutes</button></div>
       </div>
@@ -312,7 +317,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     <section class="panel" data-panel="links">
       <div class="card">
         <h2>Links</h2>
-        <div id="linkList"></div>
+<div class="bi"><label class="f"><span class="tagl en">Section heading · EN</span><input type="text" data-k="linksHeading.en"></label><label class="f"><span class="tagl el">Section heading · ΕΛ</span><input type="text" data-k="linksHeading.el"></label></div>        <div id="linkList"></div>
         <div class="addbar"><button class="btn" id="addGroup" type="button">+ Add a group</button></div>
       </div>
     </section>
@@ -321,8 +326,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     <section class="panel" data-panel="contact">
       <div class="card">
         <h2>Contact</h2>
-        <label class="f"><span>Heading</span><input type="text" data-k="contact.heading"></label>
-        <label class="f"><span>Text</span><textarea data-k="contact.text"></textarea></label>
+<div class="bi"><label class="f"><span class="tagl en">Heading · EN</span><input type="text" data-k="contact.heading.en"></label><label class="f"><span class="tagl el">Heading · ΕΛ</span><input type="text" data-k="contact.heading.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Text · EN</span><textarea data-k="contact.text.en"></textarea></label><label class="f"><span class="tagl el">Text · ΕΛ</span><textarea data-k="contact.text.el"></textarea></label></div>
         <div class="grid2">
           <label class="f"><span>General email</span><input type="text" data-k="contact.email"></label>
           <label class="f"><span>Membership email</span><input type="text" data-k="contact.membershipEmail"></label>
@@ -448,6 +452,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
   }
 
   /* ---------------- generic list editor ---------------- */
+  function tx(v){ if (v == null) return ''; if (typeof v === 'object') return v.en || v.el || ''; return String(v); }
   function listEditor(opts){
     /* opts: {mount, arr, title, sub, fields, blank, onChange} */
     var mount = d.getElementById(opts.mount);
@@ -456,6 +461,19 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
       mount.innerHTML = arr.map(function(it, i){
         var body = opts.fields.map(function(f){
           var val = it[f.k] === undefined ? '' : it[f.k];
+          if (f.bi){
+            var o = (val && typeof val === 'object') ? val : {en: (typeof val === 'string' ? val : ''), el: ''};
+            var tag = f.t === 'area' ? 'textarea' : 'input';
+            function one(lg, lbl){
+              var v = o[lg] || '';
+              return '<label class="f"><span class="tagl '+lg+'">'+esc(f.l)+' · '+lbl+'</span>' +
+                (f.t === 'area'
+                  ? '<textarea data-i="'+i+'" data-f="'+f.k+'" data-lg="'+lg+'">'+esc(v)+'</textarea>'
+                  : '<input type="text" data-i="'+i+'" data-f="'+f.k+'" data-lg="'+lg+'" value="'+esc(v)+'">') +
+                '</label>';
+            }
+            return '<div class="bi">'+one('en','EN')+one('el','ΕΛ')+'</div>';
+          }
           if (f.t === 'area') return '<label class="f"><span>'+esc(f.l)+'</span><textarea data-i="'+i+'" data-f="'+f.k+'">'+esc(val)+'</textarea></label>';
           if (f.t === 'check') return '<label class="f" style="grid-auto-flow:column;justify-content:start;align-items:center;gap:.5rem"><input type="checkbox" data-i="'+i+'" data-f="'+f.k+'"'+(val?' checked':'')+' style="width:auto"><span style="letter-spacing:.06em">'+esc(f.l)+'</span></label>';
           return '<label class="f"><span>'+esc(f.l)+'</span><input type="'+(f.t||'text')+'" data-i="'+i+'" data-f="'+f.k+'" value="'+esc(val)+'"></label>';
@@ -481,8 +499,13 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
       });
       mount.querySelectorAll('[data-f]').forEach(function(el){
         el.addEventListener('input', function(){
-          var a = opts.arr(), i = +el.dataset.i;
-          a[i][el.dataset.f] = (el.type === 'checkbox') ? el.checked : el.value;
+          var a = opts.arr(), i = +el.dataset.i, k = el.dataset.f, lg = el.dataset.lg;
+          if (lg){
+            if (!a[i][k] || typeof a[i][k] !== 'object') a[i][k] = {en:'', el:''};
+            a[i][k][lg] = el.value;
+          } else {
+            a[i][k] = (el.type === 'checkbox') ? el.checked : el.value;
+          }
           var head = el.closest('.item').querySelector('.t');
           if (head) head.textContent = opts.title(a[i]) || '(untitled)';
           dirty(); if (opts.onChange) opts.onChange();
@@ -510,17 +533,43 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     function draw(){
       var arr = getArr();
       mount.innerHTML = arr.map(function(v,i){
-        return '<div class="rowline"><textarea data-i="'+i+'" rows="2" placeholder="'+esc(placeholder||'')+'">'+esc(v)+'</textarea>'+
-          '<button class="mini danger" data-del="'+i+'" type="button">Delete</button></div>';
+        var o = (v && typeof v === 'object') ? v : {en:(typeof v==='string'?v:''), el:''};
+        return '<div class="item open"><div class="item-head"><span class="chev"></span>'+
+          '<span class="t">'+esc((o.en||o.el||'(empty)').slice(0,74))+'</span>'+
+          '<span class="s">'+(o.el ? 'EN + ΕΛ' : 'EN only')+'</span></div>'+
+          '<div class="item-body"><div class="bi">'+
+            '<label class="f"><span class="tagl en">'+esc(placeholder||'')+' · EN</span><textarea data-i="'+i+'" data-lg="en" rows="3">'+esc(o.en||'')+'</textarea></label>'+
+            '<label class="f"><span class="tagl el">'+esc(placeholder||'')+' · ΕΛ</span><textarea data-i="'+i+'" data-lg="el" rows="3">'+esc(o.el||'')+'</textarea></label>'+
+          '</div><div class="item-tools">'+
+            '<button class="mini" data-up="'+i+'" type="button">↑ Move up</button>'+
+            '<button class="mini" data-down="'+i+'" type="button">↓ Move down</button>'+
+            '<button class="mini danger" data-del="'+i+'" type="button">Delete</button>'+
+          '</div></div></div>';
       }).join('') || '<p class="hint">Nothing here yet.</p>';
+      mount.querySelectorAll('.item-head').forEach(function(h){
+        h.addEventListener('click', function(){ h.parentElement.classList.toggle('open'); });
+      });
       mount.querySelectorAll('textarea[data-i]').forEach(function(t){
-        t.addEventListener('input', function(){ getArr()[+t.dataset.i] = t.value; dirty(); });
+        t.addEventListener('input', function(){
+          var a = getArr(), i = +t.dataset.i;
+          if (!a[i] || typeof a[i] !== 'object') a[i] = {en: (typeof a[i]==='string'?a[i]:''), el:''};
+          a[i][t.dataset.lg] = t.value;
+          var head = t.closest('.item').querySelector('.t');
+          if (head) head.textContent = (a[i].en || a[i].el || '(empty)').slice(0,74);
+          dirty();
+        });
       });
       mount.querySelectorAll('[data-del]').forEach(function(b){
-        b.addEventListener('click', function(){ getArr().splice(+b.dataset.del,1); dirty(); draw(); });
+        b.addEventListener('click', function(e){ e.stopPropagation(); if(!confirm('Delete this item?')) return; getArr().splice(+b.dataset.del,1); dirty(); draw(); });
+      });
+      mount.querySelectorAll('[data-up]').forEach(function(b){
+        b.addEventListener('click', function(e){ e.stopPropagation(); var a=getArr(),i=+b.dataset.up; if(i>0){a.splice(i-1,0,a.splice(i,1)[0]); dirty(); draw();} });
+      });
+      mount.querySelectorAll('[data-down]').forEach(function(b){
+        b.addEventListener('click', function(e){ e.stopPropagation(); var a=getArr(),i=+b.dataset.down; if(i<a.length-1){a.splice(i+1,0,a.splice(i,1)[0]); dirty(); draw();} });
       });
     }
-    return { draw: draw, add: function(){ getArr().push(''); dirty(); draw(); } };
+    return { draw: draw, add: function(){ getArr().push({en:'', el:''}); dirty(); draw(); } };
   }
 
   /* ---------------- editors ---------------- */
@@ -528,64 +577,67 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
   function buildEditors(){
     Ed.news = listEditor({
       mount:'newsList', arr:function(){ return DATA.news; },
-      title:function(x){ return x.title; }, sub:function(x){ return (x.date||'') + ' · ' + (x.category||''); },
+      title:function(x){ return tx(x.title); }, sub:function(x){ return (x.date||'') + ' · ' + tx(x.category); },
       fields:[
-        {k:'title', l:'Title'},
+        {k:'title', l:'Title', bi:true},
         {k:'date',  l:'Date (YYYY-MM-DD)', t:'date'},
-        {k:'category', l:'Category (News, Meetings, Awards, Advocacy…)'},
-        {k:'summary', l:'One-line summary (shown on the card)', t:'area'},
-        {k:'body', l:'Full text (shown when the card is opened)', t:'area'},
+        {k:'category', l:'Category', bi:true},
+        {k:'summary', l:'One-line summary (shown on the card)', t:'area', bi:true},
+        {k:'body', l:'Full text (shown when the card is opened)', t:'area', bi:true},
+        {k:'image', l:'Image (e.g. assets/my-photo.webp) — optional'},
         {k:'link', l:'External link (optional)'},
         {k:'id', l:'Internal id (leave as generated)'}
       ],
-      blank:function(){ return {id:'n'+Date.now(), date:new Date().toISOString().slice(0,10), category:'Announcements', title:'', summary:'', body:'', link:''}; }
+      blank:function(){ return {id:'n'+Date.now(), date:new Date().toISOString().slice(0,10), category:{en:'Announcements',el:'Ανακοινώσεις'}, title:{en:'',el:''}, summary:{en:'',el:''}, body:{en:'',el:''}, image:'', link:''}; }
     });
     Ed.stats = listEditor({
       mount:'statsList', arr:function(){ return DATA.stats; },
-      title:function(x){ return (x.value||'') + (x.suffix||''); }, sub:function(x){ return x.label; },
-      wrap:'grid3',
-      fields:[{k:'value', l:'Figure'}, {k:'suffix', l:'Suffix (+, %, …)'}, {k:'label', l:'Label'}],
-      blank:function(){ return {value:'', suffix:'', label:''}; }
+      title:function(x){ return (x.value||'') + (x.suffix||''); }, sub:function(x){ return tx(x.label); },
+      fields:[{k:'value', l:'Figure'}, {k:'suffix', l:'Suffix (+, %, …)'}, {k:'label', l:'Label', bi:true}],
+      blank:function(){ return {value:'', suffix:'', label:{en:'',el:''}}; }
     });
     Ed.goals = listEditor({
       mount:'goalsList', arr:function(){ return DATA.goals; },
-      title:function(x){ return (x.key||'') + ' — ' + String(x.text||'').slice(0,60); },
-      fields:[{k:'key', l:'Letter'}, {k:'text', l:'Goal', t:'area'}],
-      blank:function(){ return {key:'', text:''}; }
+      title:function(x){ return (x.key||'') + ' — ' + tx(x.text).slice(0,60); },
+      fields:[{k:'key', l:'Letter'}, {k:'text', l:'Goal', t:'area', bi:true}],
+      blank:function(){ return {key:'', text:{en:'',el:''}}; }
     });
     Ed.officers = listEditor({
       mount:'officersList', arr:function(){ return DATA.officers; },
-      title:function(x){ return x.name; }, sub:function(x){ return x.role; },
-      wrap:'grid2',
+      title:function(x){ return x.name; }, sub:function(x){ return tx(x.role); },
       fields:[
-        {k:'role', l:'Role'}, {k:'name', l:'Name'},
-        {k:'title', l:'Title / affiliation'}, {k:'place', l:'Place'},
-        {k:'email', l:'Email'}, {k:'web', l:'Website'}
+        {k:'name', l:'Name'},
+        {k:'role', l:'Role', bi:true},
+        {k:'title', l:'Title / affiliation', t:'area', bi:true},
+        {k:'place', l:'Place', bi:true},
+        {k:'email', l:'Email'}, {k:'web', l:'Website'},
+        {k:'photo', l:'Photo (e.g. assets/name.webp) — optional'}
       ],
-      blank:function(){ return {role:'Councillor', name:'', title:'', place:'', email:'', web:''}; }
+      blank:function(){ return {role:{en:'Councillor',el:'Σύμβουλος'}, name:'', title:{en:'',el:''}, place:{en:'',el:''}, email:'', web:'', photo:''}; }
     });
     Ed.past = listEditor({
       mount:'pastList', arr:function(){ return DATA.pastOfficers; },
-      title:function(x){ return x.term; }, sub:function(x){ return String(x.text||'').slice(0,50); },
-      fields:[{k:'term', l:'Term'}, {k:'text', l:'Officers', t:'area'}],
-      blank:function(){ return {term:'', text:''}; }
+      title:function(x){ return x.term; }, sub:function(x){ return tx(x.text).slice(0,50); },
+      fields:[{k:'term', l:'Term'}, {k:'text', l:'Officers', t:'area', bi:true}],
+      blank:function(){ return {term:'', text:{en:'',el:''}}; }
     });
     Ed.com = listEditor({
       mount:'comList', arr:function(){ return DATA.committees; },
-      title:function(x){ return x.name; }, sub:function(x){ return x.chair; },
+      title:function(x){ return tx(x.name); }, sub:function(x){ return x.chair; },
       fields:[
-        {k:'name', l:'Committee'}, {k:'chair', l:'Chair'}, {k:'cochair', l:'Co-chair'},
-        {k:'members', l:'Members (separate with ·)'}, {k:'brief', l:'What it does', t:'area'},
+        {k:'name', l:'Committee', bi:true},
+        {k:'chair', l:'Chair'}, {k:'cochair', l:'Co-chair'},
+        {k:'members', l:'Members (separate with ·)'},
+        {k:'brief', l:'What it does', t:'area', bi:true},
         {k:'feature', l:'Show as a wide feature card', t:'check'}
       ],
-      blank:function(){ return {name:'', chair:'', cochair:'', members:'', brief:'', feature:false}; }
+      blank:function(){ return {name:{en:'',el:''}, chair:'', cochair:'', members:'', brief:{en:'',el:''}, feature:false}; }
     });
     Ed.min = listEditor({
       mount:'minList', arr:function(){ return DATA.minutes; },
-      title:function(x){ return x.title; }, sub:function(x){ return x.date; },
-      wrap:'grid2',
-      fields:[{k:'title', l:'Title'}, {k:'date', l:'Date', t:'date'}, {k:'place', l:'Place'}, {k:'url', l:'Link (optional)'}],
-      blank:function(){ return {title:'', date:'', place:'', url:''}; }
+      title:function(x){ return tx(x.title); }, sub:function(x){ return x.date; },
+      fields:[{k:'title', l:'Title', bi:true}, {k:'date', l:'Date', t:'date'}, {k:'place', l:'Place', bi:true}, {k:'url', l:'Link (optional)'}],
+      blank:function(){ return {title:{en:'',el:''}, date:'', place:{en:'',el:''}, url:''}; }
     });
     Ed.ben = strEditor('benList', function(){ return DATA.membership.benefits; }, 'Member benefit');
     Ed.welcome = strEditor('welcomeList', function(){ return DATA.welcome.paragraphs; }, 'Paragraph');
@@ -597,9 +649,10 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
   function drawLinkGroups(){
     var mount = d.getElementById('linkList');
     mount.innerHTML = DATA.linkGroups.map(function(g, gi){
-      return '<div class="item open"><div class="item-head"><span class="chev"></span><span class="t">'+esc(g.heading)+'</span>'+
+      return '<div class="item open"><div class="item-head"><span class="chev"></span><span class="t">'+esc(tx(g.heading))+'</span>'+
         '<span class="s">'+g.items.length+' links</span></div><div class="item-body">'+
-        '<label class="f"><span>Group heading</span><input type="text" data-g="'+gi+'" data-gf="heading" value="'+esc(g.heading)+'"></label>'+
+        '<div class="bi"><label class="f"><span class="tagl en">Group heading · EN</span><input type="text" data-g="'+gi+'" data-gf="heading" data-glg="en" value="'+esc((g.heading&&g.heading.en)||(typeof g.heading==='string'?g.heading:''))+'"></label>'+
+        '<label class="f"><span class="tagl el">Group heading · ΕΛ</span><input type="text" data-g="'+gi+'" data-gf="heading" data-glg="el" value="'+esc((g.heading&&g.heading.el)||'')+'"></label></div>'+
         g.items.map(function(it, ii){
           return '<div class="rowline"><input type="text" data-g="'+gi+'" data-i="'+ii+'" data-lf="label" value="'+esc(it.label)+'" placeholder="Organization name">'+
             '<input type="text" data-g="'+gi+'" data-i="'+ii+'" data-lf="url" value="'+esc(it.url)+'" placeholder="https://…">'+
@@ -612,7 +665,11 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
 
     mount.querySelectorAll('.item-head').forEach(function(h){ h.addEventListener('click', function(){ h.parentElement.classList.toggle('open'); }); });
     mount.querySelectorAll('[data-gf]').forEach(function(el){
-      el.addEventListener('input', function(){ DATA.linkGroups[+el.dataset.g].heading = el.value; dirty(); });
+      el.addEventListener('input', function(){
+        var g = DATA.linkGroups[+el.dataset.g];
+        if (!g.heading || typeof g.heading !== 'object') g.heading = {en:'', el:''};
+        g.heading[el.dataset.glg] = el.value; dirty();
+      });
     });
     mount.querySelectorAll('[data-lf]').forEach(function(el){
       el.addEventListener('input', function(){ DATA.linkGroups[+el.dataset.g].items[+el.dataset.i][el.dataset.lf] = el.value; dirty(); });
@@ -628,7 +685,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     });
   }
   d.getElementById('addGroup').addEventListener('click', function(){
-    DATA.linkGroups.push({heading:'New group', items:[{label:'', url:''}]}); dirty(); drawLinkGroups();
+    DATA.linkGroups.push({heading:{en:'New group',el:'Νέα ομάδα'}, items:[{label:'', url:''}]}); dirty(); drawLinkGroups();
   });
 
   /* add buttons */
@@ -652,6 +709,8 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     C.committees = C.committees || []; C.minutes = C.minutes || []; C.linkGroups = C.linkGroups || [];
     C.welcome.paragraphs = C.welcome.paragraphs || [];
     C.membership.benefits = C.membership.benefits || [];
+    C.ui = C.ui || {};
+    C.schema = 2;
     return C;
   }
 
