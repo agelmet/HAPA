@@ -1,0 +1,335 @@
+{
+  "_readme": "This file is the entire editable content of the HAPA website. Edit it through admin.html — never by hand unless you know JSON.",
+  "updated": "2026-09-01",
+
+  "site": {
+    "name": "Hellenic American Psychiatric Association",
+    "short": "HAPA",
+    "tagline": "A Forum for Psychiatrists of Greek Origin",
+    "founded": "May 15, 1999",
+    "email": "info@hellenic-psych.org",
+    "facebook": "https://www.facebook.com/",
+    "heroTitle": "A professional home for psychiatrists of Greek origin.",
+    "heroLead": "Founded in 1999, HAPA connects psychiatrists across the United States, Canada, Greece and the wider Greek diaspora — for scientific exchange, professional development, and advocacy for the mental health of Greek communities.",
+    "heroCtaPrimary": { "label": "Become a member", "href": "#membership" },
+    "heroCtaSecondary": { "label": "Read our mission", "href": "#about" }
+  },
+
+  "stats": [
+    { "value": "1999", "label": "Founded, on 15 May" },
+    { "value": "25", "suffix": "+", "label": "Annual meetings held" },
+    { "value": "3", "label": "Continents represented" },
+    { "value": "501", "suffix": "(c)", "label": "Educational, scientific and charitable purposes" }
+  ],
+
+  "welcome": {
+    "heading": "Welcome",
+    "author": "Maria T. Lymberis, MD",
+    "authorRole": "HAPA Founder & former President",
+    "paragraphs": [
+      "As the Founder of HAPA I want to welcome you to our organization.",
+      "HAPA was founded on 15 May 1999 to fulfil an urgent need: to provide a PROFESSIONAL HOME for psychiatrists in the USA and in the GREEK DIASPORA.",
+      "The Hellenic psyche and its values are the unifying link of HAPA. Our membership is open to psychiatrists who are members of the American Psychiatric Association, the American Academy of Child and Adolescent Psychiatry and the Hellenic Psychiatric Association — and to all professionals working in, or interested in, our field who share Hellenic roots or the passion for HELLENISM and HUMANISM.",
+      "HAPA always meets at the time of the APA Annual Meeting, on the Tuesday from 6:00 to 8:00 PM, followed by a Dutch-treat dinner at a local restaurant.",
+      "I hope you will look at our website, join us, and participate with your ideas and views."
+    ]
+  },
+
+  "mission": "The mission of HAPA is to provide a forum for psychiatrists of Greek origin, or those who are Greek identified, to share experiences, establish a network for scientific and social exchange, facilitate the professional development and professional aspirations of members, and advocate for the psychiatric needs of Greek individuals, families and communities through education, research and professional organizational cooperation.",
+
+  "goalsIntro": "HAPA is organized exclusively for educational, scientific and charitable purposes in the public interest. Our goals are:",
+  "goals": [
+    { "key": "a", "text": "To promote professional affiliation through the continued study and exploration of the Hellenic heritage among Greek or Greek-identified psychiatrists who practise in the USA, Canada, Greece and other countries all over the world." },
+    { "key": "b", "text": "To promote a close cooperative relationship and professional exchange with other organizations concerned with psychiatric and psychotherapeutic education, research and treatment." },
+    { "key": "c", "text": "To identify and advocate for the psychiatric and psychotherapeutic needs of Greek communities." },
+    { "key": "d", "text": "To educate Greek communities on mental health issues and promote mental health services for Greek individuals, families and communities." },
+    { "key": "e", "text": "To recognize and publicize — and to establish funds and awards for — outstanding service, achievement or scientific contributions in the field of psychiatry, psychotherapy and psychoanalysis by Greek or Greek-identified psychiatrists." },
+    { "key": "f", "text": "To advocate for the special needs of psychiatrists of Greek origin." },
+    { "key": "g", "text": "To publish journals, newsletters, books or pamphlets, hold property, receive grants and awards, monitor research activities conducted under its auspices, and organize courses of instruction in areas of psychiatry and psychotherapy." },
+    { "key": "h", "text": "To make distributions to organizations that qualify as exempt organizations under Section 501(c) of the Internal Revenue Code of 1954, or the corresponding provision of any future United States Internal Revenue Law." }
+  ],
+
+  "officersTerm": "Current HAPA Officers · 2022 – 2025",
+  "officers": [
+    { "role": "President", "name": "Georgios J. Karampoutakis, MD, MSc, PhD", "title": "Forensic Psychiatrist — Mediator", "place": "Athens, Greece", "email": "karampoutakis@gmail.com", "web": "https://www.myshrink.gr" },
+    { "role": "President Elect", "name": "Philip J. Candilis, MD, DFAPA", "title": "Director of Medical Affairs; Director, Forensic Psychiatry Fellowship, Saint Elizabeths Hospital. Professor of Psychiatry, George Washington University School of Medicine", "place": "Washington, DC", "email": "philip.candilis@dc.gov", "web": "" },
+    { "role": "Secretary", "name": "Eva Theodosiadis, MD", "title": "Adult, Child & Adolescent and Forensic Psychiatrist", "place": "", "email": "evatheodosiadis@gmail.com", "web": "" },
+    { "role": "Secretary", "name": "Stefania Chaikali", "title": "CT Psychiatry, West London NHS Trust", "place": "London, United Kingdom", "email": "stefaniachaikali@gmail.com", "web": "" },
+    { "role": "Treasurer", "name": "Lillian Markaki, MD", "title": "Psychiatrist", "place": "Greece", "email": "lillianmarkaki@gmail.com", "web": "" },
+    { "role": "Treasurer", "name": "Katina Matthews-Ferrari, MD, FAACAP, FAPA", "title": "Chief Medical Officer, Charlotte Behavioral Health", "place": "Punta Gorda, FL", "email": "", "web": "" },
+    { "role": "Councillor", "name": "Georgios P. Pagkalos, MD, FECSM, IFAPA", "title": "Psychiatrist — Sexologist", "place": "Thessaloniki, Greece", "email": "georgiospagkalos@gmail.com", "web": "" },
+    { "role": "Councillor", "name": "Achilleas Oikonomou, MD, MSc", "title": "Psychiatrist", "place": "Greece", "email": "axilleasoikonomou@yahoo.gr", "web": "" },
+    { "role": "Councillor", "name": "Georgios Demetriades", "title": "Psychiatrist", "place": "Greece", "email": "geodim@hotmail.com", "web": "" },
+    { "role": "Councillor", "name": "Emmanouil Tsalamanios", "title": "Child & Adolescent Psychiatrist; Director of the Psychiatric Sector, “Asklepieio Voulas” General Hospital", "place": "Voula, Greece", "email": "emtsalamanios@hotmail.com", "web": "" },
+    { "role": "Founder & Acting Executive Director", "name": "Maria T. Lymberis, MD, DLFAPA", "title": "Founder of HAPA; President 1999–2002; Acting Executive Director since 2002", "place": "Santa Monica, CA", "email": "maria@lymberis.com", "web": "" },
+    { "role": "Past President", "name": "Philip J. Candilis, MD, DFAPA", "title": "President 2018–2021", "place": "Washington, DC", "email": "philip.candilis@dc.gov", "web": "" }
+  ],
+
+  "pastOfficers": [
+    { "term": "2018 – 2021", "text": "President: Philip J. Candilis · President-Elect: Georgios J. Karampoutakis · Secretary: Georgios P. Pagkalos · Treasurers: Nick Togias, Katina Matthews-Ferrari · Councillor: Apostolos V. Tsiamis" },
+    { "term": "2011 – 2014", "text": "President: Katina Matthews-Ferrari · President-Elect: Philip J. Candilis · Treasurer: George Fouras · Secretary: Philip J. Candilis · Immediate Past President: Emmanuel G. Cassimatis · Councillors: Iannis Zervas, Arthur N. Papas, Yannis G. Papakostas" },
+    { "term": "2008 – 2011", "text": "President: Emmanuel G. Cassimatis · President-Elect: Vassilios Latoussakis · Secretary: Katina Matthews-Ferrari · Treasurer: Arthur N. Papas · Councillors: Yannis G. Papakostas, Georgios Papadimitriou, Athanasios A. Vidalis" },
+    { "term": "2005 – 2008", "text": "President: Georgios Petrides · President-Elect: Emmanuel G. Cassimatis · Secretary: George Papakostas · Treasurer: Vassilios Latoussakis · Councillors: Athanasios A. Vidalis, Georgios Papadimitriou, Kanellos Charalambous" },
+    { "term": "2002 – 2005", "text": "President: Constantine Lyketsos · President-Elect: Georgios Petrides · Secretary: Iannis Zervas · Treasurer: Dora Wang · Past President: Maria T. Lymberis · Councillors: Kanellos Charalambous, William Cardasis, George Papadimitriou" },
+    { "term": "1999 – 2002", "text": "President: Maria T. Lymberis (Founder) · President-Elect: Constantine Lyketsos · Secretary: George Alexopoulos · Treasurer: Dora Wang · Councillors: George N. Christodoulou, William Cardasis, Kanellos Charalambous" }
+  ],
+
+  "committeesIntro": "We want to know your interest in participating in any of the HAPA committees. Members are welcome to put their name forward at any time.",
+  "committeeSurvey": "https://hellenic-psych.org/committees/committee-survey/",
+  "committees": [
+    { "name": "Membership Committee", "chair": "Arthur N. Papas, MD", "cochair": "Katina Matthews-Ferrari, MD", "members": "Athanasios Vidalis, MD · Iannis Zervas, MD", "brief": "Responsible for processing HAPA membership applications: verifying good-standing membership for APA and AACAP psychiatrists, for HPA psychiatrists and for all other applicants, and developing procedures and initiatives for membership recruitment and retention.", "feature": true },
+    { "name": "Program Committee", "chair": "Emmanuel Cassimatis, MD", "cochair": "Maria Lymberis, MD", "members": "Katina Matthews-Ferrari, MD · George Papadimitriou, MD", "brief": "Responsible for the annual HAPA programme; works with the President to finalise it for approval by the Executive Committee.", "feature": false },
+    { "name": "Ethics Committee", "chair": "Maria Lymberis, MD", "cochair": "", "members": "George Christodoulou, MD", "brief": "Guardian of the association's professional and ethical standards.", "feature": false },
+    { "name": "Budget Committee", "chair": "Arthur N. Papas, MD", "cochair": "", "members": "Nicolas E. Stratas, MD · George Petrides, MD", "brief": "Files HAPA's income tax papers, presents the operating budget to the Executive Committee and advises on financial matters.", "feature": false },
+    { "name": "Website / Newsletter Committee", "chair": "Maria T. Lymberis, MD", "cochair": "Emmanuel Cassimatis, MD", "members": "", "brief": "Maintains the HAPA website and publishes the HAPA Newsletter.", "feature": false },
+    { "name": "Nominating Committee", "chair": "Emmanuel Cassimatis, MD", "cochair": "", "members": "Maria T. Lymberis, MD · George Christodoulou, MD · Athanasios Vidalis, MD", "brief": "Prepares the slate of candidates for HAPA office.", "feature": false },
+    { "name": "By-Laws Committee", "chair": "Maria T. Lymberis, MD", "cochair": "", "members": "George Papakostas, MD · Miltiades Zaphiropoulos, MD · Iannis Zervas, MD", "brief": "Keeps the association's by-laws current and consistent with its purposes.", "feature": false }
+  ],
+
+  "membership": {
+    "intro": "Becoming a member of HAPA is straightforward: complete the membership form and pay your dues online.",
+    "benefits": [
+      "Attend the HAPA Annual Meeting",
+      "Receive the HAPA Newsletter by mail or e-mail",
+      "Contribute to the HAPA Newsletter and website",
+      "Join us in fulfilling our goals",
+      "Participate, network and exchange information with fellow Hellenophiles committed to psychiatric issues",
+      "Stand for HAPA committees and office"
+    ],
+    "duesNote": "Annual membership dues can be paid online with any major credit card via PayPal. Choose your membership type and you will be taken to a secure PayPal page.",
+    "postalNote": "If you prefer to join by mail, download the sign-up form, complete it and post it with a cheque for your dues to the Chair of the Membership Committee. Forms may also be sent by fax.",
+    "contactName": "Arthur N. Papas, MD — Chair, HAPA Membership Committee",
+    "contactAddress": "5 Byron Rd, Weston, MA 02493-2228, USA",
+    "contactPhone": "+1 (781) 431-7399",
+    "contactFax": "+1 (781) 431-8599",
+    "contactEmail": "anpapas@comcast.net",
+    "payUrl": "https://hellenic-psych.org/membership/pay-dues/",
+    "formUrl": "https://hellenic-psych.org/membership/",
+    "donateUrl": "https://hellenic-psych.org/support-hapa/"
+  },
+
+  "support": {
+    "heading": "Support HAPA",
+    "text": "HAPA is organized exclusively for educational, scientific and charitable purposes in the public interest. Donations of any amount help fund the annual meeting, the newsletter, awards for outstanding contributions to Hellenic psychiatry, and our advocacy for the mental health of Greek communities.",
+    "cta": "Make a donation"
+  },
+
+  "linkGroups": [
+    {
+      "heading": "Hellenic medical organizations",
+      "items": [
+        { "label": "Hellenic Medical Society of New York", "url": "" },
+        { "label": "New England Hellenic Medical & Dental Society", "url": "" },
+        { "label": "Hellenic Medical Society of Pennsylvania", "url": "" },
+        { "label": "Federation of Hellenic Medical Societies of North America", "url": "" },
+        { "label": "Hellenic American Medical and Dental Society of Southern California", "url": "" },
+        { "label": "Hellenic Bioscientific Association in the USA", "url": "" }
+      ]
+    },
+    {
+      "heading": "Psychiatry in Greece",
+      "items": [
+        { "label": "Ελληνική Ψυχιατρική Εταιρεία — Hellenic Psychiatric Association", "url": "" },
+        { "label": "Hellenic Society of Child & Adolescent Psychiatry", "url": "" },
+        { "label": "Ένωση Επαγγελματιών Ψυχιάτρων Ελλάδας", "url": "" },
+        { "label": "«ΜΙΤΟΣ» Εταιρεία Ψυχικής Υγείας και Κοινωνικών Παρεμβάσεων", "url": "" },
+        { "label": "Obrela", "url": "https://www.obrela.gr/" }
+      ]
+    }
+  ],
+
+  "news": [
+    {
+      "id": "n2025-jaapl-candilis",
+      "date": "2026-03-01",
+      "category": "Members",
+      "title": "The Journal of the American Academy of Psychiatry and the Law — Philip J. Candilis, MD: Biography",
+      "summary": "A biography of HAPA President-Elect Philip J. Candilis published in JAAPL, recalling a first meeting in Denver during the historic AAPL blizzard.",
+      "body": "The Journal of the American Academy of Psychiatry and the Law has published a biography of Philip J. Candilis, MD, DFAPA — HAPA President-Elect and Immediate Past President. The piece traces a career in forensic psychiatry, medical ethics and professional education, from Massachusetts to Saint Elizabeths Hospital in Washington, DC.",
+      "link": ""
+    },
+    {
+      "id": "n2025-annual-meeting",
+      "date": "2025-05-01",
+      "category": "Meetings",
+      "title": "Annual HAPA Meeting, held in conjunction with the 2025 APA Meeting",
+      "summary": "Dear HAPA members — you are cordially invited to attend our Annual HAPA Meeting, held in conjunction with the 2025 APA Annual Meeting.",
+      "body": "Dear HAPA members,\n\nYou are cordially invited to attend our Annual HAPA Meeting, held in conjunction with the 2025 APA Annual Meeting. As always the meeting takes place on the Tuesday of the APA week, from 6:00 to 8:00 PM, and is followed by a Dutch-treat dinner at a local restaurant.",
+      "link": ""
+    },
+    {
+      "id": "n2024-deputy-minister",
+      "date": "2024-06-13",
+      "category": "Advocacy",
+      "title": "APA and HAPA representatives meet the Deputy Minister of Health, Mr Dimitris Vartzopoulos",
+      "summary": "Representatives of the American Psychiatric Association and HAPA met the Greek Deputy Minister of Health to discuss collaboration on mental health policy.",
+      "body": "Representatives of the American Psychiatric Association and the Hellenic American Psychiatric Association met the Deputy Minister of Health, Mr Dimitris Vartzopoulos, as part of a programme of meetings across Greece on international collaboration in psychiatry.",
+      "link": ""
+    },
+    {
+      "id": "n2024-eody",
+      "date": "2024-06-12",
+      "category": "Advocacy",
+      "title": "APA and HAPA at EODY in Athens and at the University of Thessaly",
+      "summary": "Dr P. Candilis and Dr V. Pozios of the APA, with the President of HAPA, met colleagues at EODY in Athens and at the University of Thessaly.",
+      "body": "Representatives of the American Psychiatric Association, Dr P. Candilis and Dr V. Pozios, together with the President of the Hellenic American Psychiatric Association, met colleagues at EODY in Athens and at EODY in the University of Thessaly, to discuss public mental health, climate and community psychiatry.",
+      "link": ""
+    },
+    {
+      "id": "n2024-rigas-feraios",
+      "date": "2024-06-11",
+      "category": "Advocacy",
+      "title": "Meeting with the Mayor of the Rigas Feraios Municipality",
+      "summary": "APA representatives and the President of HAPA met the Mayor of the Rigas Feraios Municipality on community mental health provision.",
+      "body": "The representatives of the American Psychiatric Association, Dr P. Candilis and Dr V. Pozios, and the President of the Hellenic American Psychiatric Association met the Mayor of the Rigas Feraios Municipality to discuss mental health provision in the community.",
+      "link": ""
+    },
+    {
+      "id": "n2024-volos",
+      "date": "2024-06-10",
+      "category": "Advocacy",
+      "title": "Visit to the Mental Health Centre in Volos",
+      "summary": "APA and HAPA representatives visited the Mental Health Centre in Volos and met the hospital's director, Mr Giannis Ntokos.",
+      "body": "Representatives of the American Psychiatric Association and the Hellenic American Psychiatric Association visited the Mental Health Centre in Volos and met the hospital's director, Mr Giannis Ntokos.",
+      "link": ""
+    },
+    {
+      "id": "n2024-climate",
+      "date": "2024-05-27",
+      "category": "Advocacy",
+      "title": "Dr Candilis at EODY's Climate Conference, Athens",
+      "summary": "Dr Candilis delivered the opening remarks at EODY's Climate Conference in Athens on 27 May.",
+      "body": "Dr Philip Candilis made the opening remarks at EODY's Climate Conference in Athens on 27 May, on the mental health consequences of the climate crisis.",
+      "link": ""
+    },
+    {
+      "id": "n2024-24th-meeting",
+      "date": "2024-05-07",
+      "category": "Meetings",
+      "title": "24th HAPA Annual Meeting, New York",
+      "summary": "The 24th annual meeting of the Hellenic American Psychiatric Association took place on Tuesday 7 May at the New York Marriott Marquis.",
+      "body": "The 24th annual meeting of the Hellenic American Psychiatric Association took place on Tuesday 7 May at the New York Marriott Marquis, held in conjunction with the APA Annual Meeting, and was followed by the traditional Dutch-treat dinner.",
+      "link": ""
+    },
+    {
+      "id": "n2024-apa-presidential",
+      "date": "2024-05-06",
+      "category": "Meetings",
+      "title": "2024 APA Meeting, New York — Presidential Session: “Models of International Collaboration for Psychiatry”",
+      "summary": "HAPA took part in the APA Presidential Session on international collaboration in psychiatry.",
+      "body": "HAPA took part in the APA Presidential Session on “Models of International Collaboration for Psychiatry” at the 2024 APA Annual Meeting in New York — a global research team drawing together colleagues from several countries.",
+      "link": ""
+    },
+    {
+      "id": "n2023-antiracism",
+      "date": "2023-06-01",
+      "category": "Research",
+      "title": "Dr Philip Candilis presents anti-racism data",
+      "summary": "Dr Philip Candilis presented anti-racism data from the HAPA collaboration with George Washington University.",
+      "body": "Dr Philip Candilis, Immediate Past President of HAPA, presented anti-racism data drawn from the HAPA collaboration with George Washington University.",
+      "link": ""
+    },
+    {
+      "id": "n2023-23rd-meeting",
+      "date": "2023-05-23",
+      "category": "Meetings",
+      "title": "HAPA 23rd Annual Meeting — Hilton Union Square, San Francisco",
+      "summary": "Tuesday 23 May 2023, Hilton Union Square, Room: Union Square 22.",
+      "body": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\nHAPA 23rd Annual Meeting\nTuesday, 23 May 2023\nHilton Union Square — Room: Union Square 22\nHeld in conjunction with the APA Annual Meeting.",
+      "link": ""
+    },
+    {
+      "id": "n2022-world-mental-health-day",
+      "date": "2022-10-10",
+      "category": "Events",
+      "title": "World Mental Health Day — online event",
+      "summary": "Monday 10 October 2022, 20:00 – 21:30 (Athens time). “Make Mental Health for All a Global Priority.”",
+      "body": "World Mental Health Day\nMonday 10 October 2022\nOnline event — 20:00 to 21:30 (Athens time)\n“Make Mental Health for All a Global Priority.”",
+      "link": ""
+    },
+    {
+      "id": "n2022-new-board",
+      "date": "2022-06-01",
+      "category": "Announcements",
+      "title": "Announcement of the appointment of new board members",
+      "summary": "The Hellenic American Psychiatric Association is pleased to announce the appointment of new members to its board.",
+      "body": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\nThe Hellenic American Psychiatric Association is pleased to announce the appointment of new members to its board for the 2022–2025 term.",
+      "link": ""
+    },
+    {
+      "id": "n2022-22nd-meeting",
+      "date": "2022-05-24",
+      "category": "Meetings",
+      "title": "HAPA 22nd Annual Meeting — Hilton New Orleans Riverside",
+      "summary": "Tuesday 24 May 2022, Hilton New Orleans Riverside, Durham Room, from 6:00 PM.",
+      "body": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\nHAPA 22nd Annual Meeting\nTuesday, 24 May 2022\nHilton New Orleans Riverside — Durham Room\nTime: 6:00 PM – 8:00 PM",
+      "link": ""
+    },
+    {
+      "id": "n2021-21st-meeting",
+      "date": "2021-05-03",
+      "category": "Meetings",
+      "title": "HAPA 21st Annual Meeting — virtual",
+      "summary": "Monday 3 May 2021, virtual. 2:00 – 4:00 PM EST / 9:00 – 11:00 PM Athens time.",
+      "body": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\nHAPA 21st Annual Meeting\nMonday, 3 May 2021 — virtual\nTime: 2:00 PM – 4:00 PM EST · 9:00 PM – 11:00 PM Athens time",
+      "link": ""
+    },
+    {
+      "id": "n2019-presidents-report",
+      "date": "2019-03-14",
+      "category": "Announcements",
+      "title": "President's Report, 20th HAPA Annual Meeting",
+      "summary": "Philip Candilis, MD — the President's report to the 20th HAPA Annual Meeting.",
+      "body": "HAPA President's Report for the 20th HAPA Annual Meeting\nPhilip Candilis, MD — 14 March 2019.",
+      "link": ""
+    },
+    {
+      "id": "n2018-thessaloniki-fair",
+      "date": "2018-09-15",
+      "category": "Advocacy",
+      "title": "US and Hellenic psychiatry meet in Greece — 83rd Thessaloniki International Fair",
+      "summary": "In September 2018 HAPA participated in the 83rd Thessaloniki International Fair, with the USA as honoured country.",
+      "body": "In September 2018 the Hellenic American Psychiatric Association participated in the 83rd Thessaloniki International Fair in Greece, at which the United States was the honoured country — an occasion for US and Hellenic psychiatry to meet.",
+      "link": ""
+    },
+    {
+      "id": "n2014-nye-award",
+      "date": "2014-05-01",
+      "category": "Awards",
+      "title": "Dr Maria Lymberis receives the 2014 Gary S. Nye Award",
+      "summary": "HAPA's founder was presented with the 2014 Gary S. Nye Award for Physician Health and Well-Being.",
+      "body": "Dr Maria Lymberis was presented with the 2014 Gary S. Nye Award for Physician Health and Well-Being, in recognition of her longstanding contribution to the health and well-being of physicians.",
+      "link": ""
+    },
+    {
+      "id": "n2014-hygeia-award",
+      "date": "2014-04-01",
+      "category": "Awards",
+      "title": "Dr Arthur N. Papas honoured with the 2014 Hygeia Award",
+      "summary": "HAPA is proud to announce that Treasurer Dr Arthur N. Papas was honoured with the 2014 Hygeia Award.",
+      "body": "HAPA is very proud to announce that our Treasurer, Dr Arthur N. Papas, was honoured with the 2014 Hygeia Award.",
+      "link": ""
+    }
+  ],
+
+  "minutes": [
+    { "title": "Minutes of the HAPA 23rd Annual Meeting", "date": "2022-05-24", "place": "New Orleans, Louisiana", "url": "" },
+    { "title": "Minutes of the HAPA 19th Annual Meeting", "date": "2018-05-08", "place": "New York City, New York", "url": "" },
+    { "title": "Minutes of the HAPA 18th Annual Meeting", "date": "2017-05-17", "place": "San Diego, California", "url": "" },
+    { "title": "Minutes of the HAPA 17th Annual Meeting", "date": "2016-05-17", "place": "Atlanta, Georgia", "url": "" },
+    { "title": "Minutes of the HAPA 15th Annual Meeting", "date": "2014-05-06", "place": "New York City, New York", "url": "" },
+    { "title": "Minutes of the HAPA 14th Annual Meeting", "date": "2013-05-21", "place": "San Francisco, California", "url": "" },
+    { "title": "Minutes of the HAPA 13th Annual Meeting", "date": "2012-05-08", "place": "Philadelphia, Pennsylvania", "url": "" },
+    { "title": "Minutes of the HAPA 12th Annual Meeting", "date": "2011-05-17", "place": "Honolulu, Hawaii", "url": "" },
+    { "title": "Minutes of the HAPA 10th Annual Meeting", "date": "2009-05-19", "place": "San Francisco, California", "url": "" }
+  ],
+
+  "contact": {
+    "heading": "Contact HAPA",
+    "text": "For membership questions, to propose an item for the newsletter, or to reach the board, write to us and we will pass your message to the right officer.",
+    "email": "info@hellenic-psych.org",
+    "membershipEmail": "anpapas@comcast.net",
+    "membershipPhone": "+1 (781) 431-7399",
+    "facebook": "https://www.facebook.com/"
+  }
+}

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  HAPA — site administration panel
+  Built by Advon Media — https://advonmedia.com
+
+  This page edits content.json, which is the entire editable content of the
+  public site. Nothing here is a security boundary: the passcode only keeps
+  the panel tidy. Real protection comes from the GitHub token, which is
+  entered by the editor, stored only in this browser, and never committed.
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>HAPA — Site admin</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#12294F; --navy-2:#1B3A6B; --blue:#335FB0; --sky:#7FC1E8; --sky-soft:#E6F1FA;
+  --marble:#F6F5F2; --white:#fff; --ink:#141B26; --ink-2:#4C5666; --ink-3:#7C8697;
+  --line:#DFE3EA; --line-2:#C9D1DE; --ok:#2E7D53; --warn:#B45309; --bad:#B3261E;
+  --serif:'Newsreader',Georgia,serif; --sans:'Manrope',-apple-system,'Segoe UI',sans-serif;
+  --r:14px; --sh:0 18px 48px -26px rgba(18,41,79,.4);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--marble);line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue)}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--navy);line-height:1.2}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:6px}
+
+/* ---------- gate ---------- */
+.gate{position:fixed;inset:0;z-index:50;background:var(--navy);display:grid;place-items:center;padding:1.4rem}
+.gate.hide{display:none}
+.gate-card{background:var(--white);border-radius:20px;padding:clamp(1.6rem,4vw,2.6rem);width:min(430px,100%);box-shadow:0 40px 90px -40px #000;text-align:center}
+.gate-card img{width:82px;margin:0 auto 1.2rem}
+.gate-card h1{font-size:1.6rem}
+.gate-card p{color:var(--ink-2);font-size:.9rem;margin-top:.5rem}
+.gate-card input{width:100%;margin-top:1.4rem;padding:.8rem 1rem;font:inherit;border:1px solid var(--line);border-radius:11px;background:var(--marble);text-align:center;letter-spacing:.2em}
+.gate-card button{width:100%;margin-top:.8rem;padding:.85rem;border-radius:999px;background:var(--navy);color:#fff;font-weight:600}
+.gate-err{color:var(--bad);font-size:.85rem;min-height:1.2em;margin-top:.6rem}
+
+/* ---------- shell ---------- */
+.top{position:sticky;top:0;z-index:30;background:rgba(246,245,242,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top-in{width:min(1400px,94%);margin-inline:auto;display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:.75rem 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.65rem}
+.brand img{width:36px}
+.brand b{font-family:var(--serif);font-weight:500;font-size:1.02rem;color:var(--navy);display:block;line-height:1.15}
+.brand i{font-style:normal;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.top-actions{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.05rem;border-radius:999px;border:1px solid var(--line-2);font-size:.85rem;font-weight:600;color:var(--navy);background:var(--white);transition:background .25s,color .25s,border-color .25s,transform .18s}
+.btn:hover{border-color:var(--navy)}
+.btn:active{transform:scale(.98)}
+.btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn.primary:hover{background:var(--blue);border-color:var(--blue)}
+.btn.gold{background:#B8912F;border-color:#B8912F;color:#241B05}
+.btn.ghost{background:transparent}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.saveflag{font-size:.78rem;font-weight:600;color:var(--warn);display:none}
+.saveflag.on{display:inline}
+
+.layout{width:min(1400px,94%);margin:1.6rem auto 4rem;display:grid;grid-template-columns:222px minmax(0,1fr);gap:1.6rem;align-items:start}
+.side{position:sticky;top:78px;display:grid;gap:.2rem;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:.55rem}
+.side button{display:flex;align-items:center;gap:.6rem;width:100%;text-align:left;padding:.6rem .8rem;border-radius:10px;font-size:.88rem;font-weight:500;color:var(--ink-2);transition:background .22s,color .22s}
+.side button:hover{background:var(--sky-soft)}
+.side button.active{background:var(--navy);color:#fff}
+.side .num{font-size:.66rem;opacity:.6;font-variant-numeric:tabular-nums}
+
+.panel{display:none}
+.panel.active{display:block}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:clamp(1.1rem,2.4vw,1.8rem);margin-bottom:1.1rem;box-shadow:var(--sh)}
+.card>h2{font-size:1.35rem;margin-bottom:.3rem}
+.card>.hint{color:var(--ink-3);font-size:.85rem;margin-bottom:1.2rem}
+
+label.f{display:grid;gap:.35rem;margin-bottom:.95rem}
+label.f>span{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+input[type=text],input[type=url],input[type=email],input[type=date],input[type=password],textarea,select{
+  width:100%;font:inherit;font-size:.93rem;color:var(--ink);background:var(--marble);
+  border:1px solid var(--line);border-radius:10px;padding:.62rem .8rem;transition:border-color .22s,background .22s,box-shadow .22s;
+}
+textarea{resize:vertical;min-height:96px;line-height:1.6}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);background:var(--white);box-shadow:0 0 0 3px rgba(51,95,176,.12)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 1rem}
+
+.item{border:1px solid var(--line);border-radius:12px;margin-bottom:.7rem;background:var(--marble);overflow:hidden}
+.item-head{display:flex;align-items:center;gap:.8rem;padding:.7rem .9rem;cursor:pointer}
+.item-head .t{flex:1;font-weight:600;font-size:.92rem;color:var(--navy);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item-head .s{font-size:.72rem;color:var(--ink-3);white-space:nowrap}
+.item-head .chev{width:22px;height:22px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;position:relative;flex:none;background:var(--white)}
+.item-head .chev::before,.item-head .chev::after{content:"";position:absolute;left:50%;top:50%;background:var(--navy);transition:transform .3s}
+.item-head .chev::before{width:9px;height:1.4px;transform:translate(-50%,-50%)}
+.item-head .chev::after{width:1.4px;height:9px;transform:translate(-50%,-50%)}
+.item.open .chev::after{transform:translate(-50%,-50%) rotate(90deg)}
+.item-body{display:none;padding:.2rem .9rem 1rem;background:var(--white);border-top:1px solid var(--line)}
+.item.open .item-body{display:block}
+.item-tools{display:flex;gap:.45rem;flex-wrap:wrap;padding-top:.4rem;border-top:1px solid var(--line);margin-top:.4rem}
+.mini{font-size:.76rem;padding:.35rem .7rem;border-radius:999px;border:1px solid var(--line-2);font-weight:600;color:var(--ink-2);background:var(--white)}
+.mini:hover{border-color:var(--navy);color:var(--navy)}
+.mini.danger:hover{border-color:var(--bad);color:var(--bad)}
+
+.rowline{display:flex;gap:.5rem;align-items:center;margin-bottom:.5rem}
+.rowline input{flex:1}
+.addbar{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.9rem}
+
+.note{border-left:3px solid var(--blue);background:var(--sky-soft);padding:.85rem 1rem;border-radius:0 10px 10px 0;font-size:.86rem;color:var(--ink-2);margin-bottom:1.1rem}
+.note b{color:var(--navy)}
+.note.warn{border-color:var(--warn);background:#FEF6E7}
+.status{font-size:.86rem;font-weight:600;min-height:1.3em;margin-top:.8rem}
+.status.ok{color:var(--ok)} .status.bad{color:var(--bad)} .status.busy{color:var(--ink-3)}
+
+.toast{
+  position:fixed;left:50%;bottom:1.4rem;transform:translate(-50%,140%);z-index:60;
+  background:var(--navy);color:#fff;padding:.75rem 1.3rem;border-radius:999px;font-size:.86rem;font-weight:600;
+  box-shadow:0 20px 50px -20px rgba(0,0,0,.6);transition:transform .4s cubic-bezier(.22,.61,.36,1);
+}
+.toast.show{transform:translate(-50%,0)}
+
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .side{position:static;display:flex;overflow-x:auto;gap:.3rem}
+  .side button{white-space:nowrap}
+  .grid2,.grid3{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================== GATE ============================== -->
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <img src="assets/hapa-logo.webp" alt="HAPA">
+    <h1>HAPA site admin</h1>
+    <p>Enter the panel passcode to manage the website content.</p>
+    <input type="password" id="pass" placeholder="Passcode" autocomplete="current-password" aria-label="Passcode">
+    <button id="passBtn" type="button">Open the panel</button>
+    <div class="gate-err" id="gateErr"></div>
+    <p style="margin-top:1.2rem;font-size:.78rem;color:var(--ink-3)">This passcode only tidies the panel away — it is not security. Publishing requires a GitHub token that only you hold.</p>
+  </div>
+</div>
+
+<!-- ============================== SHELL ============================== -->
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html">
+      <img src="assets/hapa-logo.webp" width="36" height="36" alt="">
+      <span><b>HAPA site admin</b><i>Content manager</i></span>
+    </a>
+    <div class="top-actions">
+      <span class="saveflag" id="saveflag">● Unsaved changes</span>
+      <a class="btn ghost" href="index.html" target="_blank" rel="noopener">View site</a>
+      <button class="btn" id="downloadBtn" type="button">Download content.json</button>
+      <button class="btn primary" id="publishBtn" type="button">Publish to the website</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="side" id="side" aria-label="Sections">
+    <button data-p="news" class="active"><span class="num">01</span>News</button>
+    <button data-p="home"><span class="num">02</span>Home &amp; welcome</button>
+    <button data-p="about"><span class="num">03</span>Mission &amp; goals</button>
+    <button data-p="officers"><span class="num">04</span>Officers</button>
+    <button data-p="committees"><span class="num">05</span>Committees</button>
+    <button data-p="membership"><span class="num">06</span>Membership</button>
+    <button data-p="minutes"><span class="num">07</span>Minutes</button>
+    <button data-p="links"><span class="num">08</span>Links</button>
+    <button data-p="contact"><span class="num">09</span>Contact</button>
+    <button data-p="publish"><span class="num">10</span>Publishing</button>
+  </aside>
+
+  <main>
+    <!-- ---------- NEWS ---------- -->
+    <section class="panel active" data-panel="news">
+      <div class="card">
+        <h2>News &amp; announcements</h2>
+        <p class="hint">Newest items appear first on the website. Add an item, fill in the title and a one-line summary, then publish.</p>
+        <div class="addbar" style="margin-top:0;margin-bottom:1rem">
+          <button class="btn primary" id="addNews" type="button">+ Add a news item</button>
+        </div>
+        <div id="newsList"></div>
+      </div>
+    </section>
+
+    <!-- ---------- HOME ---------- -->
+    <section class="panel" data-panel="home">
+      <div class="card">
+        <h2>Home page</h2>
+        <p class="hint">The headline, the line underneath it, and the four figures in the blue strip.</p>
+        <label class="f"><span>Association name</span><input type="text" data-k="site.name"></label>
+        <label class="f"><span>Tagline</span><input type="text" data-k="site.tagline"></label>
+        <label class="f"><span>Hero headline</span><input type="text" data-k="site.heroTitle"></label>
+        <label class="f"><span>Hero paragraph</span><textarea data-k="site.heroLead"></textarea></label>
+        <div class="grid2">
+          <label class="f"><span>Primary button label</span><input type="text" data-k="site.heroCtaPrimary.label"></label>
+          <label class="f"><span>Primary button link</span><input type="text" data-k="site.heroCtaPrimary.href"></label>
+          <label class="f"><span>Secondary button label</span><input type="text" data-k="site.heroCtaSecondary.label"></label>
+          <label class="f"><span>Secondary button link</span><input type="text" data-k="site.heroCtaSecondary.href"></label>
+        </div>
+        <label class="f"><span>Founded</span><input type="text" data-k="site.founded"></label>
+      </div>
+
+      <div class="card">
+        <h2>The blue figures strip</h2>
+        <p class="hint">Four figures, shown across the top of the page.</p>
+        <div id="statsList"></div>
+        <div class="addbar"><button class="btn" id="addStat" type="button">+ Add a figure</button></div>
+      </div>
+
+      <div class="card">
+        <h2>Welcome letter</h2>
+        <div class="grid2">
+          <label class="f"><span>Heading</span><input type="text" data-k="welcome.heading"></label>
+          <label class="f"><span>Author</span><input type="text" data-k="welcome.author"></label>
+        </div>
+        <label class="f"><span>Author role</span><input type="text" data-k="welcome.authorRole"></label>
+        <p class="hint" style="margin:0 0 .6rem">Paragraphs — one box each.</p>
+        <div id="welcomeList"></div>
+        <div class="addbar"><button class="btn" id="addWelcome" type="button">+ Add a paragraph</button></div>
+      </div>
+    </section>
+
+    <!-- ---------- ABOUT ---------- -->
+    <section class="panel" data-panel="about">
+      <div class="card">
+        <h2>Mission</h2>
+        <label class="f"><span>Mission statement</span><textarea data-k="mission" style="min-height:150px"></textarea></label>
+      </div>
+      <div class="card">
+        <h2>Goals</h2>
+        <label class="f"><span>Introduction</span><textarea data-k="goalsIntro"></textarea></label>
+        <div id="goalsList"></div>
+        <div class="addbar"><button class="btn" id="addGoal" type="button">+ Add a goal</button></div>
+      </div>
+    </section>
+
+    <!-- ---------- OFFICERS ---------- -->
+    <section class="panel" data-panel="officers">
+      <div class="card">
+        <h2>Current officers</h2>
+        <label class="f"><span>Section heading (e.g. “Current HAPA Officers · 2022 – 2025”)</span><input type="text" data-k="officersTerm"></label>
+        <div id="officersList"></div>
+        <div class="addbar"><button class="btn primary" id="addOfficer" type="button">+ Add an officer</button></div>
+      </div>
+      <div class="card">
+        <h2>Past boards</h2>
+        <p class="hint">Shown in the collapsible list underneath the current board.</p>
+        <div id="pastList"></div>
+        <div class="addbar"><button class="btn" id="addPast" type="button">+ Add a past board</button></div>
+      </div>
+    </section>
+
+    <!-- ---------- COMMITTEES ---------- -->
+    <section class="panel" data-panel="committees">
+      <div class="card">
+        <h2>Committees</h2>
+        <label class="f"><span>Introduction</span><textarea data-k="committeesIntro"></textarea></label>
+        <label class="f"><span>Committee survey link</span><input type="text" data-k="committeeSurvey"></label>
+        <div id="comList"></div>
+        <div class="addbar"><button class="btn primary" id="addCom" type="button">+ Add a committee</button></div>
+      </div>
+    </section>
+
+    <!-- ---------- MEMBERSHIP ---------- -->
+    <section class="panel" data-panel="membership">
+      <div class="card">
+        <h2>Membership</h2>
+        <label class="f"><span>Introduction</span><textarea data-k="membership.intro"></textarea></label>
+        <label class="f"><span>Dues note</span><textarea data-k="membership.duesNote"></textarea></label>
+        <label class="f"><span>Postal note</span><textarea data-k="membership.postalNote"></textarea></label>
+        <div class="grid2">
+          <label class="f"><span>Pay-dues link</span><input type="text" data-k="membership.payUrl"></label>
+          <label class="f"><span>Membership form link</span><input type="text" data-k="membership.formUrl"></label>
+          <label class="f"><span>Donate link</span><input type="text" data-k="membership.donateUrl"></label>
+          <label class="f"><span>Committee contact name</span><input type="text" data-k="membership.contactName"></label>
+          <label class="f"><span>Address</span><input type="text" data-k="membership.contactAddress"></label>
+          <label class="f"><span>Phone</span><input type="text" data-k="membership.contactPhone"></label>
+          <label class="f"><span>Fax</span><input type="text" data-k="membership.contactFax"></label>
+          <label class="f"><span>Email</span><input type="text" data-k="membership.contactEmail"></label>
+        </div>
+        <p class="hint" style="margin:.6rem 0">Member benefits</p>
+        <div id="benList"></div>
+        <div class="addbar"><button class="btn" id="addBen" type="button">+ Add a benefit</button></div>
+      </div>
+      <div class="card">
+        <h2>Support HAPA</h2>
+        <div class="grid2">
+          <label class="f"><span>Heading</span><input type="text" data-k="support.heading"></label>
+          <label class="f"><span>Button label</span><input type="text" data-k="support.cta"></label>
+        </div>
+        <label class="f"><span>Text</span><textarea data-k="support.text"></textarea></label>
+      </div>
+    </section>
+
+    <!-- ---------- MINUTES ---------- -->
+    <section class="panel" data-panel="minutes">
+      <div class="card">
+        <h2>Meeting minutes</h2>
+        <p class="hint">Leave the link empty and the site shows “On request”.</p>
+        <div id="minList"></div>
+        <div class="addbar"><button class="btn primary" id="addMin" type="button">+ Add minutes</button></div>
+      </div>
+    </section>
+
+    <!-- ---------- LINKS ---------- -->
+    <section class="panel" data-panel="links">
+      <div class="card">
+        <h2>Links</h2>
+        <div id="linkList"></div>
+        <div class="addbar"><button class="btn" id="addGroup" type="button">+ Add a group</button></div>
+      </div>
+    </section>
+
+    <!-- ---------- CONTACT ---------- -->
+    <section class="panel" data-panel="contact">
+      <div class="card">
+        <h2>Contact</h2>
+        <label class="f"><span>Heading</span><input type="text" data-k="contact.heading"></label>
+        <label class="f"><span>Text</span><textarea data-k="contact.text"></textarea></label>
+        <div class="grid2">
+          <label class="f"><span>General email</span><input type="text" data-k="contact.email"></label>
+          <label class="f"><span>Membership email</span><input type="text" data-k="contact.membershipEmail"></label>
+          <label class="f"><span>Membership phone</span><input type="text" data-k="contact.membershipPhone"></label>
+          <label class="f"><span>Facebook URL</span><input type="text" data-k="contact.facebook"></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- PUBLISH ---------- -->
+    <section class="panel" data-panel="publish">
+      <div class="card">
+        <h2>Publishing</h2>
+        <div class="note">
+          <b>Two ways to save your work.</b><br>
+          <b>1 — Download.</b> “Download content.json” saves the file to your computer; upload it to the repository yourself. This always works.<br>
+          <b>2 — Publish directly.</b> Paste a GitHub personal access token below and the panel writes the file straight to the repository. The website updates within a minute or two.
+        </div>
+        <div class="note warn">
+          Your token is stored only in this browser, on this device. It is never part of the website and never sent anywhere except GitHub. Anyone with the token can change the repository — treat it like a password, and revoke it on GitHub if this computer is lost.
+        </div>
+        <div class="grid2">
+          <label class="f"><span>GitHub owner</span><input type="text" id="ghOwner" placeholder="agelmet"></label>
+          <label class="f"><span>Repository</span><input type="text" id="ghRepo" placeholder="HAPA"></label>
+          <label class="f"><span>Branch</span><input type="text" id="ghBranch" placeholder="main"></label>
+          <label class="f"><span>File path</span><input type="text" id="ghPath" placeholder="content.json"></label>
+        </div>
+        <label class="f"><span>Personal access token (fine-grained, Contents: read &amp; write)</span>
+          <input type="password" id="ghToken" placeholder="github_pat_… or ghp_…" autocomplete="off"></label>
+        <label class="f"><span>Change note (optional)</span><input type="text" id="ghMsg" placeholder="Add news item — HAPA 2026 annual meeting"></label>
+        <div class="top-actions" style="margin-top:.4rem">
+          <button class="btn primary" id="pubBtn" type="button">Publish now</button>
+          <button class="btn" id="reloadBtn" type="button">Reload from the website</button>
+          <button class="btn ghost" id="forgetBtn" type="button">Forget my token</button>
+        </div>
+        <div class="status" id="pubStatus"></div>
+      </div>
+
+      <div class="card">
+        <h2>Panel passcode</h2>
+        <p class="hint">Set the code that opens this panel on this device. It keeps the panel tidy; it is not a security boundary.</p>
+        <div class="grid2">
+          <label class="f"><span>New passcode</span><input type="password" id="newPass" placeholder="Leave blank to keep the current one"></label>
+          <label class="f"><span>&nbsp;</span><button class="btn" id="savePass" type="button">Save passcode</button></label>
+        </div>
+        <div class="status" id="passStatus"></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+  var d = document, DATA = null, DIRTY = false;
+  var LS = {
+    pass:'hapa.admin.pass', token:'hapa.admin.token',
+    owner:'hapa.admin.owner', repo:'hapa.admin.repo',
+    branch:'hapa.admin.branch', path:'hapa.admin.path',
+    draft:'hapa.admin.draft'
+  };
+  var store = {
+    get:function(k,f){ try{ var v=localStorage.getItem(k); return v===null?f:v; }catch(e){ return f; } },
+    set:function(k,v){ try{ localStorage.setItem(k,v); }catch(e){} },
+    del:function(k){ try{ localStorage.removeItem(k); }catch(e){} }
+  };
+  var esc = function(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); };
+  var toastEl = d.getElementById('toast');
+  var toastT;
+  function toast(msg){
+    toastEl.textContent = msg; toastEl.classList.add('show');
+    clearTimeout(toastT); toastT = setTimeout(function(){ toastEl.classList.remove('show'); }, 2600);
+  }
+  function dirty(on){
+    DIRTY = on !== false;
+    d.getElementById('saveflag').classList.toggle('on', DIRTY);
+    if (DIRTY) { try { store.set(LS.draft, JSON.stringify(DATA)); } catch(e){} }
+  }
+
+  /* ---------------- gate ---------------- */
+  var gate = d.getElementById('gate');
+  function openPanel(){ gate.classList.add('hide'); }
+  d.getElementById('passBtn').addEventListener('click', function(){
+    var want = store.get(LS.pass, 'hapa2026');
+    if (d.getElementById('pass').value === want) openPanel();
+    else d.getElementById('gateErr').textContent = 'That passcode is not right.';
+  });
+  d.getElementById('pass').addEventListener('keydown', function(e){ if (e.key === 'Enter') d.getElementById('passBtn').click(); });
+  d.getElementById('savePass').addEventListener('click', function(){
+    var v = d.getElementById('newPass').value.trim();
+    if (!v){ d.getElementById('passStatus').textContent = 'Nothing entered — the passcode is unchanged.'; return; }
+    store.set(LS.pass, v);
+    d.getElementById('newPass').value = '';
+    d.getElementById('passStatus').className = 'status ok';
+    d.getElementById('passStatus').textContent = 'Passcode saved on this device.';
+  });
+
+  /* ---------------- tabs ---------------- */
+  d.querySelectorAll('#side button').forEach(function(b){
+    b.addEventListener('click', function(){
+      d.querySelectorAll('#side button').forEach(function(o){ o.classList.toggle('active', o === b); });
+      d.querySelectorAll('.panel').forEach(function(p){ p.classList.toggle('active', p.dataset.panel === b.dataset.p); });
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+
+  /* ---------------- path helpers ---------------- */
+  function getPath(o, p){ return p.split('.').reduce(function(a,k){ return (a && a[k] !== undefined) ? a[k] : undefined; }, o); }
+  function setPath(o, p, v){
+    var ks = p.split('.'), last = ks.pop(), cur = o;
+    ks.forEach(function(k){ if (typeof cur[k] !== 'object' || cur[k] === null) cur[k] = {}; cur = cur[k]; });
+    cur[last] = v;
+  }
+
+  function bindFields(){
+    d.querySelectorAll('[data-k]').forEach(function(el){
+      var v = getPath(DATA, el.dataset.k);
+      el.value = (v === undefined || v === null) ? '' : v;
+      el.addEventListener('input', function(){ setPath(DATA, el.dataset.k, el.value); dirty(); });
+    });
+  }
+
+  /* ---------------- generic list editor ---------------- */
+  function listEditor(opts){
+    /* opts: {mount, arr, title, sub, fields, blank, onChange} */
+    var mount = d.getElementById(opts.mount);
+    function draw(){
+      var arr = opts.arr();
+      mount.innerHTML = arr.map(function(it, i){
+        var body = opts.fields.map(function(f){
+          var val = it[f.k] === undefined ? '' : it[f.k];
+          if (f.t === 'area') return '<label class="f"><span>'+esc(f.l)+'</span><textarea data-i="'+i+'" data-f="'+f.k+'">'+esc(val)+'</textarea></label>';
+          if (f.t === 'check') return '<label class="f" style="grid-auto-flow:column;justify-content:start;align-items:center;gap:.5rem"><input type="checkbox" data-i="'+i+'" data-f="'+f.k+'"'+(val?' checked':'')+' style="width:auto"><span style="letter-spacing:.06em">'+esc(f.l)+'</span></label>';
+          return '<label class="f"><span>'+esc(f.l)+'</span><input type="'+(f.t||'text')+'" data-i="'+i+'" data-f="'+f.k+'" value="'+esc(val)+'"></label>';
+        }).join('');
+        return '<div class="item" data-idx="'+i+'">'+
+          '<div class="item-head"><span class="chev" aria-hidden="true"></span>'+
+            '<span class="t">'+esc(opts.title(it) || '(untitled)')+'</span>'+
+            '<span class="s">'+esc(opts.sub ? opts.sub(it) : '')+'</span>'+
+          '</div>'+
+          '<div class="item-body">'+ (opts.wrap ? '<div class="'+opts.wrap+'">'+body+'</div>' : body) +
+            '<div class="item-tools">'+
+              '<button class="mini" data-act="up" data-i="'+i+'" type="button">↑ Move up</button>'+
+              '<button class="mini" data-act="down" data-i="'+i+'" type="button">↓ Move down</button>'+
+              '<button class="mini" data-act="dup" data-i="'+i+'" type="button">Duplicate</button>'+
+              '<button class="mini danger" data-act="del" data-i="'+i+'" type="button">Delete</button>'+
+            '</div>'+
+          '</div>'+
+        '</div>';
+      }).join('') || '<p class="hint">Nothing here yet.</p>';
+
+      mount.querySelectorAll('.item-head').forEach(function(h){
+        h.addEventListener('click', function(){ h.parentElement.classList.toggle('open'); });
+      });
+      mount.querySelectorAll('[data-f]').forEach(function(el){
+        el.addEventListener('input', function(){
+          var a = opts.arr(), i = +el.dataset.i;
+          a[i][el.dataset.f] = (el.type === 'checkbox') ? el.checked : el.value;
+          var head = el.closest('.item').querySelector('.t');
+          if (head) head.textContent = opts.title(a[i]) || '(untitled)';
+          dirty(); if (opts.onChange) opts.onChange();
+        });
+      });
+      mount.querySelectorAll('[data-act]').forEach(function(b){
+        b.addEventListener('click', function(e){
+          e.stopPropagation();
+          var a = opts.arr(), i = +b.dataset.i, act = b.dataset.act;
+          if (act === 'del'){ if (!confirm('Delete this item?')) return; a.splice(i,1); }
+          if (act === 'dup'){ a.splice(i+1, 0, JSON.parse(JSON.stringify(a[i]))); }
+          if (act === 'up' && i > 0){ a.splice(i-1, 0, a.splice(i,1)[0]); }
+          if (act === 'down' && i < a.length-1){ a.splice(i+1, 0, a.splice(i,1)[0]); }
+          dirty(); draw(); if (opts.onChange) opts.onChange();
+        });
+      });
+    }
+    return { draw: draw, add: function(){ opts.arr().unshift(JSON.parse(JSON.stringify(opts.blank()))); dirty(); draw();
+      var first = mount.querySelector('.item'); if (first) first.classList.add('open'); } };
+  }
+
+  /* ---------------- simple string-array editor ---------------- */
+  function strEditor(mountId, getArr, placeholder){
+    var mount = d.getElementById(mountId);
+    function draw(){
+      var arr = getArr();
+      mount.innerHTML = arr.map(function(v,i){
+        return '<div class="rowline"><textarea data-i="'+i+'" rows="2" placeholder="'+esc(placeholder||'')+'">'+esc(v)+'</textarea>'+
+          '<button class="mini danger" data-del="'+i+'" type="button">Delete</button></div>';
+      }).join('') || '<p class="hint">Nothing here yet.</p>';
+      mount.querySelectorAll('textarea[data-i]').forEach(function(t){
+        t.addEventListener('input', function(){ getArr()[+t.dataset.i] = t.value; dirty(); });
+      });
+      mount.querySelectorAll('[data-del]').forEach(function(b){
+        b.addEventListener('click', function(){ getArr().splice(+b.dataset.del,1); dirty(); draw(); });
+      });
+    }
+    return { draw: draw, add: function(){ getArr().push(''); dirty(); draw(); } };
+  }
+
+  /* ---------------- editors ---------------- */
+  var Ed = {};
+  function buildEditors(){
+    Ed.news = listEditor({
+      mount:'newsList', arr:function(){ return DATA.news; },
+      title:function(x){ return x.title; }, sub:function(x){ return (x.date||'') + ' · ' + (x.category||''); },
+      fields:[
+        {k:'title', l:'Title'},
+        {k:'date',  l:'Date (YYYY-MM-DD)', t:'date'},
+        {k:'category', l:'Category (News, Meetings, Awards, Advocacy…)'},
+        {k:'summary', l:'One-line summary (shown on the card)', t:'area'},
+        {k:'body', l:'Full text (shown when the card is opened)', t:'area'},
+        {k:'link', l:'External link (optional)'},
+        {k:'id', l:'Internal id (leave as generated)'}
+      ],
+      blank:function(){ return {id:'n'+Date.now(), date:new Date().toISOString().slice(0,10), category:'Announcements', title:'', summary:'', body:'', link:''}; }
+    });
+    Ed.stats = listEditor({
+      mount:'statsList', arr:function(){ return DATA.stats; },
+      title:function(x){ return (x.value||'') + (x.suffix||''); }, sub:function(x){ return x.label; },
+      wrap:'grid3',
+      fields:[{k:'value', l:'Figure'}, {k:'suffix', l:'Suffix (+, %, …)'}, {k:'label', l:'Label'}],
+      blank:function(){ return {value:'', suffix:'', label:''}; }
+    });
+    Ed.goals = listEditor({
+      mount:'goalsList', arr:function(){ return DATA.goals; },
+      title:function(x){ return (x.key||'') + ' — ' + String(x.text||'').slice(0,60); },
+      fields:[{k:'key', l:'Letter'}, {k:'text', l:'Goal', t:'area'}],
+      blank:function(){ return {key:'', text:''}; }
+    });
+    Ed.officers = listEditor({
+      mount:'officersList', arr:function(){ return DATA.officers; },
+      title:function(x){ return x.name; }, sub:function(x){ return x.role; },
+      wrap:'grid2',
+      fields:[
+        {k:'role', l:'Role'}, {k:'name', l:'Name'},
+        {k:'title', l:'Title / affiliation'}, {k:'place', l:'Place'},
+        {k:'email', l:'Email'}, {k:'web', l:'Website'}
+      ],
+      blank:function(){ return {role:'Councillor', name:'', title:'', place:'', email:'', web:''}; }
+    });
+    Ed.past = listEditor({
+      mount:'pastList', arr:function(){ return DATA.pastOfficers; },
+      title:function(x){ return x.term; }, sub:function(x){ return String(x.text||'').slice(0,50); },
+      fields:[{k:'term', l:'Term'}, {k:'text', l:'Officers', t:'area'}],
+      blank:function(){ return {term:'', text:''}; }
+    });
+    Ed.com = listEditor({
+      mount:'comList', arr:function(){ return DATA.committees; },
+      title:function(x){ return x.name; }, sub:function(x){ return x.chair; },
+      fields:[
+        {k:'name', l:'Committee'}, {k:'chair', l:'Chair'}, {k:'cochair', l:'Co-chair'},
+        {k:'members', l:'Members (separate with ·)'}, {k:'brief', l:'What it does', t:'area'},
+        {k:'feature', l:'Show as a wide feature card', t:'check'}
+      ],
+      blank:function(){ return {name:'', chair:'', cochair:'', members:'', brief:'', feature:false}; }
+    });
+    Ed.min = listEditor({
+      mount:'minList', arr:function(){ return DATA.minutes; },
+      title:function(x){ return x.title; }, sub:function(x){ return x.date; },
+      wrap:'grid2',
+      fields:[{k:'title', l:'Title'}, {k:'date', l:'Date', t:'date'}, {k:'place', l:'Place'}, {k:'url', l:'Link (optional)'}],
+      blank:function(){ return {title:'', date:'', place:'', url:''}; }
+    });
+    Ed.ben = strEditor('benList', function(){ return DATA.membership.benefits; }, 'Member benefit');
+    Ed.welcome = strEditor('welcomeList', function(){ return DATA.welcome.paragraphs; }, 'Paragraph');
+
+    drawLinkGroups();
+  }
+
+  /* link groups: nested, so hand-built */
+  function drawLinkGroups(){
+    var mount = d.getElementById('linkList');
+    mount.innerHTML = DATA.linkGroups.map(function(g, gi){
+      return '<div class="item open"><div class="item-head"><span class="chev"></span><span class="t">'+esc(g.heading)+'</span>'+
+        '<span class="s">'+g.items.length+' links</span></div><div class="item-body">'+
+        '<label class="f"><span>Group heading</span><input type="text" data-g="'+gi+'" data-gf="heading" value="'+esc(g.heading)+'"></label>'+
+        g.items.map(function(it, ii){
+          return '<div class="rowline"><input type="text" data-g="'+gi+'" data-i="'+ii+'" data-lf="label" value="'+esc(it.label)+'" placeholder="Organization name">'+
+            '<input type="text" data-g="'+gi+'" data-i="'+ii+'" data-lf="url" value="'+esc(it.url)+'" placeholder="https://…">'+
+            '<button class="mini danger" data-gdel="'+gi+'" data-idel="'+ii+'" type="button">×</button></div>';
+        }).join('') +
+        '<div class="item-tools"><button class="mini" data-gadd="'+gi+'" type="button">+ Add a link</button>'+
+        '<button class="mini danger" data-gremove="'+gi+'" type="button">Delete the group</button></div>'+
+      '</div></div>';
+    }).join('') || '<p class="hint">No link groups yet.</p>';
+
+    mount.querySelectorAll('.item-head').forEach(function(h){ h.addEventListener('click', function(){ h.parentElement.classList.toggle('open'); }); });
+    mount.querySelectorAll('[data-gf]').forEach(function(el){
+      el.addEventListener('input', function(){ DATA.linkGroups[+el.dataset.g].heading = el.value; dirty(); });
+    });
+    mount.querySelectorAll('[data-lf]').forEach(function(el){
+      el.addEventListener('input', function(){ DATA.linkGroups[+el.dataset.g].items[+el.dataset.i][el.dataset.lf] = el.value; dirty(); });
+    });
+    mount.querySelectorAll('[data-gadd]').forEach(function(b){
+      b.addEventListener('click', function(){ DATA.linkGroups[+b.dataset.gadd].items.push({label:'', url:''}); dirty(); drawLinkGroups(); });
+    });
+    mount.querySelectorAll('[data-gdel]').forEach(function(b){
+      b.addEventListener('click', function(){ DATA.linkGroups[+b.dataset.gdel].items.splice(+b.dataset.idel,1); dirty(); drawLinkGroups(); });
+    });
+    mount.querySelectorAll('[data-gremove]').forEach(function(b){
+      b.addEventListener('click', function(){ if(!confirm('Delete this whole group?')) return; DATA.linkGroups.splice(+b.dataset.gremove,1); dirty(); drawLinkGroups(); });
+    });
+  }
+  d.getElementById('addGroup').addEventListener('click', function(){
+    DATA.linkGroups.push({heading:'New group', items:[{label:'', url:''}]}); dirty(); drawLinkGroups();
+  });
+
+  /* add buttons */
+  var adders = {addNews:'news', addStat:'stats', addGoal:'goals', addOfficer:'officers', addPast:'past', addCom:'com', addMin:'min', addBen:'ben', addWelcome:'welcome'};
+  Object.keys(adders).forEach(function(id){
+    d.getElementById(id).addEventListener('click', function(){ Ed[adders[id]].add(); });
+  });
+
+  /* ---------------- load ---------------- */
+  function drawAll(){
+    bindFields();
+    ['news','stats','goals','officers','past','com','min','ben','welcome'].forEach(function(k){ Ed[k].draw(); });
+    drawLinkGroups();
+  }
+
+  function normalise(C){
+    C.site = C.site || {}; C.welcome = C.welcome || {}; C.membership = C.membership || {};
+    C.support = C.support || {}; C.contact = C.contact || {};
+    C.stats = C.stats || []; C.goals = C.goals || []; C.news = C.news || [];
+    C.officers = C.officers || []; C.pastOfficers = C.pastOfficers || [];
+    C.committees = C.committees || []; C.minutes = C.minutes || []; C.linkGroups = C.linkGroups || [];
+    C.welcome.paragraphs = C.welcome.paragraphs || [];
+    C.membership.benefits = C.membership.benefits || [];
+    return C;
+  }
+
+  function load(fresh){
+    var draft = store.get(LS.draft, null);
+    if (draft && !fresh) {
+      try {
+        DATA = normalise(JSON.parse(draft));
+        buildEditors(); drawAll(); dirty(true);
+        toast('Restored your unsaved draft');
+        return;
+      } catch(e){}
+    }
+    fetch('content.json?v=' + Date.now())
+      .then(function(r){ if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
+      .then(function(j){
+        DATA = normalise(j);
+        buildEditors(); drawAll(); dirty(false); store.del(LS.draft);
+        if (fresh) toast('Reloaded from the website');
+      })
+      .catch(function(){
+        DATA = normalise({});
+        buildEditors(); drawAll();
+        toast('content.json could not be loaded — starting empty');
+      });
+  }
+
+  /* ---------------- download ---------------- */
+  function json(){ DATA.updated = new Date().toISOString().slice(0,10); return JSON.stringify(DATA, null, 2); }
+  d.getElementById('downloadBtn').addEventListener('click', function(){
+    var blob = new Blob([json()], {type:'application/json'});
+    var a = d.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = 'content.json';
+    d.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1000);
+    toast('content.json downloaded');
+  });
+
+  /* ---------------- publish to GitHub ---------------- */
+  var gh = {
+    owner: d.getElementById('ghOwner'), repo: d.getElementById('ghRepo'),
+    branch: d.getElementById('ghBranch'), path: d.getElementById('ghPath'),
+    token: d.getElementById('ghToken'), msg: d.getElementById('ghMsg'),
+    status: d.getElementById('pubStatus')
+  };
+  gh.owner.value  = store.get(LS.owner, 'agelmet');
+  gh.repo.value   = store.get(LS.repo, 'HAPA');
+  gh.branch.value = store.get(LS.branch, 'main');
+  gh.path.value   = store.get(LS.path, 'content.json');
+  gh.token.value  = store.get(LS.token, '');
+  ['owner','repo','branch','path','token'].forEach(function(k){
+    gh[k].addEventListener('change', function(){ store.set(LS[k], gh[k].value.trim()); });
+  });
+  d.getElementById('forgetBtn').addEventListener('click', function(){
+    store.del(LS.token); gh.token.value = '';
+    gh.status.className = 'status ok'; gh.status.textContent = 'Token removed from this browser.';
+  });
+
+  function b64(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+
+  async function publish(){
+    var owner = gh.owner.value.trim(), repo = gh.repo.value.trim(),
+        branch = gh.branch.value.trim() || 'main', path = gh.path.value.trim() || 'content.json',
+        token = gh.token.value.trim();
+    if (!owner || !repo || !token){
+      gh.status.className = 'status bad';
+      gh.status.textContent = 'Fill in the owner, the repository and your token first.';
+      return;
+    }
+    gh.status.className = 'status busy'; gh.status.textContent = 'Publishing…';
+    var api = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path;
+    var head = {'Authorization':'Bearer ' + token, 'Accept':'application/vnd.github+json', 'X-GitHub-Api-Version':'2022-11-28'};
+    try {
+      var sha = null;
+      var cur = await fetch(api + '?ref=' + encodeURIComponent(branch), {headers:head});
+      if (cur.ok){ sha = (await cur.json()).sha; }
+      else if (cur.status !== 404){ throw new Error('GitHub said ' + cur.status + ' when reading the file'); }
+
+      var body = {message: (gh.msg.value.trim() || 'Update site content'), content: b64(json()), branch: branch};
+      if (sha) body.sha = sha;
+      var res = await fetch(api, {method:'PUT', headers:head, body: JSON.stringify(body)});
+      if (!res.ok){
+        var t = await res.text();
+        throw new Error('GitHub said ' + res.status + '. ' + t.slice(0,180));
+      }
+      dirty(false); store.del(LS.draft);
+      gh.status.className = 'status ok';
+      gh.status.textContent = 'Published. The website updates within a minute or two — refresh it to see the change.';
+      toast('Published to the website');
+    } catch (err) {
+      gh.status.className = 'status bad';
+      gh.status.textContent = String(err.message || err) + ' — if this keeps failing, use “Download content.json” instead.';
+    }
+  }
+  d.getElementById('pubBtn').addEventListener('click', publish);
+  d.getElementById('publishBtn').addEventListener('click', function(){
+    d.querySelector('#side button[data-p="publish"]').click();
+    setTimeout(publish, 250);
+  });
+  d.getElementById('reloadBtn').addEventListener('click', function(){
+    if (DIRTY && !confirm('You have unsaved changes. Reload and lose them?')) return;
+    store.del(LS.draft); load(true);
+  });
+
+  window.addEventListener('beforeunload', function(e){
+    if (!DIRTY) return;
+    e.preventDefault(); e.returnValue = '';
+  });
+
+  load(false);
+})();
+</script>
+</body>
+</html>

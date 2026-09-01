@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Hellenic American Psychiatric Association (HAPA)
+  Built by Advon Media — https://advonmedia.com
+
+  All editable content lives in content.json and is managed from /admin.html.
+  INDEXING STATE: PREVIEW (GitHub Pages) — noindex + robots Disallow until the domain is live.
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Hellenic American Psychiatric Association — A Forum for Psychiatrists of Greek Origin</title>
+<meta name="description" content="HAPA — the Hellenic American Psychiatric Association. Founded in 1999, a professional home for psychiatrists of Greek origin in the USA, Canada, Greece and the Greek diaspora.">
+<meta name="keywords" content="Hellenic American Psychiatric Association, HAPA, Greek psychiatrists, Greek diaspora psychiatry, APA, AACAP, Hellenic Psychiatric Association, mental health Greek communities">
+<meta name="theme-color" content="#12294F">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hellenic American Psychiatric Association">
+<meta property="og:title" content="Hellenic American Psychiatric Association — HAPA">
+<meta property="og:description" content="A professional home for psychiatrists of Greek origin. Founded 1999.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/hapa-parthenon.webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   HAPA — Hellenic American Psychiatric Association
+   Palette taken from the association's own emblem: the deep Aegean navy of
+   the sidebar, the pale blue of the seal's ring, Pentelic marble, and a
+   restrained Hellenic gold for honours.
+   Type: Newsreader (display) + Manrope (UI)
+   Signature: the meander (Greek key) rule, and the column-flute grid.
+   ========================================================================== */
+:root{
+  --navy:      #12294F;
+  --navy-2:    #1B3A6B;
+  --blue:      #335FB0;   /* the association's existing brand blue */
+  --blue-2:    #4A79CE;
+  --sky:       #7FC1E8;   /* the seal's ring */
+  --sky-soft:  #E6F1FA;
+  --marble:    #F6F5F2;
+  --marble-2:  #ECEAE4;
+  --gold:      #B8912F;
+  --ink:       #141B26;
+  --ink-2:     #4C5666;
+  --ink-3:     #7C8697;
+  --line:      #DFE3EA;
+  --line-2:    #C9D1DE;
+  --white:     #FFFFFF;
+  --r:         16px;
+  --r-lg:      26px;
+  --sh:        0 20px 60px -30px rgba(18,41,79,.42);
+  --sh-2:      0 44px 110px -48px rgba(18,41,79,.6);
+  --serif:     'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --sans:      'Manrope', -apple-system, 'Segoe UI', sans-serif;
+  --ease:      cubic-bezier(.22,.61,.36,1);
+  --nav-h:     72px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 18px);-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);font-weight:300;font-size:clamp(1rem,.96rem + .18vw,1.0625rem);
+  line-height:1.72;color:var(--ink);background:var(--marble);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--sky);color:var(--navy)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+
+h1,h2,h3,h4,.display{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.014em;color:var(--navy)}
+h1{font-size:clamp(2.5rem,1.5rem + 4.6vw,5rem);font-weight:300}
+h2{font-size:clamp(1.9rem,1.35rem + 2.3vw,3.15rem);font-weight:300}
+h3{font-size:clamp(1.15rem,1.05rem + .45vw,1.4rem);font-weight:500}
+em{font-style:italic}
+strong{font-weight:600}
+
+.wrap{width:min(1240px,90%);margin-inline:auto}
+.sec{padding-block:clamp(4rem,8vw,8rem);position:relative}
+.band{background:var(--white)}
+.dark{background:var(--navy);color:#DCE4F0}
+.dark h2,.dark h3,.dark h4{color:#fff}
+
+/* ---------- meander (Greek key) rule ---------- */
+/* Greek key (meander) rule, tiled as a background */
+.meander{
+  height:16px;width:100%;
+  background-color:var(--navy-2);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16' viewBox='0 0 32 16'%3E%3Cpath d='M2 14V2h12v9H8V5h3' fill='none' stroke='%237FC1E8' stroke-width='1.6'/%3E%3Cpath d='M18 14V2h12v9h-6V5h3' fill='none' stroke='%237FC1E8' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat:repeat-x;background-position:center;background-size:auto 16px;
+  opacity:.55;
+}
+
+/* ---------- eyebrow ---------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-size:.7rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:1rem;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--sky)}
+.dark .eyebrow{color:var(--sky)}
+.dark .eyebrow::before{background:rgba(127,193,232,.6)}
+
+/* ---------- buttons ---------- */
+.btn{
+  --bg:transparent;--fg:var(--navy);--bd:var(--line-2);
+  position:relative;display:inline-flex;align-items:center;gap:.6rem;
+  padding:.88rem 1.55rem;border-radius:999px;border:1px solid var(--bd);
+  background:var(--bg);color:var(--fg);font-size:.9rem;font-weight:600;
+  overflow:hidden;isolation:isolate;transition:color .4s var(--ease),border-color .4s var(--ease),transform .3s var(--ease);
+}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.9;flex:none;transition:transform .4s var(--ease)}
+.btn::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--navy);transform:translateY(101%);transition:transform .5s var(--ease)}
+.btn:hover{color:#fff;border-color:var(--navy)}
+.btn:hover::after{transform:translateY(0)}
+.btn:hover svg{transform:translateX(4px)}
+.btn:active{transform:scale(.985)}
+.btn-solid{--bg:var(--blue);--fg:#fff;--bd:var(--blue)}
+.btn-solid::after{background:var(--navy)}
+.btn-solid:hover{border-color:var(--navy)}
+.btn-gold{--bg:var(--gold);--fg:#20180400;--bd:var(--gold);color:#241B05}
+.btn-gold::after{background:#8F6F1E}
+.btn-gold:hover{color:#fff;border-color:#8F6F1E}
+.btn-ghost-light{--bd:rgba(220,228,240,.34);--fg:#EAF0FA}
+.btn-ghost-light::after{background:#fff}
+.btn-ghost-light:hover{color:var(--navy);border-color:#fff}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+.rvi{clip-path:inset(0 0 100% 0);transition:clip-path 1.2s var(--ease)}
+.rvi.in{clip-path:inset(0 0 0 0)}
+.lines .ln{display:block;overflow:hidden}
+.lines .ln>span{display:block;transform:translateY(105%);transition:transform 1s var(--ease)}
+.lines.in .ln>span{transform:none}
+.lines.in .ln:nth-child(2)>span{transition-delay:.08s}
+.lines.in .ln:nth-child(3)>span{transition-delay:.16s}
+
+/* ---------- progress ---------- */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--sky),var(--blue));z-index:220;transition:width .1s linear}
+
+/* ============================== NAV ============================== */
+header.site{
+  position:fixed;inset:0 0 auto 0;z-index:180;height:var(--nav-h);display:flex;align-items:center;
+  transition:background .45s var(--ease),box-shadow .45s var(--ease),backdrop-filter .45s;
+}
+header.site.stuck{background:rgba(246,245,242,.92);backdrop-filter:blur(16px) saturate(1.2);box-shadow:0 1px 0 var(--line)}
+.nav-in{width:min(1240px,90%);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+.brand{display:flex;align-items:center;gap:.7rem;flex:none}
+.brand img{width:42px;height:42px;flex:none;transition:transform .6s var(--ease)}
+.brand:hover img{transform:rotate(-8deg) scale(1.06)}
+.brand .wm{display:grid;line-height:1.18}
+.brand .wm b{font-family:var(--serif);font-weight:500;font-size:1rem;color:var(--navy);letter-spacing:-.01em}
+.brand .wm i{font-style:normal;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.nav-links{display:flex;align-items:center;gap:1.7rem;list-style:none}
+.nav-links a{position:relative;font-size:.86rem;font-weight:500;color:var(--ink-2);transition:color .3s}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:2px;background:var(--blue);transition:right .4s var(--ease)}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)}
+.nav-links a:hover::after,.nav-links a.active::after{right:0}
+.nav-right{display:flex;align-items:center;gap:.7rem}
+.burger{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line-2);place-items:center;background:rgba(255,255,255,.6)}
+.burger span{display:block;width:17px;height:1.6px;background:var(--navy);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:17px;height:1.6px;background:var(--navy)}
+.burger span::before{top:-5px}.burger span::after{top:5px}
+
+.mob{
+  position:fixed;inset:0;z-index:190;background:var(--marble);
+  display:flex;flex-direction:column;padding:1.2rem 7% 2.2rem;
+  opacity:0;visibility:hidden;transform:translateY(-12px);
+  transition:opacity .4s var(--ease),transform .4s var(--ease),visibility .4s;overflow-y:auto;
+}
+.mob.open{opacity:1;visibility:visible;transform:none}
+.mob-top{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);flex:none}
+.mob-close{
+  width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;
+  font-size:1.5rem;line-height:1;color:var(--navy);transition:background .3s,color .3s,transform .35s;
+}
+.mob-close:hover{background:var(--navy);color:#fff;transform:rotate(90deg)}
+.mob nav{display:grid;gap:.1rem;margin-top:1.2rem}
+.mob nav a{
+  font-family:var(--serif);font-size:clamp(1.55rem,6.5vw,2.1rem);font-weight:300;color:var(--navy);
+  padding:.4rem 0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:.85rem;
+  opacity:0;transform:translateY(14px);
+}
+.mob.open nav a{animation:mobIn .5s var(--ease) forwards}
+.mob.open nav a:nth-child(2){animation-delay:.04s}.mob.open nav a:nth-child(3){animation-delay:.08s}
+.mob.open nav a:nth-child(4){animation-delay:.12s}.mob.open nav a:nth-child(5){animation-delay:.16s}
+.mob.open nav a:nth-child(6){animation-delay:.2s}.mob.open nav a:nth-child(7){animation-delay:.24s}
+.mob.open nav a:nth-child(8){animation-delay:.28s}
+@keyframes mobIn{to{opacity:1;transform:none}}
+.mob nav a .n{font-family:var(--sans);font-size:.58rem;letter-spacing:.2em;color:var(--blue);font-weight:600}
+.mob-foot{margin-top:auto;padding-top:1.6rem;display:grid;gap:.4rem;font-size:.9rem;color:var(--ink-2)}
+.mob-foot a{font-weight:600;color:var(--navy)}
+
+/* ============================== HERO ============================== */
+.hero{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--navy)}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 62%;transform:scale(1.08);will-change:transform}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,24,48,.62) 0%,rgba(10,24,48,.34) 38%,rgba(10,24,48,.9) 100%);
+}
+.hero-in{position:relative;z-index:2;width:min(1240px,90%);margin-inline:auto;padding-block:clamp(6rem,14vw,8rem) clamp(2.6rem,5vw,4rem)}
+.hero-seal{width:clamp(78px,10vw,116px);margin-bottom:1.6rem;filter:drop-shadow(0 12px 30px rgba(0,0,0,.45))}
+.hero h1{color:#fff;max-width:17ch;text-shadow:0 2px 30px rgba(6,16,34,.4)}
+.hero .tag{
+  display:inline-block;font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,1rem + .5vw,1.35rem);
+  color:var(--sky);margin-bottom:1.1rem;
+}
+.hero .lead{color:rgba(232,238,248,.9);max-width:60ch;margin-top:1.5rem;font-size:clamp(1.02rem,.98rem + .3vw,1.14rem)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.1rem}
+.scrollcue{
+  position:absolute;left:50%;bottom:1.1rem;z-index:3;transform:translateX(-50%);
+  font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(232,238,248,.6);
+  display:flex;flex-direction:column;align-items:center;gap:.45rem;
+}
+.scrollcue::after{content:"";width:1px;height:26px;background:linear-gradient(180deg,rgba(232,238,248,.7),transparent);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(.2);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(.2);transform-origin:bottom}}
+
+/* ---------- stat strip ---------- */
+.stats{background:var(--navy-2);color:#DCE4F0;position:relative;z-index:3}
+.stats-in{width:min(1240px,90%);margin-inline:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(220,228,240,.16)}
+.stat{background:var(--navy-2);padding:clamp(1.4rem,3vw,2.2rem) clamp(1rem,2vw,1.6rem);display:grid;gap:.35rem;align-content:start}
+.stat .n{font-family:var(--serif);font-size:clamp(2rem,1.4rem + 2vw,2.9rem);font-weight:300;color:var(--sky);line-height:1}
+.stat .l{font-size:.85rem;color:rgba(220,228,240,.68);line-height:1.5}
+
+/* ============================== WELCOME ============================== */
+.welcome-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(2.2rem,5vw,4.6rem);align-items:start}
+.welcome-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(1.6rem,3vw,2.4rem);box-shadow:var(--sh);position:sticky;top:calc(var(--nav-h) + 24px);
+}
+.welcome-card img{width:96px;margin-bottom:1.1rem}
+.welcome-card .who{font-family:var(--serif);font-size:1.28rem;color:var(--navy)}
+.welcome-card .role{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-top:.3rem;font-weight:600}
+.welcome-card .since{margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.9rem;color:var(--ink-2)}
+.welcome-copy p+p{margin-top:1.05rem;color:var(--ink-2)}
+.welcome-copy .first{font-family:var(--serif);font-size:clamp(1.25rem,1.1rem + .8vw,1.7rem);line-height:1.4;color:var(--navy);font-weight:300}
+
+/* ============================== MISSION / GOALS ============================== */
+.mission-quote{
+  font-family:var(--serif);font-weight:300;font-size:clamp(1.35rem,1.05rem + 1.5vw,2.35rem);line-height:1.34;
+  color:var(--navy);max-width:22ch;
+}
+.mission-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.4rem);align-items:center}
+.mission-side p{color:var(--ink-2)}
+.goals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:clamp(2.6rem,5vw,3.8rem)}
+.goal{background:var(--white);padding:clamp(1.3rem,2.4vw,1.8rem);display:grid;gap:.6rem;align-content:start;transition:background .45s var(--ease)}
+.goal:hover{background:var(--sky-soft)}
+.goal .k{
+  width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;
+  font-family:var(--serif);font-size:.95rem;flex:none;
+}
+.goal p{font-size:.92rem;color:var(--ink-2);line-height:1.62}
+
+/* ============================== NEWS ============================== */
+.news-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.6rem;align-items:end;margin-bottom:clamp(1.8rem,3.5vw,2.6rem)}
+.filters{display:flex;flex-wrap:wrap;gap:.45rem}
+.filters button{
+  border:1px solid var(--line-2);border-radius:999px;padding:.44rem 1rem;font-size:.8rem;font-weight:500;
+  color:var(--ink-2);background:var(--white);transition:all .35s var(--ease);
+}
+.filters button:hover{border-color:var(--blue);color:var(--navy)}
+.filters button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.5rem)}
+.post{
+  position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(1.4rem,2.5vw,1.9rem);display:flex;flex-direction:column;gap:.65rem;text-align:left;
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease);
+}
+.post::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue);transform:scaleY(0);transform-origin:50% 0;transition:transform .55s var(--ease);border-radius:3px 0 0 3px}
+.post:hover{transform:translateY(-5px);box-shadow:var(--sh);border-color:var(--line-2)}
+.post:hover::before{transform:scaleY(1)}
+.post .meta{display:flex;align-items:center;gap:.65rem;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.post .cat{color:var(--blue)}
+.post h3{font-size:1.12rem;line-height:1.3}
+.post p{font-size:.93rem;color:var(--ink-2);flex:1}
+.post .more{margin-top:.4rem;font-size:.82rem;font-weight:600;color:var(--navy);display:inline-flex;align-items:center;gap:.4rem}
+.post .more svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .4s var(--ease)}
+.post:hover .more svg{transform:translateX(4px)}
+.news-more{display:flex;justify-content:center;margin-top:2.2rem}
+.post.hide{display:none}
+
+/* modal */
+.modal{
+  position:fixed;inset:0;z-index:210;background:rgba(12,22,40,.72);backdrop-filter:blur(6px);
+  display:grid;place-items:center;padding:clamp(1rem,4vw,3rem);
+  opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s;
+}
+.modal.open{opacity:1;visibility:visible}
+.modal-card{
+  background:var(--white);border-radius:var(--r-lg);max-width:min(720px,94vw);max-height:86vh;overflow-y:auto;
+  padding:clamp(1.6rem,4vw,2.8rem);box-shadow:var(--sh-2);transform:translateY(16px) scale(.98);
+  transition:transform .45s var(--ease);
+}
+.modal.open .modal-card{transform:none}
+.modal-card .meta{display:flex;gap:.7rem;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:.7rem}
+.modal-card h3{font-size:clamp(1.35rem,1.2rem + .8vw,1.85rem);margin-bottom:1rem;line-height:1.22}
+.modal-card p{color:var(--ink-2);white-space:pre-line}
+.modal-close{
+  position:absolute;top:clamp(.8rem,3vw,1.6rem);right:clamp(.8rem,3vw,1.6rem);width:44px;height:44px;border-radius:50%;
+  border:1px solid rgba(246,245,242,.35);color:#fff;display:grid;place-items:center;font-size:1.4rem;line-height:1;
+  transition:background .3s,transform .35s;
+}
+.modal-close:hover{background:rgba(246,245,242,.16);transform:rotate(90deg)}
+
+/* ============================== OFFICERS ============================== */
+.off-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.4rem);margin-top:clamp(2.2rem,4vw,3.2rem)}
+.off{
+  background:rgba(255,255,255,.045);border:1px solid rgba(220,228,240,.16);border-radius:var(--r);
+  padding:clamp(1.3rem,2.4vw,1.8rem);display:grid;gap:.45rem;align-content:start;
+  transition:background .45s var(--ease),border-color .45s var(--ease),transform .45s var(--ease);
+}
+.off:hover{background:rgba(127,193,232,.09);border-color:rgba(127,193,232,.4);transform:translateY(-4px)}
+.off .role{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sky);font-weight:700}
+.off .name{font-family:var(--serif);font-size:1.16rem;color:#fff;line-height:1.28}
+.off .title{font-size:.86rem;color:rgba(220,228,240,.68);line-height:1.55}
+.off .place{font-size:.78rem;color:rgba(220,228,240,.5)}
+.off .links{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:.35rem;font-size:.8rem}
+.off .links a{color:var(--sky);border-bottom:1px solid rgba(127,193,232,.4);overflow-wrap:anywhere}
+.off .links a:hover{border-color:var(--sky)}
+.past{margin-top:clamp(2.4rem,4vw,3.4rem);border-top:1px solid rgba(220,228,240,.18);padding-top:1.4rem}
+.past-toggle{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0;
+  font-family:var(--serif);font-size:1.2rem;color:#fff;text-align:left;
+}
+.past-toggle .ico{width:30px;height:30px;border-radius:50%;border:1px solid rgba(220,228,240,.35);position:relative;flex:none}
+.past-toggle .ico::before,.past-toggle .ico::after{content:"";position:absolute;left:50%;top:50%;background:#fff;transition:transform .4s var(--ease)}
+.past-toggle .ico::before{width:11px;height:1.4px;transform:translate(-50%,-50%)}
+.past-toggle .ico::after{width:1.4px;height:11px;transform:translate(-50%,-50%)}
+.past-toggle[aria-expanded="true"] .ico::after{transform:translate(-50%,-50%) rotate(90deg)}
+.past-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.past-panel>div{overflow:hidden}
+.past-toggle[aria-expanded="true"]+.past-panel{grid-template-rows:1fr}
+.past-row{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;padding:.85rem 0;border-top:1px solid rgba(220,228,240,.14);font-size:.9rem;color:rgba(220,228,240,.76)}
+.past-row .yr{font-weight:700;color:var(--sky);white-space:nowrap;font-size:.84rem}
+
+/* ============================== COMMITTEES ============================== */
+.com-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2vw,1.4rem);margin-top:clamp(2rem,4vw,3rem)}
+.com{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:clamp(1.35rem,2.4vw,1.85rem);
+  display:grid;gap:.55rem;align-content:start;transition:transform .5s var(--ease),box-shadow .5s var(--ease)
+}
+.com:hover{transform:translateY(-5px);box-shadow:var(--sh)}
+.com.feature{grid-column:span 3;background:linear-gradient(135deg,var(--sky-soft),var(--white) 62%);border-color:var(--line-2)}
+.com h3{font-size:1.12rem}
+.com .who{font-size:.86rem;color:var(--ink-2)}
+.com .who b{color:var(--navy);font-weight:600}
+.com p{font-size:.9rem;color:var(--ink-2)}
+
+/* ============================== MEMBERSHIP ============================== */
+.mem-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(2rem,5vw,4.4rem);align-items:start}
+.benefits{list-style:none;display:grid;gap:0;margin-top:1.6rem}
+.benefits li{display:flex;gap:.9rem;align-items:flex-start;padding:.8rem 0;border-top:1px solid var(--line);font-size:.96rem;color:var(--ink-2)}
+.benefits li:last-child{border-bottom:1px solid var(--line)}
+.benefits li svg{width:18px;height:18px;flex:none;margin-top:.28rem;stroke:var(--blue);fill:none;stroke-width:2}
+.join-card{
+  background:var(--navy);color:#DCE4F0;border-radius:var(--r-lg);padding:clamp(1.6rem,3.2vw,2.4rem);
+  box-shadow:var(--sh);position:relative;overflow:hidden;
+}
+.join-card::before{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(127,193,232,.28),transparent 66%)}
+.join-card h3{color:#fff;position:relative}
+.join-card p{position:relative;font-size:.93rem;color:rgba(220,228,240,.76);margin-top:.7rem}
+.join-actions{position:relative;display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.5rem}
+.join-contact{position:relative;margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid rgba(220,228,240,.2);display:grid;gap:.35rem;font-size:.88rem}
+.join-contact .k{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sky);font-weight:700}
+.join-contact a{color:#fff;border-bottom:1px solid rgba(220,228,240,.35);overflow-wrap:anywhere}
+
+/* ============================== MINUTES / ARCHIVE ============================== */
+.arch{display:grid;gap:0;margin-top:clamp(1.8rem,3.5vw,2.6rem);border-top:1px solid var(--line)}
+.arch-row{
+  display:grid;grid-template-columns:auto 1fr auto;gap:clamp(.9rem,2.4vw,2rem);align-items:center;
+  padding:1.05rem 0;border-bottom:1px solid var(--line);transition:padding-left .45s var(--ease);
+}
+.arch-row:hover{padding-left:.5rem}
+.arch-row .yr{font-family:var(--serif);font-size:1.25rem;color:var(--blue);min-width:3.4ch}
+.arch-row .t{font-weight:500;color:var(--navy)}
+.arch-row .p{font-size:.86rem;color:var(--ink-3)}
+.arch-row .go{font-size:.78rem;font-weight:600;color:var(--ink-3);white-space:nowrap}
+.arch-row a.go:hover{color:var(--blue)}
+
+/* ============================== LINKS ============================== */
+.linkcols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.8rem,4vw,3.6rem);margin-top:clamp(2rem,4vw,3rem)}
+.linkcol h3{margin-bottom:1rem}
+.linkcol ul{list-style:none;display:grid;gap:0}
+.linkcol li{border-top:1px solid var(--line)}
+.linkcol li:last-child{border-bottom:1px solid var(--line)}
+.linkcol li a,.linkcol li span{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.82rem 0;font-size:.94rem;color:var(--ink-2);transition:color .35s,padding-left .4s var(--ease)}
+.linkcol li a:hover{color:var(--navy);padding-left:.4rem}
+.linkcol li svg{width:15px;height:15px;stroke:var(--ink-3);fill:none;stroke-width:1.8;flex:none;transition:stroke .35s,transform .4s var(--ease)}
+.linkcol li a:hover svg{stroke:var(--blue);transform:translate(3px,-3px)}
+
+/* ============================== CONTACT ============================== */
+.ct-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(2rem,5vw,4.4rem);align-items:start}
+.ct-list{display:grid;gap:1rem;margin-top:2rem;padding-top:1.8rem;border-top:1px solid var(--line-2)}
+.ct-list .row{display:flex;gap:.9rem;align-items:flex-start}
+.ct-list svg{width:19px;height:19px;flex:none;stroke:var(--blue);fill:none;stroke-width:1.7;margin-top:.28rem}
+.ct-list .k{display:block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.1rem;font-weight:600}
+.ct-list a{border-bottom:1px solid var(--line-2);font-weight:500;overflow-wrap:anywhere;transition:color .3s,border-color .3s}
+.ct-list a:hover{color:var(--blue);border-color:var(--blue)}
+form.cform{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(1.5rem,3.2vw,2.5rem);box-shadow:var(--sh)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{display:grid;gap:.4rem;margin-bottom:1rem}
+.field label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.field input,.field textarea{
+  font:inherit;font-size:.96rem;color:var(--ink);background:var(--marble);border:1px solid var(--line);
+  border-radius:11px;padding:.8rem .95rem;width:100%;transition:border-color .3s,background .3s,box-shadow .3s;
+}
+.field textarea{resize:vertical;min-height:120px}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--blue);background:var(--white);box-shadow:0 0 0 3px rgba(51,95,176,.12)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.fnote{margin-top:.9rem;font-size:.82rem;color:var(--ink-3)}
+
+/* ============================== FOOTER ============================== */
+footer.site{background:var(--navy);color:rgba(220,228,240,.76);padding-block:clamp(3rem,6vw,4.4rem) 1.8rem}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(1.8rem,4vw,3.4rem)}
+.fbrand{display:flex;align-items:center;gap:.85rem}
+.fbrand img{width:52px;flex:none}
+.fbrand .wm b{display:block;font-family:var(--serif);font-weight:400;font-size:1.08rem;color:#fff;line-height:1.25}
+.fbrand .wm i{font-style:normal;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(220,228,240,.55)}
+.fnote-b{margin-top:1rem;font-size:.86rem;line-height:1.7;max-width:42ch}
+.fcol h4{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--sky);font-family:var(--sans);font-weight:700;margin-bottom:.9rem}
+.fcol ul{list-style:none;display:grid;gap:.5rem;font-size:.9rem}
+.fcol a:hover{color:var(--sky)}
+.fbot{
+  margin-top:clamp(2rem,4vw,3rem);padding-top:1.4rem;border-top:1px solid rgba(220,228,240,.18);
+  display:flex;flex-wrap:wrap;gap:.8rem;justify-content:space-between;font-size:.79rem;color:rgba(220,228,240,.58);
+}
+.fbot a{color:var(--sky)}
+.fbot a:hover{text-decoration:underline}
+
+/* ============================== RESPONSIVE ============================== */
+@media(max-width:1080px){
+  .news-grid,.off-grid,.com-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .com.feature{grid-column:span 2}
+  .goals{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats-in{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:grid}
+  .nav-right>.btn{display:none}
+  .welcome-grid,.mission-grid,.mem-grid,.ct-grid,.linkcols{grid-template-columns:1fr}
+  .welcome-card{position:static}
+  .news-head{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .brand .wm b{font-size:.88rem}
+  .brand .wm i{font-size:.52rem;letter-spacing:.13em}
+  .brand img{width:36px;height:36px}
+  .news-grid,.off-grid,.com-grid,.goals,.stats-in{grid-template-columns:1fr}
+  .com.feature{grid-column:span 1}
+  .frow{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .arch-row{grid-template-columns:auto 1fr;gap:.8rem}
+  .arch-row .go{grid-column:2}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  .rv,.rvi,.lines .ln>span{opacity:1 !important;transform:none !important;clip-path:none !important}
+}
+@media print{header.site,.mob,.burger,.modal,.progress,form.cform,.scrollcue{display:none !important}}
+</style>
+</head>
+<body id="top">
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============================== NAV ============================== -->
+<header class="site" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="HAPA — back to top">
+      <img src="assets/hapa-logo.webp" width="42" height="42" alt="HAPA emblem">
+      <span class="wm">
+        <b>H.A.P.A.</b>
+        <i>Hellenic American Psychiatric Association</i>
+      </span>
+    </a>
+
+    <nav aria-label="Main menu">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#officers">Officers</a></li>
+        <li><a href="#committees">Committees</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#archive">Archive</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <a class="btn btn-solid" href="#membership" style="padding:.68rem 1.2rem">Join HAPA</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobnav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mob" id="mobnav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="mob-top">
+    <a class="brand" href="#top" data-close>
+      <img src="assets/hapa-logo.webp" width="42" height="42" alt="">
+      <span class="wm"><b>H.A.P.A.</b><i>Hellenic American Psychiatric Association</i></span>
+    </a>
+    <button class="mob-close" id="mobClose" aria-label="Close menu">&times;</button>
+  </div>
+  <nav aria-label="Menu">
+    <a href="#about" data-close><span class="n">01</span>About</a>
+    <a href="#news" data-close><span class="n">02</span>News</a>
+    <a href="#officers" data-close><span class="n">03</span>Officers</a>
+    <a href="#committees" data-close><span class="n">04</span>Committees</a>
+    <a href="#membership" data-close><span class="n">05</span>Membership</a>
+    <a href="#archive" data-close><span class="n">06</span>Archive</a>
+    <a href="#links" data-close><span class="n">07</span>Links</a>
+    <a href="#contact" data-close><span class="n">08</span>Contact</a>
+  </nav>
+  <div class="mob-foot">
+    <a href="#" data-email>info@hellenic-psych.org</a>
+    <span>Founded 15 May 1999</span>
+  </div>
+</div>
+
+<main>
+
+<!-- ============================== HERO ============================== -->
+<section class="hero" aria-labelledby="h1">
+  <div class="hero-media" aria-hidden="true">
+    <img src="assets/hapa-parthenon.webp" width="1316" height="660" fetchpriority="high" decoding="async" alt="">
+  </div>
+  <div class="hero-in">
+    <img class="hero-seal rv in" src="assets/hapa-logo.webp" width="116" height="116" alt="The HAPA emblem: the rod of Asclepius and an Ionic column">
+    <span class="tag" data-bind="site.tagline">A Forum for Psychiatrists of Greek Origin</span>
+    <h1 id="h1" class="lines" data-lines="site.heroTitle"><span class="ln"><span>A professional home for psychiatrists of Greek origin.</span></span></h1>
+    <p class="lead rv d2" data-bind="site.heroLead"></p>
+    <div class="hero-cta rv d3">
+      <a class="btn btn-solid" href="#membership" data-cta="primary">Become a member
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn-ghost-light" href="#about" data-cta="secondary">Read our mission</a>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- stat strip ---------- -->
+<section class="stats" aria-label="HAPA at a glance">
+  <div class="stats-in" id="stats"></div>
+</section>
+
+<div class="meander" aria-hidden="true"></div>
+
+<!-- ============================== WELCOME ============================== -->
+<section class="sec band" id="welcome" aria-labelledby="h-welcome">
+  <div class="wrap welcome-grid">
+    <aside class="welcome-card rv">
+      <img src="assets/hapa-logo.webp" width="96" height="96" alt="">
+      <p class="who" data-bind="welcome.author"></p>
+      <p class="role" data-bind="welcome.authorRole"></p>
+      <p class="since">Founded <span data-bind="site.founded"></span> to give psychiatrists of Greek origin a professional home — in the United States and across the diaspora.</p>
+    </aside>
+    <div class="welcome-copy">
+      <span class="eyebrow rv">From the founder</span>
+      <h2 id="h-welcome" class="rv" data-bind="welcome.heading">Welcome</h2>
+      <div id="welcomeBody" style="margin-top:1.3rem"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ABOUT: MISSION + GOALS ============================== -->
+<section class="sec" id="about" aria-labelledby="h-about">
+  <div class="wrap">
+    <div class="mission-grid">
+      <div>
+        <span class="eyebrow rv">Our mission</span>
+        <h2 id="h-about" class="mission-quote rv">A forum, a network, and a voice.</h2>
+      </div>
+      <div class="mission-side">
+        <p class="rv d1" data-bind="mission" style="font-size:1.04rem"></p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(3rem,6vw,4.6rem)">
+      <span class="eyebrow rv">Our goals</span>
+      <h2 class="rv" style="max-width:20ch">Organized for education, science and the public interest</h2>
+      <p class="rv d1" data-bind="goalsIntro" style="margin-top:1rem;max-width:70ch;color:var(--ink-2)"></p>
+      <div class="goals" id="goals"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== NEWS ============================== -->
+<section class="sec band" id="news" aria-labelledby="h-news">
+  <div class="wrap">
+    <div class="news-head">
+      <div>
+        <span class="eyebrow rv">Recent news</span>
+        <h2 id="h-news" class="rv">What HAPA has been doing</h2>
+      </div>
+      <div class="filters rv d1" id="filters" role="group" aria-label="Filter news by category"></div>
+    </div>
+    <div class="news-grid" id="newsGrid"></div>
+    <div class="news-more"><button class="btn" id="moreBtn" type="button">Show more news
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button></div>
+  </div>
+</section>
+
+<!-- ============================== OFFICERS ============================== -->
+<section class="sec dark" id="officers" aria-labelledby="h-off">
+  <div class="wrap">
+    <span class="eyebrow rv">The board</span>
+    <h2 id="h-off" class="rv" data-bind="officersTerm">Current HAPA Officers</h2>
+    <p class="rv d1" style="margin-top:1rem;max-width:64ch;color:rgba(220,228,240,.72)">HAPA is led by an executive committee of psychiatrists practising in the United States, Greece and the United Kingdom. Members are welcome to contact any officer directly.</p>
+    <div class="off-grid" id="officersGrid"></div>
+
+    <div class="past">
+      <button class="past-toggle" aria-expanded="false">
+        <span>Past HAPA officers, 1999 to today</span>
+        <span class="ico" aria-hidden="true"></span>
+      </button>
+      <div class="past-panel"><div id="pastOfficers"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== COMMITTEES ============================== -->
+<section class="sec" id="committees" aria-labelledby="h-com">
+  <div class="wrap">
+    <div class="news-head">
+      <div>
+        <span class="eyebrow rv">Committees</span>
+        <h2 id="h-com" class="rv">Where the work gets done</h2>
+      </div>
+      <a class="btn rv d1" id="surveyBtn" href="#contact">Join a committee
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <p class="rv d1" data-bind="committeesIntro" style="max-width:70ch;color:var(--ink-2)"></p>
+    <div class="com-grid" id="comGrid"></div>
+  </div>
+</section>
+
+<!-- ============================== MEMBERSHIP ============================== -->
+<section class="sec band" id="membership" aria-labelledby="h-mem">
+  <div class="wrap mem-grid">
+    <div>
+      <span class="eyebrow rv">Membership</span>
+      <h2 id="h-mem" class="rv">Join HAPA</h2>
+      <p class="rv d1" data-bind="membership.intro" style="margin-top:1.1rem;color:var(--ink-2)"></p>
+      <ul class="benefits rv d1" id="benefits"></ul>
+    </div>
+
+    <div class="join-card rv d2">
+      <h3>Dues &amp; forms</h3>
+      <p data-bind="membership.duesNote"></p>
+      <div class="join-actions">
+        <a class="btn btn-gold" id="payBtn" href="#" target="_blank" rel="noopener">Pay dues online
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-ghost-light" id="formBtn" href="#" target="_blank" rel="noopener">Membership form</a>
+      </div>
+      <p style="margin-top:1.4rem" data-bind="membership.postalNote"></p>
+      <div class="join-contact">
+        <span class="k">Membership committee</span>
+        <span data-bind="membership.contactName"></span>
+        <span data-bind="membership.contactAddress"></span>
+        <a href="#" data-href="tel" data-bind="membership.contactPhone"></a>
+        <a href="#" data-href="mailto" data-bind="membership.contactEmail"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== SUPPORT ============================== -->
+<section class="sec dark" id="support" aria-labelledby="h-sup">
+  <div class="wrap" style="text-align:center;max-width:74ch">
+    <span class="eyebrow rv" style="justify-content:center">Support</span>
+    <h2 id="h-sup" class="rv" data-bind="support.heading"></h2>
+    <p class="rv d1" data-bind="support.text" style="margin-top:1.2rem;color:rgba(220,228,240,.78)"></p>
+    <div class="rv d2" style="margin-top:2rem"><a class="btn btn-gold" id="donateBtn" href="#" target="_blank" rel="noopener">
+      <span data-bind="support.cta"></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a></div>
+  </div>
+</section>
+
+<!-- ============================== ARCHIVE ============================== -->
+<section class="sec" id="archive" aria-labelledby="h-arch">
+  <div class="wrap">
+    <span class="eyebrow rv">Archive</span>
+    <h2 id="h-arch" class="rv">Minutes of the annual meetings</h2>
+    <p class="rv d1" style="margin-top:1rem;max-width:66ch;color:var(--ink-2)">HAPA meets each year on the Tuesday of the APA Annual Meeting. Approved minutes of past annual meetings are listed below.</p>
+    <div class="arch" id="minutes"></div>
+  </div>
+</section>
+
+<!-- ============================== LINKS ============================== -->
+<section class="sec band" id="links" aria-labelledby="h-links">
+  <div class="wrap">
+    <span class="eyebrow rv">Links</span>
+    <h2 id="h-links" class="rv">Colleagues and partner organizations</h2>
+    <div class="linkcols" id="linkcols"></div>
+  </div>
+</section>
+
+<!-- ============================== CONTACT ============================== -->
+<section class="sec" id="contact" aria-labelledby="h-contact">
+  <div class="wrap ct-grid">
+    <div class="ct-info">
+      <span class="eyebrow rv">Contact</span>
+      <h2 id="h-contact" class="rv" data-bind="contact.heading"></h2>
+      <p class="rv d1" data-bind="contact.text" style="margin-top:1.1rem;color:var(--ink-2)"></p>
+      <div class="ct-list">
+        <div class="row rv">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.6 7 8.4 6 8.4-6" stroke-linejoin="round"/></svg>
+          <div><span class="k">General enquiries</span><a href="#" data-href="mailto" data-bind="contact.email"></a></div>
+        </div>
+        <div class="row rv d1">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+          <div><span class="k">Membership</span><a href="#" data-href="mailto" data-bind="contact.membershipEmail"></a></div>
+        </div>
+        <div class="row rv d2">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+          <div><span class="k">Membership committee</span><a href="#" data-href="tel" data-bind="contact.membershipPhone"></a></div>
+        </div>
+        <div class="row rv d3">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H8v4h2v6h4v-6h3l1-4h-4V8.8c0-.5.4-.8 1-.8Z" stroke-linejoin="round"/></svg>
+          <div><span class="k">Follow</span><a id="fbLink" href="#" target="_blank" rel="noopener">Facebook</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rv d1">
+      <form class="cform" id="hapaForm" novalidate>
+        <div class="frow">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input type="text" id="f-name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="f-email">Your email</label>
+            <input type="email" id="f-email" name="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-subject">Subject</label>
+          <input type="text" id="f-subject" name="subject">
+        </div>
+        <div class="field">
+          <label for="f-msg">Your message</label>
+          <textarea id="f-msg" name="message" rows="6" required></textarea>
+        </div>
+        <p class="hp" aria-hidden="true"><label>Do not fill this in<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+        <button type="submit" class="btn btn-solid" style="width:100%;justify-content:center">Send message
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="fnote" id="fMsg" role="status">Your message opens in your email programme, ready to send.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="fbrand" href="#top" aria-label="Back to top">
+          <img src="assets/hapa-logo.webp" width="52" height="52" alt="">
+          <span class="wm"><b>Hellenic American<br>Psychiatric Association</b><i data-bind="site.tagline"></i></span>
+        </a>
+        <p class="fnote-b">Founded <span data-bind="site.founded"></span>. Organized exclusively for educational, scientific and charitable purposes in the public interest.</p>
+      </div>
+      <div class="fcol">
+        <h4>Association</h4>
+        <ul>
+          <li><a href="#about">Mission &amp; goals</a></li>
+          <li><a href="#officers">Officers</a></li>
+          <li><a href="#committees">Committees</a></li>
+          <li><a href="#archive">Meeting minutes</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Get involved</h4>
+        <ul>
+          <li><a href="#membership">Become a member</a></li>
+          <li><a href="#support">Support HAPA</a></li>
+          <li><a href="#news">News &amp; announcements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© <span id="year">2026</span> Hellenic American Psychiatric Association. All rights reserved.</span>
+      <span>Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener">Advon Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================== POST MODAL ============================== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+  <div class="modal-card">
+    <div class="meta"><span id="modalDate"></span><span id="modalCat"></span></div>
+    <h3 id="modalTitle"></h3>
+    <p id="modalBody"></p>
+    <p style="margin-top:1.4rem"><a class="btn" id="modalLink" href="#" target="_blank" rel="noopener" hidden>Read the full item
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a></p>
+  </div>
+</div>
+<script>
+(function(){
+  "use strict";
+  var d = document;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ------------------------------------------------------------------ *
+   * 1. CHROME: nav, progress, mobile drawer, reveals — run immediately  *
+   * ------------------------------------------------------------------ */
+  var yEl = d.getElementById('year'); if (yEl) yEl.textContent = new Date().getFullYear();
+
+  var nav = d.getElementById('nav'), prog = d.getElementById('progress');
+  function onScroll(){
+    var sy = window.scrollY || 0;
+    nav.classList.toggle('stuck', sy > 18);
+    var h = d.body.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? (sy / h * 100) : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var burger = d.getElementById('burger'), mob = d.getElementById('mobnav'), mobClose = d.getElementById('mobClose');
+  function openMob(){ mob.classList.add('open'); burger.setAttribute('aria-expanded','true'); d.body.style.overflow='hidden'; }
+  function closeMob(){ mob.classList.remove('open'); burger.setAttribute('aria-expanded','false'); d.body.style.overflow=''; }
+  burger.addEventListener('click', openMob);
+  mobClose.addEventListener('click', closeMob);
+  mob.querySelectorAll('[data-close]').forEach(function(a){ a.addEventListener('click', closeMob); });
+
+  var io = null;
+  if ('IntersectionObserver' in window && !reduced) {
+    io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
+  }
+  function watch(root){
+    (root || d).querySelectorAll('.rv,.rvi,.lines').forEach(function(el){
+      if (el.classList.contains('in')) return;
+      if (io) io.observe(el); else el.classList.add('in');
+    });
+  }
+  watch();
+
+  /* hero parallax */
+  var heroImg = d.querySelector('.hero-media img');
+  if (heroImg && !reduced) {
+    var t = false;
+    window.addEventListener('scroll', function(){
+      if (t) return; t = true;
+      requestAnimationFrame(function(){
+        var y = Math.min(window.scrollY, 900);
+        heroImg.style.transform = 'scale(1.08) translate3d(0,' + (y * 0.16).toFixed(1) + 'px,0)';
+        t = false;
+      });
+    }, {passive:true});
+  }
+
+  /* nav scroll-spy */
+  var spySections = [].slice.call(d.querySelectorAll('main section[id]'));
+  var navLinks = [].slice.call(d.querySelectorAll('.nav-links a'));
+  if ('IntersectionObserver' in window && spySections.length) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        var id = en.target.id;
+        navLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + id); });
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    spySections.forEach(function(s){ spy.observe(s); });
+  }
+
+  /* ------------------------------------------------------------------ *
+   * 2. CONTENT: everything below is rendered from content.json           *
+   * ------------------------------------------------------------------ */
+  var esc = function(s){ return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); };
+  var get = function(obj, path){
+    return path.split('.').reduce(function(o,k){ return (o && o[k] !== undefined) ? o[k] : undefined; }, obj);
+  };
+  var fmtDate = function(iso){
+    if (!iso) return '';
+    var p = String(iso).split('-'); if (p.length < 2) return iso;
+    var m = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    return (p[2] ? (parseInt(p[2],10) + ' ') : '') + m[parseInt(p[1],10)-1] + ' ' + p[0];
+  };
+
+  function bindSimple(C){
+    d.querySelectorAll('[data-bind]').forEach(function(el){
+      var v = get(C, el.getAttribute('data-bind'));
+      if (v === undefined || v === null || v === '') return;
+      el.textContent = v;
+      var mode = el.getAttribute('data-href');
+      if (mode === 'mailto') el.href = 'mailto:' + v;
+      if (mode === 'tel') el.href = 'tel:' + String(v).replace(/[^\d+]/g,'');
+    });
+    /* headline, split into lines */
+    var h1 = d.querySelector('[data-lines]');
+    if (h1) {
+      var txt = get(C, h1.getAttribute('data-lines')) || h1.textContent;
+      var words = String(txt).split(' '), per = Math.ceil(words.length / 3), out = [];
+      for (var i = 0; i < words.length; i += per) out.push(words.slice(i, i + per).join(' '));
+      h1.innerHTML = out.map(function(l){ return '<span class="ln"><span>' + esc(l) + '</span></span>'; }).join('');
+    }
+    /* CTAs */
+    var p1 = get(C,'site.heroCtaPrimary'), p2 = get(C,'site.heroCtaSecondary');
+    var a1 = d.querySelector('[data-cta="primary"]'), a2 = d.querySelector('[data-cta="secondary"]');
+    if (p1 && a1){ a1.childNodes[0].nodeValue = p1.label + ' '; a1.href = p1.href || '#membership'; }
+    if (p2 && a2){ a2.textContent = p2.label; a2.href = p2.href || '#about'; }
+    /* misc hrefs */
+    var m = C.membership || {};
+    var setHref = function(id, url){ var e = d.getElementById(id); if (e && url) e.href = url; };
+    setHref('payBtn', m.payUrl); setHref('formBtn', m.formUrl); setHref('donateBtn', m.donateUrl);
+    setHref('surveyBtn', C.committeeSurvey);
+    var fb = d.getElementById('fbLink'); if (fb && get(C,'contact.facebook')) fb.href = C.contact.facebook;
+    d.querySelectorAll('[data-email]').forEach(function(e){
+      var v = get(C,'contact.email') || get(C,'site.email'); if (v){ e.textContent = v; e.href = 'mailto:' + v; }
+    });
+    if (C.site && C.site.name) d.title = C.site.name + ' — ' + (C.site.tagline || '');
+  }
+
+  function renderStats(C){
+    var box = d.getElementById('stats'); if (!box || !C.stats) return;
+    box.innerHTML = C.stats.map(function(s, i){
+      return '<div class="stat rv d' + Math.min(i,4) + '"><span class="n">' + esc(s.value) + esc(s.suffix || '') +
+             '</span><span class="l">' + esc(s.label) + '</span></div>';
+    }).join('');
+    watch(box);
+  }
+
+  function renderWelcome(C){
+    var box = d.getElementById('welcomeBody'); if (!box || !get(C,'welcome.paragraphs')) return;
+    box.innerHTML = C.welcome.paragraphs.map(function(p, i){
+      return '<p class="rv d' + Math.min(i+1,3) + '"' + (i === 0 ? ' style="margin-top:0"' : ' style="margin-top:1.05rem"') +
+             (i === 0 ? ' class="first rv"' : '') + '>' + esc(p) + '</p>';
+    }).join('').replace('<p class="rv d1" style="margin-top:0"', '<p class="first rv d1" style="margin-top:0"');
+    watch(box);
+  }
+
+  function renderGoals(C){
+    var box = d.getElementById('goals'); if (!box || !C.goals) return;
+    box.innerHTML = C.goals.map(function(g, i){
+      return '<article class="goal rv d' + Math.min(i % 4, 3) + '"><span class="k">' + esc(g.key) + '</span><p>' + esc(g.text) + '</p></article>';
+    }).join('');
+    watch(box);
+  }
+
+  var NEWS = [], SHOWN = 6, FILTER = 'All';
+  function renderNews(){
+    var box = d.getElementById('newsGrid'); if (!box) return;
+    var list = NEWS.filter(function(p){ return FILTER === 'All' || p.category === FILTER; });
+    box.innerHTML = list.slice(0, SHOWN).map(function(p, i){
+      return '<button class="post rv d' + Math.min(i % 3, 3) + '" type="button" data-id="' + esc(p.id) + '">' +
+        '<span class="meta"><span>' + esc(fmtDate(p.date)) + '</span><span class="cat">' + esc(p.category || '') + '</span></span>' +
+        '<h3>' + esc(p.title) + '</h3>' +
+        '<p>' + esc(p.summary || '') + '</p>' +
+        '<span class="more">Read <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>' +
+      '</button>';
+    }).join('');
+    var btn = d.getElementById('moreBtn');
+    if (btn) btn.style.display = (list.length > SHOWN) ? '' : 'none';
+    watch(box);
+  }
+
+  function renderFilters(){
+    var box = d.getElementById('filters'); if (!box) return;
+    var cats = ['All'];
+    NEWS.forEach(function(p){ if (p.category && cats.indexOf(p.category) < 0) cats.push(p.category); });
+    box.innerHTML = cats.map(function(c){
+      return '<button type="button" data-cat="' + esc(c) + '" aria-pressed="' + (c === FILTER) + '">' + esc(c) + '</button>';
+    }).join('');
+    box.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){
+        FILTER = b.dataset.cat; SHOWN = 6;
+        box.querySelectorAll('button').forEach(function(o){ o.setAttribute('aria-pressed', String(o === b)); });
+        renderNews();
+      });
+    });
+  }
+
+  function renderOfficers(C){
+    var box = d.getElementById('officersGrid'); if (!box || !C.officers) return;
+    box.innerHTML = C.officers.map(function(o, i){
+      var links = [];
+      if (o.email) links.push('<a href="mailto:' + esc(o.email) + '">' + esc(o.email) + '</a>');
+      if (o.web) links.push('<a href="' + esc(o.web) + '" target="_blank" rel="noopener">Website</a>');
+      return '<article class="off rv d' + Math.min(i % 3, 3) + '">' +
+        '<span class="role">' + esc(o.role) + '</span>' +
+        '<span class="name">' + esc(o.name) + '</span>' +
+        (o.title ? '<span class="title">' + esc(o.title) + '</span>' : '') +
+        (o.place ? '<span class="place">' + esc(o.place) + '</span>' : '') +
+        (links.length ? '<span class="links">' + links.join('') + '</span>' : '') +
+      '</article>';
+    }).join('');
+    watch(box);
+
+    var past = d.getElementById('pastOfficers');
+    if (past && C.pastOfficers) {
+      past.innerHTML = C.pastOfficers.map(function(p){
+        return '<div class="past-row"><span class="yr">' + esc(p.term) + '</span><span>' + esc(p.text) + '</span></div>';
+      }).join('');
+    }
+  }
+
+  function renderCommittees(C){
+    var box = d.getElementById('comGrid'); if (!box || !C.committees) return;
+    box.innerHTML = C.committees.map(function(c, i){
+      var who = [];
+      if (c.chair) who.push('<b>Chair:</b> ' + esc(c.chair));
+      if (c.cochair) who.push('<b>Co-Chair:</b> ' + esc(c.cochair));
+      if (c.members) who.push('<b>Members:</b> ' + esc(c.members));
+      return '<article class="com rv d' + Math.min(i % 3, 3) + (c.feature ? ' feature' : '') + '">' +
+        '<h3>' + esc(c.name) + '</h3>' +
+        (who.length ? '<p class="who">' + who.join(' · ') + '</p>' : '') +
+        (c.brief ? '<p>' + esc(c.brief) + '</p>' : '') +
+      '</article>';
+    }).join('');
+    watch(box);
+  }
+
+  function renderMembership(C){
+    var box = d.getElementById('benefits'); if (!box || !get(C,'membership.benefits')) return;
+    box.innerHTML = C.membership.benefits.map(function(b){
+      return '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4 10-10" stroke-linecap="round" stroke-linejoin="round"/></svg>' + esc(b) + '</li>';
+    }).join('');
+  }
+
+  function renderMinutes(C){
+    var box = d.getElementById('minutes'); if (!box || !C.minutes) return;
+    box.innerHTML = C.minutes.map(function(m, i){
+      var yr = (m.date || '').slice(0,4);
+      var go = m.url ? '<a class="go" href="' + esc(m.url) + '" target="_blank" rel="noopener">Open &rarr;</a>'
+                     : '<span class="go">On request</span>';
+      return '<div class="arch-row rv d' + Math.min(i % 3, 3) + '"><span class="yr">' + esc(yr) + '</span>' +
+        '<span><span class="t">' + esc(m.title) + '</span><br><span class="p">' + esc(m.place || '') + ' · ' + esc(fmtDate(m.date)) + '</span></span>' +
+        go + '</div>';
+    }).join('');
+    watch(box);
+  }
+
+  function renderLinks(C){
+    var box = d.getElementById('linkcols'); if (!box || !C.linkGroups) return;
+    box.innerHTML = C.linkGroups.map(function(g, gi){
+      return '<div class="linkcol rv d' + gi + '"><h3>' + esc(g.heading) + '</h3><ul>' +
+        g.items.map(function(it){
+          var arrow = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          return it.url
+            ? '<li><a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + esc(it.label) + arrow + '</a></li>'
+            : '<li><span>' + esc(it.label) + '</span></li>';
+        }).join('') +
+      '</ul></div>';
+    }).join('');
+    watch(box);
+  }
+
+  /* modal */
+  var modal = d.getElementById('modal');
+  function openPost(id){
+    var p = NEWS.filter(function(n){ return n.id === id; })[0]; if (!p) return;
+    d.getElementById('modalDate').textContent = fmtDate(p.date);
+    d.getElementById('modalCat').textContent = p.category || '';
+    d.getElementById('modalTitle').textContent = p.title;
+    d.getElementById('modalBody').textContent = p.body || p.summary || '';
+    var l = d.getElementById('modalLink');
+    if (p.link){ l.href = p.link; l.hidden = false; } else { l.hidden = true; }
+    modal.classList.add('open'); d.body.style.overflow = 'hidden';
+    d.getElementById('modalClose').focus();
+  }
+  function closePost(){ modal.classList.remove('open'); d.body.style.overflow = ''; }
+  d.getElementById('modalClose').addEventListener('click', closePost);
+  modal.addEventListener('click', function(e){ if (e.target === modal) closePost(); });
+  d.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape') return;
+    if (modal.classList.contains('open')) closePost();
+    else if (mob.classList.contains('open')) closeMob();
+  });
+  d.addEventListener('click', function(e){
+    var post = e.target.closest && e.target.closest('.post');
+    if (post) openPost(post.dataset.id);
+  });
+  var moreBtn = d.getElementById('moreBtn');
+  if (moreBtn) moreBtn.addEventListener('click', function(){ SHOWN += 6; renderNews(); });
+
+  /* past-officers accordion */
+  d.querySelectorAll('.past-toggle').forEach(function(b){
+    b.addEventListener('click', function(){
+      b.setAttribute('aria-expanded', String(b.getAttribute('aria-expanded') !== 'true'));
+    });
+  });
+
+  /* contact form → the visitor's own mail client (no server needed) */
+  var form = d.getElementById('hapaForm'), fMsg = d.getElementById('fMsg');
+  var CONTACT_EMAIL = 'info@hellenic-psych.org';
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var fd = new FormData(form);
+    if (fd.get('_gotcha')) return;
+    var name = (fd.get('name')||'').toString().trim();
+    var email = (fd.get('email')||'').toString().trim();
+    var msg = (fd.get('message')||'').toString().trim();
+    if (!name || !email || !msg){ fMsg.textContent = 'Please add your name, your email and a message.'; return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){ fMsg.textContent = 'That email address does not look right.'; return; }
+    var subject = (fd.get('subject')||'').toString().trim() || ('Website enquiry from ' + name);
+    var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + msg;
+    window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    fMsg.textContent = 'Your email programme has opened with the message ready — press send.';
+  });
+
+  /* ------------------------------------------------------------------ *
+   * 3. LOAD content.json                                                *
+   * ------------------------------------------------------------------ */
+  function apply(C){
+    try { bindSimple(C); } catch(e){}
+    try { renderStats(C); } catch(e){}
+    try { renderWelcome(C); } catch(e){}
+    try { renderGoals(C); } catch(e){}
+    try { renderOfficers(C); } catch(e){}
+    try { renderCommittees(C); } catch(e){}
+    try { renderMembership(C); } catch(e){}
+    try { renderMinutes(C); } catch(e){}
+    try { renderLinks(C); } catch(e){}
+    NEWS = (C.news || []).slice().sort(function(a,b){ return (b.date||'').localeCompare(a.date||''); });
+    if (get(C,'contact.email')) CONTACT_EMAIL = C.contact.email;
+    renderFilters(); renderNews();
+    onScroll();
+  }
+
+  fetch('content.json?v=' + Date.now())
+    .then(function(r){ if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
+    .then(apply)
+    .catch(function(){
+      var g = d.getElementById('newsGrid');
+      if (g) g.innerHTML = '<p style="grid-column:1/-1;color:var(--ink-3)">The news feed could not be loaded. Please refresh the page.</p>';
+    });
+
+})();
+</script>
+</body>
+</html>
