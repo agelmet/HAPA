@@ -385,7 +385,7 @@ html[lang="el"] .hero h1{max-width:16ch;font-size:clamp(2.1rem,1.2rem + 3.9vw,4.
 .modal-card .mbody{padding:clamp(1.5rem,4vw,2.6rem)}
 .modal-card .meta{display:flex;gap:.7rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:.7rem}
 .modal-card h3{font-size:clamp(1.3rem,1.15rem + .8vw,1.85rem);margin-bottom:1rem;line-height:1.24}
-.modal-card p{color:var(--ink-2);white-space:pre-line}
+.modal-card p{color:var(--ink-2);white-space:pre-line;line-height:1.75;font-size:.965rem}
 .modal-close{
   position:absolute;top:clamp(.8rem,3vw,1.6rem);right:clamp(.8rem,3vw,1.6rem);width:44px;height:44px;border-radius:50%;
   border:1px solid rgba(247,246,243,.36);color:#fff;display:grid;place-items:center;font-size:1.4rem;line-height:1;
@@ -1222,7 +1222,7 @@ footer.site::before{content:"";position:absolute;right:-8%;bottom:-40%;width:min
     watch(box);
   }
 
-  var NEWS = [], SHOWN = 6, FILTER = null;
+  var NEWS = [], SHOWN = 9, FILTER = null;
   function renderNews(){
     var box = d.getElementById('newsGrid'); if (!box) return;
     var list = NEWS.filter(function(p){ return !FILTER || t(p.category) === FILTER; });
@@ -1251,7 +1251,7 @@ footer.site::before{content:"";position:absolute;right:-8%;bottom:-40%;width:min
       }).join('');
     box.querySelectorAll('button').forEach(function(b){
       b.addEventListener('click', function(){
-        FILTER = b.dataset.cat || null; SHOWN = 6;
+        FILTER = b.dataset.cat || null; SHOWN = 9;
         box.querySelectorAll('button').forEach(function(o){ o.setAttribute('aria-pressed', String(o === b)); });
         renderNews();
       });
@@ -1388,7 +1388,7 @@ footer.site::before{content:"";position:absolute;right:-8%;bottom:-40%;width:min
     if (min) openMinute(min.dataset.min);
   });
   var moreBtn = d.getElementById('moreBtn');
-  if (moreBtn) moreBtn.addEventListener('click', function(){ SHOWN += 6; renderNews(); });
+  if (moreBtn) moreBtn.addEventListener('click', function(){ SHOWN += 9; renderNews(); });
 
   d.querySelectorAll('.past-toggle').forEach(function(b){
     b.addEventListener('click', function(){
@@ -1429,7 +1429,7 @@ footer.site::before{content:"";position:absolute;right:-8%;bottom:-40%;width:min
     try { renderMinutes(); } catch(e){}
     try { renderLinks(); } catch(e){}
     NEWS = (C.news || []).slice().sort(function(a,b){ return (b.date||'').localeCompare(a.date||''); });
-    FILTER = null; SHOWN = 6;
+    FILTER = null; SHOWN = 9;
     renderFilters(); renderNews();
     onScroll();
   }
