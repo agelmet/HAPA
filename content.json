@@ -1,6 +1,6 @@
 {
   "_readme": "Every word on the HAPA website. Bilingual fields are objects: {\"en\": \"...\", \"el\": \"...\"}. Edit through admin.html.",
-  "updated": "2026-09-01",
+  "updated": "2026-09-02",
   "schema": 2,
   "site": {
     "name": "Hellenic American Psychiatric Association",
@@ -1175,8 +1175,8 @@
         "el": "Βιογραφικό του εκλεγμένου Προέδρου της HAPA, Philip J. Candilis, δημοσιευμένο στο JAAPL, με αφορμή μια πρώτη συνάντηση στο Ντένβερ κατά την ιστορική χιονοθύελλα του συνεδρίου της AAPL."
       },
       "body": {
-        "en": "The Journal of the American Academy of Psychiatry and the Law has published a biography of Philip J. Candilis, MD, DFAPA — HAPA President-Elect and Immediate Past President. The piece traces a career in forensic psychiatry, medical ethics and professional education, from Massachusetts to Saint Elizabeths Hospital in Washington, DC.",
-        "el": "Το The Journal of the American Academy of Psychiatry and the Law δημοσίευσε βιογραφικό του Philip J. Candilis, MD, DFAPA — εκλεγμένου Προέδρου και άμεσα τέως Προέδρου της HAPA. Το κείμενο παρακολουθεί μια πορεία στη δικαστική ψυχιατρική, την ιατρική δεοντολογία και την επαγγελματική εκπαίδευση, από τη Μασαχουσέτη έως το Saint Elizabeths Hospital στην Ουάσιγκτον."
+        "en": "I first met Phil Candilis in Denver during the historic American Academy of Psychiatry and the Law (AAPL) blizzard of 1997. We were both attending as fellow members of the Ethics Committee. Phil would continue as the longest sitting ethics committee member in AAPL's history, becoming chair some 15 years later.\n\nThe blizzard stranded us in one of the satellite hotels that was quickly running out of food and drink, but we never ran out of topics for engaging conversation and contagious laughter. Those hotel conversations would become phone calls during the year, dinners with our families at future AAPL meetings, and outings with our kids in conference cities with the best aquariums. For Phil, the professional and personal were always connected in one integrated whole.\n\nPhilip J. Candilis MD Biography",
+        "el": ""
       },
       "image": "assets/philip-candilis-md.webp",
       "link": ""
@@ -1197,8 +1197,8 @@
         "el": "Αγαπητά μέλη της HAPA — σας προσκαλούμε θερμά στην Ετήσια Συνάντησή μας, που πραγματοποιείται παράλληλα με την Ετήσια Συνάντηση της APA 2025."
       },
       "body": {
-        "en": "Dear HAPA members,\n\nYou are cordially invited to attend our Annual HAPA Meeting, held in conjunction with the 2025 APA Annual Meeting. As always the meeting takes place on the Tuesday of the APA week, from 6:00 to 8:00 PM, and is followed by a Dutch-treat dinner at a local restaurant.",
-        "el": "Αγαπητά μέλη της HAPA,\n\nΣας προσκαλούμε θερμά στην Ετήσια Συνάντηση της HAPA, που πραγματοποιείται παράλληλα με την Ετήσια Συνάντηση της APA 2025. Όπως πάντα, η συνάντηση γίνεται την Τρίτη της εβδομάδας της APA, από τις 6:00 έως τις 8:00 μ.μ., και ακολουθεί δείπνο σε τοπικό εστιατόριο με ατομική πληρωμή."
+        "en": "Dear HAPA members,\n\nYou are cordially invited to attend our Annual HAPA Meeting, held in conjunction with the 2025 APA Meeting. The meeting will take place on Tuesday, May 20th, from 6:00 to 7:00 PM, in the San Fernando Room (lobby level) of The Westin Bonaventure Hotel and Suites, located at 404 S. Figueroa Street, Los Angeles, CA 90071, United States.\n\nKind Regards,\n\nGeorge Karampoutakis\n\nHAPA President",
+        "el": ""
       },
       "image": "assets/hapa-24th-annual-meeting-flyer.webp",
       "link": ""
@@ -1219,8 +1219,8 @@
         "el": "Εκπρόσωποι της American Psychiatric Association και της HAPA συναντήθηκαν με τον Υφυπουργό Υγείας για τη συνεργασία σε θέματα πολιτικής ψυχικής υγείας."
       },
       "body": {
-        "en": "Representatives of the American Psychiatric Association and the Hellenic American Psychiatric Association met the Deputy Minister of Health, Mr Dimitris Vartzopoulos, as part of a programme of meetings across Greece on international collaboration in psychiatry.",
-        "el": "Εκπρόσωποι της American Psychiatric Association και της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας συναντήθηκαν με τον Υφυπουργό Υγείας κ. Δημήτρη Βαρτζόπουλο, στο πλαίσιο κύκλου συναντήσεων σε όλη την Ελλάδα για τη διεθνή συνεργασία στην ψυχιατρική."
+        "en": "Meeting of representatives of the American Psychiatric Association and the Hellenic American Psychiatric Association, HAPA with the Deputy Minister of Health Mr. Dimitris Vartzopoulos with the ultimate goal of providing expertise in the field of responding to natural environmental disasters and crisis situations, with regard to the mental health of citizens and those involved in management, as well as investigation of cooperation in the field of Psychiatry to modernize the services provided.\n\nMinistry of Health",
+        "el": ""
       },
       "image": "assets/hapa-deputy-minister-health-vartzopoulos.webp",
       "link": ""
@@ -1241,8 +1241,8 @@
         "el": "Ο Dr P. Candilis και ο Dr V. Pozios της APA, μαζί με τον Πρόεδρο της HAPA, συναντήθηκαν με συναδέλφους στον ΕΟΔΥ στην Αθήνα και στο Πανεπιστήμιο Θεσσαλίας."
       },
       "body": {
-        "en": "Representatives of the American Psychiatric Association, Dr P. Candilis and Dr V. Pozios, together with the President of the Hellenic American Psychiatric Association, met colleagues at EODY in Athens and at EODY in the University of Thessaly, to discuss public mental health, climate and community psychiatry.",
-        "el": "Οι εκπρόσωποι της American Psychiatric Association, Dr P. Candilis και Dr V. Pozios, μαζί με τον Πρόεδρο της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας, συναντήθηκαν με συναδέλφους στον ΕΟΔΥ στην Αθήνα και στον ΕΟΔΥ του Πανεπιστημίου Θεσσαλίας, για τη δημόσια ψυχική υγεία, την κλιματική κρίση και την κοινοτική ψυχιατρική."
+        "en": "Meeting of representatives of the American Psychiatric Association Dr P.Candilis and Dr V.Pozios, and the President of the Hellenic American Psychiatric Association (HAPA), Dr G.Karampoutakis, in EODY in Athens and in EODY in the University of Thessaly, School of Health Ssiences, Faculty of Medicine, Department of Hygiene & Epidimiology, with Prof. S. Hadjichristodoulou (President of EODY) and Dr G. Rachiotis (Professor of Occupational Health, Univ. of Thessaly).\n\nThe participants agreed on the development of a work-group of mental health experts to support and study the effects of climate change and resulting disasters especially in mental health, including trauma, substance use, and intimate partner violence.",
+        "el": ""
       },
       "image": "assets/hapa-eody-athens.webp",
       "link": ""
@@ -1263,8 +1263,8 @@
         "el": "Εκπρόσωποι της APA και ο Πρόεδρος της HAPA συναντήθηκαν με τον Δήμαρχο Ρήγα Φεραίου για την παροχή υπηρεσιών ψυχικής υγείας στην κοινότητα."
       },
       "body": {
-        "en": "The representatives of the American Psychiatric Association, Dr P. Candilis and Dr V. Pozios, and the President of the Hellenic American Psychiatric Association met the Mayor of the Rigas Feraios Municipality to discuss mental health provision in the community.",
-        "el": "Οι εκπρόσωποι της American Psychiatric Association, Dr P. Candilis και Dr V. Pozios, και ο Πρόεδρος της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας συναντήθηκαν με τον Δήμαρχο Ρήγα Φεραίου για την παροχή υπηρεσιών ψυχικής υγείας στην κοινότητα."
+        "en": "The Representatives of the American Psychiatric Association (APA), Dr P.Candilis and Dr V.Pozios, and the President of the Hellenic American Psychiatric Association (HAPA), Dr G.Karampoutakis, met with the Mayor of the Rigas Feraios Municipality, Mr D.Nassika and his psychology/social work staff, who made two presentations on the effects of the disaster on the local community. Resilience protocols and a debriefing program were identified as critically useful for supporting emergency personnel on the front lines.",
+        "el": ""
       },
       "image": "assets/hapa-rigas-feraios-municipality.webp",
       "link": ""
@@ -1285,8 +1285,8 @@
         "el": "Εκπρόσωποι της APA και της HAPA επισκέφθηκαν το Κέντρο Ψυχικής Υγείας Βόλου και συναντήθηκαν με τον διοικητή του νοσοκομείου, κ. Γιάννη Ντόκο."
       },
       "body": {
-        "en": "Representatives of the American Psychiatric Association and the Hellenic American Psychiatric Association visited the Mental Health Centre in Volos and met the hospital's director, Mr Giannis Ntokos.",
-        "el": "Εκπρόσωποι της American Psychiatric Association και της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας επισκέφθηκαν το Κέντρο Ψυχικής Υγείας Βόλου και συναντήθηκαν με τον διοικητή του νοσοκομείου, κ. Γιάννη Ντόκο."
+        "en": "Meeting of the American Psychiatric Association representatives and the Hellenic American Psychiatric Association in Mental Health Center, in Volos, with the Hospital's director Mr Giannis Ntokos, the Scientific Manager of the Mobile Unit of the NGO \"DIODOS\", Mr. Houstoulakis, and Mr. S. Papageorgiou.\n\nThe participants emphasized the usefulness of templates for a regional needs assessment given the challenges of annual floods and fire.",
+        "el": ""
       },
       "image": "assets/hapa-volos-mental-health-centre.webp",
       "link": ""
@@ -1307,8 +1307,8 @@
         "el": "Στη συνάντηση στη Λάρισα υπογραμμίστηκε το ενδιαφέρον της Υγειονομικής Περιφέρειας για συνεργασία σε υπηρεσίες ψυχικής υγείας."
       },
       "body": {
-        "en": "A meeting with Mr S. Papageorgiou, the Director of the 5th Regional Health Authority in Larisa, at which the Authority's interest in collaboration on mental health services was emphasised.",
-        "el": "Συνάντηση με τον κ. Σ. Παπαγεωργίου, Διοικητή της 5ης Υγειονομικής Περιφέρειας στη Λάρισα, όπου τονίστηκε το ενδιαφέρον της Περιφέρειας για συνεργασία σε υπηρεσίες ψυχικής υγείας."
+        "en": "Meeting with Mr. S. Papageorgiou, the Director of the 5th Regional Heath Authority in Larisa, where it was emphasized the Authority's interest in disaster protocols and resilience training like that provided by the George Washington University Global Mental Health Program\n\nA presentation of data and interventions by Prof of Neurology Mr Th. Dardiotis (neurology staff of NGO \"EPAPSY\") and the NGO \"The Smile of the Child\" also took place and demonstrated the capacity of the region to provide intervention even under dire circumstances",
+        "el": ""
       },
       "image": "assets/hapa-papageorgiou-larisa.webp",
       "link": ""
@@ -1329,8 +1329,8 @@
         "el": "Οι εκπρόσωποι συζήτησαν τη διάσταση της ψυχικής υγείας στην κλιματική κρίση και την πολιτική προστασία."
       },
       "body": {
-        "en": "Representatives of the American Psychiatric Association and the Hellenic American Psychiatric Association met the Deputy Minister of Climate Crisis and Civil Protection, Mr Christos Triantopoulos, to discuss the mental health dimension of the climate crisis.",
-        "el": "Εκπρόσωποι της American Psychiatric Association και της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας συναντήθηκαν με τον Υφυπουργό Κλιματικής Κρίσης και Πολιτικής Προστασίας κ. Χρήστο Τριαντόπουλο, για τη διάσταση της ψυχικής υγείας στην κλιματική κρίση."
+        "en": "Meeting of representatives of the American Psychiatric Association and the Hellenic American Psychiatric Association, HAPA with the Deputy Minister of Climate Crisis and Civil Protection Mr. Chistos Triantopoulos with the ultimate goal of providing expertise in the field of responding to natural environmental disasters and crisis situations, with regard to the mental health of citizens and those involved in management.",
+        "el": ""
       },
       "image": "assets/hapa-deputy-minister-climate-triantopoulos.webp",
       "link": ""
@@ -1358,6 +1358,28 @@
       "link": ""
     },
     {
+      "id": "n2024-presidential-session",
+      "date": "2024-05-11",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "2024 APA Meeting in New York – Presidential Session: \"Models of International Collaboration for Psychiatry\"",
+        "el": "Συνέδριο APA 2024 στη Νέα Υόρκη – Προεδρική Συνεδρία: \"Models of International Collaboration for Psychiatry\""
+      },
+      "summary": {
+        "en": "HAPA takes part in the Presidential Session on models of international collaboration for psychiatry at the 2024 APA Annual Meeting in New York.",
+        "el": "Η HAPA συμμετέχει στην Προεδρική Συνεδρία για τα μοντέλα διεθνούς συνεργασίας στην ψυχιατρική, στο Ετήσιο Συνέδριο της APA 2024 στη Νέα Υόρκη."
+      },
+      "body": {
+        "en": "Grateful and proud to be a part of this global research team.\n\nMany thanks to my colleagues and especially to Dr Pozios Vasilis.",
+        "el": "Με ευγνωμοσύνη και υπερηφάνεια για τη συμμετοχή σε αυτή τη διεθνή ερευνητική ομάδα.\n\nΘερμές ευχαριστίες στους συναδέλφους μου και ιδιαίτερα στον Δρ Βασίλη Πόζιο."
+      },
+      "image": "",
+      "link": ""
+    },
+    {
       "id": "n2024-24th-meeting",
       "date": "2024-05-07",
       "category": {
@@ -1373,10 +1395,32 @@
         "el": "Η 24η ετήσια συνάντηση της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας πραγματοποιήθηκε την Τρίτη 7 Μαΐου στο New York Marriott Marquis."
       },
       "body": {
-        "en": "The 24th annual meeting of the Hellenic American Psychiatric Association took place on Tuesday 7 May at the New York Marriott Marquis, held in conjunction with the APA Annual Meeting, and was followed by the traditional Dutch-treat dinner.",
-        "el": "Η 24η ετήσια συνάντηση της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας πραγματοποιήθηκε την Τρίτη 7 Μαΐου στο New York Marriott Marquis, παράλληλα με την Ετήσια Συνάντηση της APA, και ακολούθησε το καθιερωμένο δείπνο."
+        "en": "The annual meeting of the Hellenic American Psychiatric Association took place on Tuesday 7th May in New York Marriott Marquis at Ziegfeld room 4th floor with the partitipation of Greek colleagues and mental health professionals who traveled from Greece to New York, as well as the participation of the representatives of the American Psychiatric Association (APA), After the session was over the annual HAPA dinner was held in Greek Chef's Maria Loi Restaurant (Loi Estiatorio).\n\nWe renew our date in Los Angeles, May 17-21, 2025.",
+        "el": ""
       },
       "image": "assets/hapa-annual-meeting-2024-new-york.webp",
+      "link": ""
+    },
+    {
+      "id": "n2024-annual-meeting-announcement",
+      "date": "2024-02-12",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "HAPA 2024 Annual Meeting — announcement",
+        "el": "Ετήσια Συνέλευση HAPA 2024 — ανακοίνωση"
+      },
+      "summary": {
+        "en": "The invitation to the 24th HAPA Annual Meeting at the Jacob Javits Convention Center in New York, in connection with the APA 2024 Annual Meeting.",
+        "el": "Η πρόσκληση για την 24η Ετήσια Συνέλευση της HAPA στο Jacob Javits Convention Center στη Νέα Υόρκη, σε συνδυασμό με το Ετήσιο Συνέδριο της APA 2024."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\nHAPA 24th ANNUAL MEETING\n\nTuesday, May 7, 2024\n\nJacob Javits Convention Center\n\nRoom: TBA\n\nTime: TBA\n\nIN CONNECTION WITH THE APA 2024 ANNUAL MEETING\n\nThe Hellenic American Psychiatric Association would like to invite you to join us in our Annual Meeting, in New York.\n\nTo attend the meeting, YOU MUST pre-register on the web by sending an email to info@hapa.gr\n\nLearn more about HAPA & Fill out the Membership Application on the website: www.hellenic-psych.org\n\nSee you in New York.",
+        "el": ""
+      },
+      "image": "",
       "link": ""
     },
     {
@@ -1395,8 +1439,8 @@
         "el": "Ο Dr Philip Candilis παρουσίασε δεδομένα κατά του ρατσισμού από τη συνεργασία της HAPA με το Πανεπιστήμιο George Washington."
       },
       "body": {
-        "en": "Dr Philip Candilis, Immediate Past President of HAPA, presented anti-racism data drawn from the HAPA collaboration with George Washington University.",
-        "el": "Ο Dr Philip Candilis, άμεσα τέως Πρόεδρος της HAPA, παρουσίασε δεδομένα κατά του ρατσισμού από τη συνεργασία της HAPA με το Πανεπιστήμιο George Washington."
+        "en": "Dr. Philip Candilis, Immediate Past President of HAPA, presenting anti-racism data from the HAPA collaboration with George Washington University at the Athens Institute for Education and Research, May 2, 2023. Dr. Candilis also participated in a roundtable discussion of national experiences with COVID on May 1.",
+        "el": ""
       },
       "image": "",
       "link": ""
@@ -1417,8 +1461,52 @@
         "el": "Τρίτη 23 Μαΐου 2023, Hilton Union Square, Αίθουσα: Union Square 22."
       },
       "body": {
-        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\nHAPA 23rd Annual Meeting\nTuesday, 23 May 2023\nHilton Union Square — Room: Union Square 22\nHeld in conjunction with the APA Annual Meeting.",
-        "el": "ΕΛΛΗΝΟΑΜΕΡΙΚΑΝΙΚΗ ΨΥΧΙΑΤΡΙΚΗ ΕΤΑΙΡΕΙΑ\n23η Ετήσια Συνάντηση\nΤρίτη, 23 Μαΐου 2023\nHilton Union Square — Αίθουσα: Union Square 22\nΠαράλληλα με την Ετήσια Συνάντηση της APA."
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\nHAPA 23rd ANNUAL MEETING Tuesday, May 23, 2023\n\nHilton Union Square Room: Union Square 22 Time: 6:00PM- 7:00PM CDT\n\nIN CONNECTION WITH THE APA 2023 ANNUAL MEETING\n\nThe Hellenic American Psychiatric Association would like to invite you join us in our Annual Meeting, in San Francisco.\n\nTo attend the meeting, YOU MUST pre-register on the web by sending email to info@hapa.gr\n\nLearn more about HAPA & Fill out the Membership Application on the website: www.hellenic-psych.org\n\nSee you in San Francisco,\n\nGeorge Karampoutakis President",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2023-candilis-shannon",
+      "date": "2023-05-13",
+      "category": {
+        "en": "Members & awards",
+        "el": "Μέλη & διακρίσεις"
+      },
+      "title": {
+        "en": "Dr. Philip Candilis and Maura Shannon",
+        "el": "Ο Δρ Philip Candilis και η Maura Shannon"
+      },
+      "summary": {
+        "en": "Dr. Philip Candilis and Maura Shannon at the \"Women Artists United For Children\" exhibition at the Zoumboulakis Gallery in Athens.",
+        "el": "Ο Δρ Philip Candilis και η Maura Shannon στην έκθεση \"Women Artists United For Children\" στην γκαλερί Ζουμπουλάκη στην Αθήνα."
+      },
+      "body": {
+        "en": "Dr. Philip Candilis and Maura Shannon at the exhibition by \"Women Artists United For Children,\"\n\nat the Zoumboulakis Gallery in Kolonaki Square, Athens, on May 4.",
+        "el": "Ο Δρ Philip Candilis και η Maura Shannon στην έκθεση των \"Women Artists United For Children\",\n\nστην γκαλερί Ζουμπουλάκη, στην πλατεία Κολωνακίου, Αθήνα, στις 4 Μαΐου."
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2023-lymberis-benson-award",
+      "date": "2023-05-09",
+      "category": {
+        "en": "Members & awards",
+        "el": "Μέλη & διακρίσεις"
+      },
+      "title": {
+        "en": "HAPA announcement — Maria T. Lymberis, MD receives the 2023 Benson Award",
+        "el": "Ανακοίνωση HAPA — Η Maria T. Lymberis, MD λαμβάνει το Βραβείο Benson 2023"
+      },
+      "summary": {
+        "en": "HAPA Founder and past President Maria T. Lymberis, M.D. is selected by the Senior Psychiatrist Organization of the APA as the recipient of the 2023 Benson Award.",
+        "el": "Η ιδρύτρια και τέως Πρόεδρος της HAPA, Maria T. Lymberis, M.D., επιλέγεται από τον Οργανισμό Senior Psychiatrists της APA ως αποδέκτρια του Βραβείου Benson 2023."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\nThe board and members of the Hellenic American Psychiatric Association are proud to announce that HAPA Founder and past President Maria T. Lymberis, M.D. has been selected by the Senior Psychiatrist Organization of the American Psychiatric Association as the recipient of the 2023 Benson Award, in honor of her pioneering work in the APA.\n\nGeorge Karampoutakis\n\nPresident of the Hellenic American Psychiatric Association",
+        "el": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\nΤο διοικητικό συμβούλιο και τα μέλη της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας ανακοινώνουν με υπερηφάνεια ότι η ιδρύτρια και τέως Πρόεδρος της HAPA, Maria T. Lymberis, M.D., επιλέχθηκε από τον Οργανισμό Senior Psychiatrists της American Psychiatric Association ως αποδέκτρια του Βραβείου Benson 2023, προς τιμήν του πρωτοποριακού της έργου στην APA.\n\nΓεώργιος Καραμπουτάκης\n\nΠρόεδρος της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας"
       },
       "image": "",
       "link": ""
@@ -1439,8 +1527,8 @@
         "el": "Δευτέρα 10 Οκτωβρίου 2022, 20:00 – 21:30 (ώρα Ελλάδας). «Η ψυχική υγεία για όλους, παγκόσμια προτεραιότητα»."
       },
       "body": {
-        "en": "World Mental Health Day\nMonday 10 October 2022\nOnline event — 20:00 to 21:30 (Athens time)\n“Make Mental Health for All a Global Priority.”",
-        "el": "Παγκόσμια Ημέρα Ψυχικής Υγείας\nΔευτέρα 10 Οκτωβρίου 2022\nΔιαδικτυακή εκδήλωση — 20:00 έως 21:30 (ώρα Ελλάδας)\n«Η ψυχική υγεία για όλους, παγκόσμια προτεραιότητα»."
+        "en": "World Mental Health Day\n\nMonday October 10th 2022\n\nOnline Event – 20:00 – 21:30 (Athens time)\n\n\"Make Mental Health & Well-being For All A Global Priority\"\n\nTopics:\n\n\"Lessons from the Pandemic – What we learned about stress and wellness from COVID across the globe\"\n\nPhilip Candilis, Professor of Psychiatry of the School of Medicine and Health Sciences at George Washington University, President Elect of the Hellenic American Psychiatric Association\n\n\"The role of sports in wellness and mental health\"\n\nAlexandros Oikonomou, Psychologist, MSc Mental Health, Medical School University of Athens, President of the European Network of Active Living for Mental Health\n\n\"Mental health as a priority in emergency situations, mass disasters and war conflicts\"\n\nPanagiotis Chondros, Psychologist MSc, pgDip, Phd, Head of Mental Health and Psychosocial Support in the Dnipro region, Ukraine, Doctors of the World Germany\n\nCommentary:\n\nAchilleas Oikonomou, Psychiatrist, President of the Hellenic Association of Professional Psychiatrists\n\nCoordination:\n\nGeorgios Karampoutakis, Psychiatrist, President of the Hellenic American Psychiatric Association\n\nSend e-mail to: info@hapa.gr to register and receive the link to the event.",
+        "el": ""
       },
       "image": "",
       "link": ""
@@ -1461,8 +1549,8 @@
         "el": "Η Ελληνοαμερικανική Ψυχιατρική Εταιρεία ανακοινώνει με χαρά τον ορισμό νέων μελών στο διοικητικό της συμβούλιο."
       },
       "body": {
-        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\nThe Hellenic American Psychiatric Association is pleased to announce the appointment of new members to its board for the 2022–2025 term.",
-        "el": "ΕΛΛΗΝΟΑΜΕΡΙΚΑΝΙΚΗ ΨΥΧΙΑΤΡΙΚΗ ΕΤΑΙΡΕΙΑ\n\nΗ Ελληνοαμερικανική Ψυχιατρική Εταιρεία ανακοινώνει με χαρά τον ορισμό νέων μελών στο διοικητικό της συμβούλιο για τη θητεία 2022–2025."
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\nAnnouncement of Appointment of New Board Members\n\nThe Hellenic American Psychiatric Association is pleased to announce the results of this year's election on May 24th in New Orleans and welcome our new officers:\n\nPresident: George Karampoutakis\n\nPresident elect: Philip Candilis\n\nSecretaries: Eva Theodosiadis\n\nStefania Chaikali\n\nTreasurers: Lilian Markaki\n\nKatina Mathews-Ferrari\n\nCouncilors: Georgios Pagkalos\n\nAchilleas Oikonomou\n\nGeorgios Demetriades\n\nEmmanouil Tsalamanios",
+        "el": ""
       },
       "image": "",
       "link": ""
@@ -1483,8 +1571,8 @@
         "el": "Τρίτη 24 Μαΐου 2022, Hilton New Orleans Riverside, αίθουσα Durham, από τις 6:00 μ.μ."
       },
       "body": {
-        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\nHAPA 22nd Annual Meeting\nTuesday, 24 May 2022\nHilton New Orleans Riverside — Durham Room\nTime: 6:00 PM – 8:00 PM",
-        "el": "ΕΛΛΗΝΟΑΜΕΡΙΚΑΝΙΚΗ ΨΥΧΙΑΤΡΙΚΗ ΕΤΑΙΡΕΙΑ\n22η Ετήσια Συνάντηση\nΤρίτη, 24 Μαΐου 2022\nHilton New Orleans Riverside — Αίθουσα Durham\nΏρα: 6:00 μ.μ. – 8:00 μ.μ."
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\nHAPA 22nd ANNUAL MEETING\n\nTuesday, May 24, 2022\n\nHilton New Orleans Riverside\n\nDurham Room\n\nTime: 6:00PM- 7:30PM CDT\n\nIN CONNECTION WITH THE APA 2022 ANNUAL MEETING\n\nThis year HAPA features a very special lecture in the first in person meeting\n\nafter the pandemic:\n\n\"The Hellenic American Psychiatric Association,\n\ntwo decades of transatlantic scientific networking\"\n\nBy\n\nMaria T. Lymberis, MD\n\nHAPA, Inc. Founder and former President\n\nTo attend the meeting, YOU MUST pre-register on the web by sending email to: info@hapa.gr\n\nLearn more about HAPA & Fill out the Membership Application on the website:\n\nwww.hellenic-psych.org\n\nSee you in New Orleans",
+        "el": ""
       },
       "image": "",
       "link": ""
@@ -1527,8 +1615,8 @@
         "el": "Δευτέρα 3 Μαΐου 2021, διαδικτυακά. 2:00 – 4:00 μ.μ. EST / 9:00 – 11:00 μ.μ. ώρα Ελλάδας."
       },
       "body": {
-        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\nHAPA 21st Annual Meeting\nMonday, 3 May 2021 — virtual\nTime: 2:00 PM – 4:00 PM EST · 9:00 PM – 11:00 PM Athens time",
-        "el": "ΕΛΛΗΝΟΑΜΕΡΙΚΑΝΙΚΗ ΨΥΧΙΑΤΡΙΚΗ ΕΤΑΙΡΕΙΑ\n21η Ετήσια Συνάντηση\nΔευτέρα, 3 Μαΐου 2021 — διαδικτυακά\nΏρα: 2:00 – 4:00 μ.μ. EST · 9:00 – 11:00 μ.μ. ώρα Ελλάδας"
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\nHAPA 21st ANNUAL MEETING\n\nMonday May 3rd 2021\n\nVirtual\n\nTime: 2:00PM- 4:00PM EST, 9:00PM – 11:00 EEST\n\nIN CONNECTION WITH THE APA 2021 ANNUAL MEETING\n\nThis year HAPA features a very special scientific program by distinguished Mental Health Professionals in Greece, the US and the Diaspora.\n\n\"Mental and Moral Aspects of the Pandemic in Hellas and the Hellenic Diaspora\"\n\nCoordinators:\n\nGeorgios Karampoutakis, MD, MSc, PhD, HAPA's President-Elect\n\nGeorgios Pagkalos, MD, FECSM, IDFAPA, HAPA's Secretary\n\nSpeakers:\n\n1. Stephen N. Xenakis, MD\n\nExecutive Board, the Center for Ethics and the Rule of Law, University of Pennsylvania Law School, Adjunct Professor at the Uniformed Services University of Health Sciences, of the Department of Defense, and Program Director, COVID Resilience Campaign, Silver Hill Hospital (New Canaan, Connecticut).\n\nBrigadier General (Ret), U.S. Army\n\n\"Moral Injury – Impact of the Pandemic.\"\n\n2. Argyris Stringaris, MD, PhD, FRCPsych\n\nSenior Investigator, Chief of Section for Clinical & Computational Psychiatry, NIMH\n\nProfessor of Clinical Psychiatry, Georgetown University\n\nVisiting Professor of Psychiatry, King's College London\n\nPresident Elect (2019-2021) International Society for Research in Child and Adolescent Psychopathology\n\n\"The consequences of the COVID pandemic on youth mental health\"\n\nAnastasia Tsakiri\n\nConsultant in Child and Adolescent Psychiatry, Orion GAU impatient CAMHS Unit and Nova Psychiatric Intense Care Unit, Humber NHS Foundation Trust\n\n\"Impact of covid 19 pandemic on admissions in General Adolescents Units (GAU) in UK\".\n\nCommentary\n\nPhilip J. Candilis, MD, DFAPA\n\nPresident, Hellenic American Psychiatric Association\n\nDirector of Medical Affairs, Saint Elizabeths Hospital, Washington DC\n\nProfessor of Psychiatry, George Washington University School of Medicine and Health Sciences\n\nTo attend the meeting, YOU MUST pre-register on the web by sending email to info@hapa.gr\n\nLearn more about HAPA & Fill out the Membership Application on the website: www.hellenic-psych.org\n\nSee you VIRTUALLY.",
+        "el": ""
       },
       "image": "",
       "link": ""
@@ -1622,6 +1710,50 @@
       "link": ""
     },
     {
+      "id": "n2019-pharma-health-conference",
+      "date": "2019-07-22",
+      "category": {
+        "en": "Advocacy",
+        "el": "Διεκδίκηση"
+      },
+      "title": {
+        "en": "10th Pharma & Health Conference in Athens",
+        "el": "10ο Συνέδριο Pharma & Health στην Αθήνα"
+      },
+      "summary": {
+        "en": "HAPA President-Elect Dr George Karampoutakis discusses mental health in Greece with the Minister and Deputy Minister of Health at the 10th Pharma & Health Conference.",
+        "el": "Ο εκλεγμένος Πρόεδρος της HAPA, Δρ Γεώργιος Καραμπουτάκης, συζητά για την ψυχική υγεία στην Ελλάδα με τον Υπουργό και τον Υφυπουργό Υγείας στο 10ο Συνέδριο Pharma & Health."
+      },
+      "body": {
+        "en": "Dr. George Karampoutakis, President-Elect, represented the HAPA Board of Directors at the Breakfast Meeting just before the 10th Pharma & Health Conference in Athens. During the meeting he had the opportunity to discuss among the others with the new elected Minister of Health Dr. Vassilis Kikilias and the Deputy Minister of Health Mr. Vasilis Kontozamanis about critical issues of mental health in Greece and the potential of the HAPA's established collaborations with prestigious US Universities and Psychiatric Associations to be helpful for the Government in the demanding efforts for public health.",
+        "el": "Ο Δρ Γεώργιος Καραμπουτάκης, εκλεγμένος Πρόεδρος, εκπροσώπησε το Διοικητικό Συμβούλιο της HAPA στο Breakfast Meeting που προηγήθηκε του 10ου Συνεδρίου Pharma & Health στην Αθήνα. Στη διάρκειά του είχε την ευκαιρία να συζητήσει, μεταξύ άλλων, με τον νεοεκλεγέντα Υπουργό Υγείας Δρ Βασίλη Κικίλια και τον Υφυπουργό Υγείας κ. Βασίλη Κοντοζαμάνη για κρίσιμα ζητήματα ψυχικής υγείας στην Ελλάδα και για τη δυνατότητα οι καθιερωμένες συνεργασίες της HAPA με έγκριτα Πανεπιστήμια και Ψυχιατρικές Εταιρείες των ΗΠΑ να φανούν χρήσιμες στην Κυβέρνηση στις απαιτητικές προσπάθειες για τη δημόσια υγεία."
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2019-20th-meeting-agenda",
+      "date": "2019-05-15",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "20th HAPA Annual Meeting — Agenda",
+        "el": "20ή Ετήσια Συνέλευση HAPA — Ημερήσια διάταξη"
+      },
+      "summary": {
+        "en": "The agenda of the 20th HAPA Annual Meeting in San Francisco, including the keynote address and presentations by international guests.",
+        "el": "Η ημερήσια διάταξη της 20ής Ετήσιας Συνέλευσης της HAPA στο Σαν Φρανσίσκο, με την κεντρική ομιλία και τις παρουσιάσεις των διεθνών προσκεκλημένων."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\n20th HAPA ANNUAL MEETING\n\n5/21/19\n\nSan Francisco, CA\n\nAGENDA\n\nPhilip Candilis, MD — Welcome/Introductions\n\nMaria T. Lymberis, MD — Approval of HAPA 2018 Minutes\n\nPhilip Candilis, MD — President's Report\n\nGeorge Karampoutakis, MD — President-elect's Report\n\nKatina Matthews-Ferrari, MD — Treasurer's Report\n\nNick Togias, MD\n\nArthur Papas, MD — Membership Chair's Report\n\nNominations/Elections update\n\nNew Business\n\nKeynote address: Achilleas Economou, MD, President, Hellenic Association of Professional Psychiatrists\n\n\"The impact of disasters on mental health: The Greek experience.\"\n\nPresentations by international guests:\n\nGeorgios Dimitraidis, MD, Client-centered psychotherapist, Major (Medical Directorate), Hellenic Army General Staff\n\n\"Epicurus and psychotherapy: Challenging the new era with old tools.\"\n\nGeorgios Pagkalos, MD, MC (Army), FECSM, IFAPA\n\n\"Sexology and sexual medicine in the Greek psychiatric community.\"\n\nAdjournment",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
       "id": "n2019-presidents-report",
       "date": "2019-03-14",
       "category": {
@@ -1637,8 +1769,52 @@
         "el": "Philip Candilis, MD — η έκθεση του Προέδρου προς την 20ή Ετήσια Συνάντηση."
       },
       "body": {
-        "en": "HAPA President's Report for the 20th HAPA Annual Meeting\nPhilip Candilis, MD — 14 March 2019.",
-        "el": "Έκθεση του Προέδρου της HAPA για την 20ή Ετήσια Συνάντηση\nPhilip Candilis, MD — 14 Μαρτίου 2019."
+        "en": "HAPA President's Report for the 20th HAPA Annual meeting\n\nPhilip Candilis, MD\n\nMarch 14, 2019\n\nDuring this past year, HAPA has seen enormous energy from the collaboration with our HAPA Greek colleagues. We have conducted a series of initiatives from the participation in the Salonika Expo in September, the inauguration of the first HAPA International Conference at the War Museum in Athens, to consultations on our work with refugees in November.\n\nHAPA's presence at the Salonika Expo, organized expertly by Drs. Karampoutakis and Pagkalos, allowed us to meet our colleagues in academia, law enforcement, and politics, while the HAPA conference in Athens brought in Drs. Lymberis, Polyniki, and Candilis to talk about current projects from our centers.\n\nDr. Karampoutakis consulted to our work with the NGOs (training on trauma and resilience), while opening doors to government agencies with an interest in forensic assessment, especially risk and radicalization. We plan on a future training in the US for our Greek colleagues with an interest in forensic psychiatry; this is tentatively planned for the week prior to APA 2020, with a faculty from the Washington DC programs.\n\nResearch HAPA projects for our teams include a survey of radicalization influences on inmates and a survey of aid-workers on the risks arising from refugees. These can be important contributions to the discussion of how nations manage immigration and refugee crises.\n\nManagement of our website has now shifted to Greece, with a number of important postings there and on social media about the educational efforts of our Greek colleagues, especially Dr. Pagkalos.\n\nWe look forward to another fruitful year in 2019-2020.",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2019-school-bullying-day",
+      "date": "2019-02-27",
+      "category": {
+        "en": "Events",
+        "el": "Εκδηλώσεις"
+      },
+      "title": {
+        "en": "Greek National Day against School Bullying",
+        "el": "Πανελλήνια Ημέρα κατά της Σχολικής Βίας"
+      },
+      "summary": {
+        "en": "A public awareness scientific activity co-organised by HAPA, the Hellenic American College BSPsy Program, Helpis and ΜΙΤΟΣ.",
+        "el": "Επιστημονική εκδήλωση ευαισθητοποίησης του κοινού, συνδιοργανωμένη από την HAPA, το BSPsy Program του Hellenic American College, τη Helpis και τον ΜΙΤΟ."
+      },
+      "body": {
+        "en": "On the occasion of the Greek National Day against School Bullying we are thrilled to invite you on March 6th at the public awareness scientific activity, co-organized by the Hellenic American College /BSPsy Program, the Hellenic American Psychiatric Association, HAPA, the Helpis and the ΜΙΤΟΣ Εταιρεία Ψυχικής Υγείας & Κοινωνικών Παρεμβάσεων.\n\nRegister for your free entrance at the event!\n\nhttps://www.eventbrite.com/e/57375159647",
+        "el": "Με αφορμή την Πανελλήνια Ημέρα κατά της Σχολικής Βίας, σας προσκαλούμε με χαρά στις 6 Μαρτίου στην επιστημονική εκδήλωση ευαισθητοποίησης του κοινού, που συνδιοργανώνουν το Hellenic American College /BSPsy Program, η Hellenic American Psychiatric Association (HAPA), η Helpis και ο ΜΙΤΟΣ Εταιρεία Ψυχικής Υγείας & Κοινωνικών Παρεμβάσεων.\n\nΔηλώστε συμμετοχή για δωρεάν είσοδο στην εκδήλωση!\n\nhttps://www.eventbrite.com/e/57375159647"
+      },
+      "image": "",
+      "link": "https://www.eventbrite.com/e/57375159647"
+    },
+    {
+      "id": "n2019-20th-meeting",
+      "date": "2019-02-19",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "HAPA 20th Annual Meeting — San Francisco",
+        "el": "20ή Ετήσια Συνέλευση HAPA — Σαν Φρανσίσκο"
+      },
+      "summary": {
+        "en": "HAPA celebrates its 20th anniversary and introduces a new phase of US/Greek collaboration, featuring the work of HAPA's Greek psychiatrists.",
+        "el": "Η HAPA γιορτάζει τα 20 χρόνια της και εγκαινιάζει μια νέα φάση συνεργασίας ΗΠΑ–Ελλάδας, με το έργο των Ελλήνων ψυχιάτρων της HAPA."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\nHAPA 20th ANNUAL MEETING\n\nTuesday May 21st 2019\n\nSan Francisco, CA\n\nTime: 6:00PM- 8:00PM\n\nIN CONNECTION WITH THE APA 2019 ANNUAL MEETING\n\nLocation: Room PACIFIC A, San Francisco Marriott Marquis\n\nHAPA CELEBRATES 20th Year Anniversary & Introduces a NEW PHASE of US/GR HAPA COLLABORATION\n\nFeaturing the work of our HAPA Greek Psychiatrists\n\nAchilleas Oikonomou, MD, Psychiatrist-Psychotherapist, President of the Hellenic Association of Professional Psychiatrists\n\nThe impact of disasters in mental health: Evidence from the Greek Experience\n\nGeorgios Dimitriadis, MD, Client-centered psychotherapist, Major (Medical Directorate), Hellenic Army General Staff:\n\nEpicurus and Psychotherapy: Challenging the new era with old tools.\n\nGeorgios Pagkalos, MD, MC (Army), FECSM, IFAPA:\n\nSexology and Sexual Medicine in the Greek Psychiatric community\n\nAttend both the meeting and the Dutch Treat Dinner at 8:30PM.\n\nYOU MUST pre-register on the web by paying your HAPA 2019 dues at the HAPA website www.hellenic-psych.org through PayPal where other credit card payments are also accepted.\n\nOr Mail in your dues to HAPA Treasurer: Katina Matthews-Ferrari, MD 19022 Midway Blvd, Port Charlotte, FL\n\nLearn more about HAPA & Fill out Membership Application on HAPA website to join HAPA and come to the meeting. See you in SF.",
+        "el": ""
       },
       "image": "",
       "link": ""
@@ -1659,8 +1835,250 @@
         "el": "Τον Σεπτέμβριο του 2018 η HAPA συμμετείχε στην 83η Διεθνή Έκθεση Θεσσαλονίκης, με τιμώμενη χώρα τις ΗΠΑ."
       },
       "body": {
-        "en": "In September 2018 the Hellenic American Psychiatric Association participated in the 83rd Thessaloniki International Fair in Greece, at which the United States was the honoured country — an occasion for US and Hellenic psychiatry to meet.",
-        "el": "Τον Σεπτέμβριο του 2018 η Ελληνοαμερικανική Ψυχιατρική Εταιρεία συμμετείχε στην 83η Διεθνή Έκθεση Θεσσαλονίκης, με τιμώμενη χώρα τις Ηνωμένες Πολιτείες — μια αφορμή για να συναντηθεί η αμερικανική με την ελληνική ψυχιατρική."
+        "en": "In September 2018 the Hellenic American Psychiatric Association (HAPA) participated in the 83rd Thessaloniki International Fair in Greece. With the US as the Expo's featured nation, the American Psychiatric Association (APA) provided HAPA educational materials to battle stigma and raise the profile of mental health in a region beset by economic and refugee crises. Represented by former APA Treasurer and HAPA founder Maria Lymberis, and HAPA President and district branch president-elect Philip Candilis, HAPA's international members joined to host the US Ambassador to Greece, Greek and US political figures, and members of public and academic organizations. Alongside major corporations from Coca-Cola to Google, HAPA set up a booth focused on future educational and collaborative ventures with public, academic, and forensic agencies.\n\nFounded in May 15, 1999, HAPA provides a professional home for Greek-American, Greek, and US psychiatrists as well as psychiatrists throughout the Greek Diaspora. Organized for educational, scientific and charitable purposes in the public interest, HAPA connects philhellenes with US and Greek psychiatry and their international goals. Meeting annually at 6:00-8:00pm on the Tuesday of the APA Annual meeting. HAPA provides a forum for psychiatrists to present scientific work and establish networks for scientific exchange, facilitate professional development, and advocate for the mental health needs of individuals, families and communities.\n\nWith tens of thousands of visitors attending the Expo during its nine day course, HAPA president-elect Dr. George Karampoutakis and HAPA Secretary Dr. Georgios Pagkalos gave an interview to the American Hellenic Chamber of Commerce underlining the role of the HAPA in Greece and the reasons for its presence at the Thessaloniki International Fair. Accompanying blogs and media posts raised the profile of mental health for corporate attendees, while rolling conversations with visitors raised awareness of the mental health consequences of natural disasters, namely the wildfires and earthquakes prevalent in Greece, and the educational needs of forensic and police agencies working to address LGBTQ and sexual health needs in the community. Significant contact with Aristotle University and the American Hellenic Educational Progressive Association (AHEPA) were hopeful signs of future collaborations in education and battling the stigma of mental illness.\n\nThe Greek psychiatric contingent represented HAPA at the inaugural reception – organized by the US Embassy and the American Hellenic Chamber of Commerce. Drs. Karampoutakis and Pagkalos, International Member and International Fellow of the APA respectively, were joined by HAPA Counselor Dr. Apostolos Tsiamis, for the keynote address by US Commerce Secretary Wilbur Ross. The audience was a noteworthy gathering of Greek business, political and military leadership.\n\nOn September 16, following the Expo, the historic Athens War Museum in central Athens hosted HAPA's first international conference. Chaired by Drs. Pagkalos and Tsiamis, the conference was welcomed by prominent members of the Greek health and educational systems, namely the President of the Athens Medical Association, Dr. George Patoulis, the Vice Dean of the University of Ioannina, Professor Minas Paschopoulos, and the President of the Greek Early Career Psychiatrists, Dr. Achilleas Oikonomou.\n\nSpeakers Maria Lymberis and Philip Candilis were joined by Dr. Karampoutakis and Dr. Anna Polyniki, HAPA Counselor and faculty of the University of Nicosia Medical School in Cyprus. Dr. Karampoutakis' address exhorted mental health professionals to implement the common goals of the Hellenic, American, and Hellenic-American psychiatric community. Trauma, stigmatization, and the lack of economic resources are common challenges for all three communities, as they are world-wide, he said. Dr. Polyniki offered her university's collaborative model for overcoming the Scylla and Charybdis of healing the sick and overcoming economic anemia.\n\nDr. Maria Lymberis's keynote offered a historical perspective noting the past difficulties in forming a Hellenic American Psychiatric organization and her own determined efforts over the last 20 years in establishing HAPA as an Affiliate of the APA. She credited the success of HAPA to the support and commitment of the devoted core of HAPA Board members who believed in the need for HAPA in an increasingly globalized world with pressing mental health needs. She exulted in the new energy of the Greek community and the efforts to collaborate meaningfully in ways that serve vulnerable groups. Dr. Candilis followed with the work of his colleagues in the refugee crisis over the past few years, building resilience among Greek humanitarian aid workers and their communities, and offering new research on the process of radicalization. He was clear that the crisis of displaced persons worldwide was a global emergency, not to be borne by countries on the front lines alone.\n\nThe conference closed with the documentary film of the Southern California Psychiatric Community, \"The Art of Storytelling: The Human Experience of Being a Psychiatrist\". The film energized the audience with the narratives of psychiatrists inspired to join the profession. There followed an animated audience discussion about the concerns of Greek psychiatrists for the future of the profession and the critical importance of the know-how provided through international collaboration and research.\n\nParticipants renewed their commitment to attend the 20th Annual HAPA meeting on May 21st 2019 6:00 -8:00pm during the 175th APA Annual Meeting in San Francisco, CA May 18th to May 22d 2019.",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2018-greek-press",
+      "date": "2018-05-30",
+      "category": {
+        "en": "In the press",
+        "el": "Στον Τύπο"
+      },
+      "title": {
+        "en": "HAPA in the Greek Press",
+        "el": "Η HAPA στον ελληνικό Τύπο"
+      },
+      "summary": {
+        "en": "Greek press coverage of the two new Greek scientists elected to the board of the Hellenic American Psychiatric Association.",
+        "el": "Δημοσιεύματα του ελληνικού Τύπου για τους δύο νέους Έλληνες επιστήμονες που εξελέγησαν στο Δ.Σ. της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας."
+      },
+      "body": {
+        "en": "Δύο νέοι Έλληνες επιστήμονες στο Δ.Σ. της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας (Two new Greek scientists in the Board of the Hellenic American Psychiatric Society)\n\nhttps://www.iapopsi.gr/dyo-neoi-ellines-epistimones-sto-d-s-tis-ellinoamerikanikis-psychiatrikis-etaireias/\n\nΔύο νέοι Έλληνες επιστήμονες στο ΔΣ της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας (Two new Greek scientists in the Board of Directors of the Hellenic American Psychiatric Society)\n\nhttps://amp.onmed.gr/ygeia-eidhseis/story/366929/dyo-neoi-ellines-epistimones-sto-ds-tis-ellinoamerikanikis-psyxiatrikis-etaireias\n\nΕνας Βολιώτης στην κορυφή της Ελληνομερικανικής Ψυχιατρικής Εταιρείας (A Voliotis at the top of the Hellenic American Psychiatric Society)\n\nhttp://www.taxydromos.gr/Τοπικά/298410-enas-boliwths-sthn-koryfh-ths-ellhnomerikanikhs-psyxiatrikhs-etaireias.html",
+        "el": "Δύο νέοι Έλληνες επιστήμονες στο Δ.Σ. της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας\n\nhttps://www.iapopsi.gr/dyo-neoi-ellines-epistimones-sto-d-s-tis-ellinoamerikanikis-psychiatrikis-etaireias/\n\nΔύο νέοι Έλληνες επιστήμονες στο ΔΣ της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας\n\nhttps://amp.onmed.gr/ygeia-eidhseis/story/366929/dyo-neoi-ellines-epistimones-sto-ds-tis-ellinoamerikanikis-psyxiatrikis-etaireias\n\nΕνας Βολιώτης στην κορυφή της Ελληνομερικανικής Ψυχιατρικής Εταιρείας\n\nhttp://www.taxydromos.gr/Τοπικά/298410-enas-boliwths-sthn-koryfh-ths-ellhnomerikanikhs-psyxiatrikhs-etaireias.html"
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2018-photos-apa-hpa",
+      "date": "2018-05-09",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "Photos from H.A.P.A. meetings in APA & HPA",
+        "el": "Φωτογραφίες από τις συναντήσεις της H.A.P.A. σε APA & HPA"
+      },
+      "summary": {
+        "en": "Photographs from the 19th HAPA Annual Meeting in New York and the 26th HPA Meeting in Kos, Greece.",
+        "el": "Φωτογραφίες από την 19η Ετήσια Συνέλευση της HAPA στη Νέα Υόρκη και την 26η Συνάντηση της HPA στην Κω."
+      },
+      "body": {
+        "en": "The 19th HAPA Annual Meeting in New York, NY, USA\n\nThe 26th HPA Meeting in Kos, Greece",
+        "el": "Η 19η Ετήσια Συνέλευση της HAPA στη Νέα Υόρκη, ΗΠΑ\n\nΗ 26η Συνάντηση της HPA στην Κω, Ελλάδα"
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2018-19th-meeting",
+      "date": "2018-03-29",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "H.A.P.A. 19th Annual Meeting in New York City",
+        "el": "19η Ετήσια Συνέλευση H.A.P.A. στη Νέα Υόρκη"
+      },
+      "summary": {
+        "en": "The 19th Annual HAPA Meeting at the NY Marriott Marquis, featuring Paul Kymissis, MD on developments in medical education in Cyprus.",
+        "el": "Η 19η Ετήσια Συνέλευση της HAPA στο NY Marriott Marquis, με ομιλητή τον Paul Kymissis, MD, για τις εξελίξεις στην ιατρική εκπαίδευση στην Κύπρο."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\n19th ANNUAL HAPA MEETING\n\nNew York City\n\nTuesday May 8th 2018\n\nTime: 6:00PM- 8:00PM\n\nIN CONNECTION WITH THE APA 2018 ANNUAL MEETING\n\nPalace Room, NY Marriott Marquis Hotel, 1535 Broadway, New York, NY 10036\n\nThis year HAPA features a very special presentation:\n\nDevelopments in Medial Education in Cyprus: The Experience of the University of Nicosia\n\nPaul Kymissis, MD, DFAPA\n\nFounding Chairman and Professor of Psychiatry St George's University of London at University of Nicosia Medical Program\n\nClinical Professor of Psychiatry at New York Medical College\n\nAttend both the meeting and the Dutch Treat Dinner at 8:30PM. YOU MUST pre-register to attend.\n\nPlease complete this form then send in your HAPA 2018 dues.\n\nMember-in-Training $27.00 USD\n\nGeneral Membership $52.00 USD\n\nYou may also mail in your dues to HAPA Treasurer:\n\nKatina Matthews-Ferrari, MD, 19022 Midway Blvd, Port Charlotte FL 33948\n\nMake your check payable to HAPA",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2018-presidents-letter",
+      "date": "2018-03-29",
+      "category": {
+        "en": "Announcements",
+        "el": "Ανακοινώσεις"
+      },
+      "title": {
+        "en": "2018 President's Letter",
+        "el": "Επιστολή Προέδρου 2018"
+      },
+      "summary": {
+        "en": "HAPA President Philip Candilis on the association's work around the refugee crisis, membership growth and the year ahead.",
+        "el": "Ο Πρόεδρος της HAPA Philip Candilis για το έργο της εταιρείας γύρω από την προσφυγική κρίση, την ανάπτυξη των μελών και τη χρονιά που έρχεται."
+      },
+      "body": {
+        "en": "Greetings\n\nAs your HAPA President, it is my pleasure to represent HAPA at home and abroad. We in HAPA are working to bring attention to the refugee crisis and Greece's response. The NGOs we worked with appreciated knowing that they were supported by an organization that took their work seriously and had sent a representative to work alongside them. Those with whom I spoke in the US and Canada shared their own narratives of emigration and the importance of having a community that was knowledgeable and supportive of their experience. Talking about the Greek Diaspora was a meaningful way for our own community to connect with people who were fleeing war, famine, and persecution.\n\nWithin HAPA itself, we continue to work on increasing membership by personal outreach and continuing our tradition of presentations at the APA's annual meeting. The website continues to represent us on the Internet, and we are exploring ways to incorporate through our chapter in Boston.\n\nI look forward to your continuing support of HAPA. HAPA needs you to continue our progress in the coming years. See you at our 19th HAPA Annual meeting in NYC at the New York Marriott Marquis hotel at PALACE room on the 6th floor.\n\nPhilip Candilis, MD\n\nHAPA President",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2017-photos-17th-atlanta",
+      "date": "2017-03-13",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "Photos from H.A.P.A. 17th Annual Meeting in Atlanta",
+        "el": "Φωτογραφίες από την 17η Ετήσια Συνέλευση της H.A.P.A. στην Ατλάντα"
+      },
+      "summary": {
+        "en": "Photographs from the 17th Annual HAPA Meeting, held on 17 May 2016 in connection with the APA Annual Meeting in Atlanta.",
+        "el": "Φωτογραφίες από την 17η Ετήσια Συνέλευση της HAPA, στις 17 Μαΐου 2016, σε συνδυασμό με το Ετήσιο Συνέδριο της APA στην Ατλάντα."
+      },
+      "body": {
+        "en": "First Lady Roselyn Carter\n\nPast APA President Steve Sharfstein, MD\n\nThe 17th Annual HAPA Meeting took place on May 17, 2016 in connection with the APA Annual Meeting in Atlanta. HAPA Always meets at the time of the APA Annual meeting on Tuesday at 6:00 to 8:00PM followed by a Dutch treat dinner at a local restaurant.",
+        "el": "Η Πρώην Πρώτη Κυρία Roselyn Carter\n\nΟ τέως Πρόεδρος της APA Steve Sharfstein, MD\n\nΗ 17η Ετήσια Συνέλευση της HAPA πραγματοποιήθηκε στις 17 Μαΐου 2016, σε συνδυασμό με το Ετήσιο Συνέδριο της APA στην Ατλάντα. Η HAPA συνεδριάζει πάντοτε κατά τη διάρκεια του Ετήσιου Συνεδρίου της APA, την Τρίτη 6:00-8:00 μ.μ., και ακολουθεί δείπνο σε τοπικό εστιατόριο."
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2017-18th-meeting",
+      "date": "2017-01-13",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "H.A.P.A. 18th Annual Meeting in San Diego",
+        "el": "18η Ετήσια Συνέλευση H.A.P.A. στο Σαν Ντιέγκο"
+      },
+      "summary": {
+        "en": "The 18th Annual HAPA Meeting at the Grand Hyatt, San Diego, featuring President-Elect Philip J. Candilis on refugees, relief workers and resilience.",
+        "el": "Η 18η Ετήσια Συνέλευση της HAPA στο Grand Hyatt του Σαν Ντιέγκο, με τον εκλεγμένο Πρόεδρο Philip J. Candilis να μιλά για πρόσφυγες, εργαζόμενους σε ανθρωπιστικές αποστολές και ψυχική ανθεκτικότητα."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\n18th ANNUAL HAPA MEETING\n\nSan Diego, California\n\nTuesday May 23th 2017\n\nTime: 6:00PM- 8:00PM\n\nSolana Beach AB, Grand Hyatt, 1 Market Place, San Diego, CA 92101\n\nAttend the 18th ANNUAL HAPA MEETING on 5/23/17\n\nIN CONNECTION WITH THE APA 2017 ANNUAL MEETING\n\nThis year HAPA features a very special, timely and fascinating presentation by our HAPA President Elect on Refugees\n\n\"Its our turn now:\" Refugees, Relief Workers, and Resilience\n\nPhilip J. Candilis, MD, DFAPA\n\n1) Director, Forensic Psychiatry Fellowship Saint Elizabeth's Hospital Dept. of Behavioral Health, Washington DC\n\n2) Clinical Professor of Psychiatry, George Washington University School of Medicine & Howard University College of Medicine\n\n3) Adjunct Professor of Psychiatry, Uniformed Services University of Health Sciences\n\nAttend both the meeting and the Dutch Treat Dinner at 8:30PM. YOU MUST pre-register to attend.\n\nPlease complete this form then send in your HAPA 2017 dues.\n\nYou may also mail in your dues to HAPA Treasurer:\n\nKatina Matthews-Ferrari, MD, 19022 Midway Blvd, Port Charlotte FL 33948\n\nMake your check payable to HAPA",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2017-presidents-letter",
+      "date": "2016-12-31",
+      "category": {
+        "en": "Announcements",
+        "el": "Ανακοινώσεις"
+      },
+      "title": {
+        "en": "2017 President's Letter",
+        "el": "Επιστολή Προέδρου 2017"
+      },
+      "summary": {
+        "en": "New Year greetings from HAPA Founder and President Maria T. Lymberis, with an invitation to the 18th Annual Meeting in San Diego.",
+        "el": "Πρωτοχρονιάτικες ευχές από την ιδρύτρια και Πρόεδρο της HAPA Maria T. Lymberis, με πρόσκληση στην 18η Ετήσια Συνέλευση στο Σαν Ντιέγκο."
+      },
+      "body": {
+        "en": "Our HAPA wishes for a HEALTHY & PEACEFUL 2017\n\nThe HAPA Executive committee invites you to join us at HAPA. The Hellenic American Psychiatric Association (HAPA) is the APA home of Greek, American, Canadian and psychiatrists from all other countries globally, who value the Hellenic Heritage and support the preservation of the timeless Hellenic Spirit and values.\n\nHAPA promotes communication among psychiatrists and ALL mental health professionals who are linked through common values, cultural heritage and shared scientific professional interests. The annual HAPA meetings feature the scholarly, scientific and clinical work of psychiatrists or other mental health professionals from the US, Greece, Canada and the Greek Diaspora. HAPA meetings are always on every Tuesday at 6:00pm during the APA Annual Meeting. The elected HAPA officers serve on a volunteer basis with NO paid staff for 3 years. The executive committee of HAPA meets monthly via teleconference. Currently, HAPA is in the process of establishing a foundation to fulfill its mission and advance its scientific and professional goals including the possibility of funding a post graduate fellowship to aspiring recent Greek or US graduate psychiatrists who wish to further their professional development in special areas either in US or Greece.\n\nJoin HAPA and attend this year's 18th HAPA Annual meeting on May 23d 2017. As always the business meeting is followed by the scientific presentation. The presentation this year is by our very own incoming HAPA President Elect Philip J. Candilis, MD, DLFAPA. It is timely, compelling and informative. Dr Candilis visited Greece and worked on the refugee crisis that is still on going. HAPA is proud to feature his work: \"It's our turn now:\" Refugees, Relief Workers, and Resilience.\n\nThis year, as in in the past, the evening will wrap up with a Dutch treat dinner at a gourmet restaurant. The HAPA annual meetings and dinners are exciting opportunities to see good friends, network, discover new friends and share cultural and professional experiences. Become part of the growth of this unique Hellenic organization that unites psychiatrists and members of the Mental Health Professional Community in our global world.\n\nDO join and/or renew your HAPA membership NOW!\n\nPay your HAPA dues thru the HAPA website: General Member Dues $52.00\n\nMembers-in-Training Dues: $27.00 Or mail in your check to:\n\nHAPA Treasurer Katina Mathews-Ferrari, MD, 19022 Midway Blvd, Port Charlotte FL 33948\n\nWith Warm Wishes for a HEALTHY & PEACEFUL 2017\n\nMaria T. Lymberis, MD — HAPA Founder & Current President\n\nKatina Matthews-Ferrari, MD — HAPA Immediate Past President & Treasurer",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2016-presidents-letter",
+      "date": "2016-01-13",
+      "category": {
+        "en": "Announcements",
+        "el": "Ανακοινώσεις"
+      },
+      "title": {
+        "en": "2016 President's Letter",
+        "el": "Επιστολή Προέδρου 2016"
+      },
+      "summary": {
+        "en": "New Year greetings from HAPA, with an invitation to the 17th Annual Meeting in Atlanta and its presentation by George S. Alexopoulos, MD.",
+        "el": "Πρωτοχρονιάτικες ευχές από την HAPA, με πρόσκληση στην 17η Ετήσια Συνέλευση στην Ατλάντα και την ομιλία του George S. Alexopoulos, MD."
+      },
+      "body": {
+        "en": "GREETINGS & HAPPY NEW YEAR 2016 from HAPA\n\nThe HAPA Executive committee invites you to join us and become a HAPA member. Greek, American & Canadian psychiatrists need a home in the APA. The Hellenic American Psychiatric Association (HAPA) is the only Hellenic Psychiatric organization in the APA.\n\nHAPA promotes communication among psychiatrists and other mental health professionals who are linked through common values, cultural heritage and shared scientific professional interests. The annual HAPA meetings feature the scholarly, scientific and clinical work of Greek psychiatrists from the US, Greece and the Greek Diaspora. HAPA meets on Tuesday at 6:00pm during the APA annual meeting.\n\nThe elected HAPA officers serve on a volunteer basis with NO paid staff for 3 years. The executive committee of HAPA meets monthly via teleconference. Currently, HAPA is in the process of establishing a foundation to fulfill its mission and advance its scientific and professional goals including the possibility of funding a post graduate fellowship to aspiring recent Greek or US graduate psychiatrists who wish to further their professional development in special areas either in US or Greece.\n\nJoin HAPA and attend this year's 17th HAPA Annual meeting on May 17th 2016. As always the business meeting is followed by the scientific presentation. This year the presentation is by one of HAPA's founding members, the highly esteemed and internationally known expert in Geriatric Psychiatry George S Alexopoulos, MD. Traditionally, the evening wraps up with a Dutch treat dinner at a gourmet restaurant, with local flavors. The HAPA annual meetings and dinners are exciting opportunities to see good friends, network, discover new friends and share cultural and professional experiences. Become part of the growth of this unique Hellenic organization that unites psychiatrists and members of the Mental Health Professional Community in our global world.\n\nJoin and/or renew your HAPA membership NOW by paying your HAPA dues thru the HAPA website.\n\nGeneral Member Dues $52.00\n\nMembers-in-Training Dues: $27.00\n\nOr mail in your check to:\n\nHAPA Treasurer Katina Mathews-Ferrari, MD, 19022 Midway Blvd, Port Charlotte FL 33948\n\nSee you in Atlanta\n\nWith Warm Wishes for a HEALTHY & PEACEFUL 2016\n\nMaria T. Lymberis, MD — HAPA Founder 1999, HAPA President 2014-2017\n\nKatina Matthews-Ferrari, MD — HAPA Immediate Past President 2011-2014, HAPA Treasurer 2014-2017",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2016-17th-meeting",
+      "date": "2016-01-13",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "H.A.P.A. 17th Annual Meeting in Atlanta",
+        "el": "17η Ετήσια Συνέλευση H.A.P.A. στην Ατλάντα"
+      },
+      "summary": {
+        "en": "The 17th Annual HAPA Meeting in Atlanta, with a scientific presentation by geriatric psychiatry expert and HAPA founding member George S. Alexopoulos, MD.",
+        "el": "Η 17η Ετήσια Συνέλευση της HAPA στην Ατλάντα, με επιστημονική ομιλία του ειδικού στη γηριατρική ψυχιατρική και ιδρυτικού μέλους της HAPA George S. Alexopoulos, MD."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\n17th ANNUAL HAPA MEETING\n\nAtlanta, Georgia\n\nTuesday May 17th 2016\n\nTime: 6:00PM- 8:00PM\n\nLocation to be announced after February 2016\n\nAttend the 17th ANNUAL HAPA MEETING on 5/17/16\n\nIN CONNECTION WITH THE APA 2016 ANNUAL MEETING\n\nThis year HAPA features a very special scientific presentation by the highly esteemed, internationally known expert in Geriatric Psychiatry and HAPA founding member\n\nGeorge S Alexopoulos, MD\n\nTobin and Cooper Professor of Psychiatry Weill-Cornell Medical College,\n\nFounder and Director of the Weill-Cornell Institute of Geriatrics\n\nPresenting on\n\nNeurobiologically based Behavioral Interventions for Late Life Depression\n\nYOU MUST pre-register to attend. Please complete this form then send in your HAPA 2015 dues.\n\nYou may also mail in your dues to HAPA Treasurer:\n\nKatina Matthews-Ferrari, MD, 19022 Midway Blvd, Port Charlotte FL 33948\n\nMake your check payable to HAPA",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2015-16th-meeting",
+      "date": "2015-03-05",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "H.A.P.A. 16th Annual Meeting in Toronto",
+        "el": "16η Ετήσια Συνέλευση H.A.P.A. στο Τορόντο"
+      },
+      "summary": {
+        "en": "The 16th Annual HAPA Meeting at the Fairmont Royal York in Toronto, with a presentation on neuroimaging in severe mental illness by Aristotle Voineskos, MD, PhD.",
+        "el": "Η 16η Ετήσια Συνέλευση της HAPA στο Fairmont Royal York του Τορόντο, με ομιλία για τη νευροαπεικόνιση στη σοβαρή ψυχική νόσο από τον Aristotle Voineskos, MD, PhD."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\n16th ANNUAL HAPA MEETING\n\nTuesday May 19th 2015\n\nToronto, Canada\n\nIN CONNECTION WITH THE APA 2015 ANNUAL MEETING\n\nAttend the HAPA 16th ANNUAL MEETING on 5/19/15\n\nTime: 6:00PM- 8:00PM\n\nFairmont Royal York Hotel: Confederation 3 Room, Mezzanine\n\nHAPA features a very timely special scientific presentation\n\nAdvances in Psychiatry\n\nThe Use of Neuroimaging in severe mental illness to identify disease biomarkers and accelerate therapeutic innovation\n\nBy\n\nAristotle Voineskos MD, PhD, FRCP(C).\n\nKoerner New Scientist, Head, Kimel Family Translational Imaging-Genetics Laboratory\n\nCampbell Family Mental Health Institute, CAMH\n\nAssistant Professor, Department of Psychiatry, University of Toronto, Canada\n\nAttend both the meeting and the Dutch Treat Dinner that follows the meeting at 8:30PM.\n\nCORRECTION: Previously noted VOLOS restaurant is cancelled. Location of the dinner will be announced on site.\n\nYOU MUST pre-register to attend. Please complete this form then send in your HAPA 2015 dues.\n\nYou may also mail in your dues to:\n\nMaria T. Lymberis, MD, 1500 Montana Av, #201, Santa Monica, CA 90403\n\nMake your check payable to HAPA",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2015-greetings",
+      "date": "2015-01-15",
+      "category": {
+        "en": "Announcements",
+        "el": "Ανακοινώσεις"
+      },
+      "title": {
+        "en": "Healthy & Peaceful 2015 from HAPA",
+        "el": "Ευχές για ένα υγιές και ειρηνικό 2015 από την HAPA"
+      },
+      "summary": {
+        "en": "New Year greetings from the HAPA Executive Committee, an invitation to the 16th Annual Meeting in Toronto, and a look back at the 15th meeting in New York.",
+        "el": "Πρωτοχρονιάτικες ευχές από την Εκτελεστική Επιτροπή της HAPA, πρόσκληση στην 16η Ετήσια Συνέλευση στο Τορόντο και απολογισμός της 15ης συνάντησης στη Νέα Υόρκη."
+      },
+      "body": {
+        "en": "Greetings for 2015 from the Executive Committee of HAPA\n\nAs we are welcoming the NEW YEAR, we at HAPA are wishing you & your family a HEALTHY & PROSPEROUS 2015.\n\nWe also wish to invite you to the 2015 16th HAPA Annual Meeting in Toronto Canada in connection with the APA Annual meeting and ask for your support by renewing your membership or by becoming a new member by visiting our HAPA website: www.hellenic-psych.org\n\nJoin us on Tuesday May 19th 2015 for the 16th HAPA Annual meeting in Toronto, Canada. This year's HAPA presentation is featuring Assistant Professor of Psychiatry at Toronto University Aristotle Voineskos, MD, a rising star Canadian Psychiatric researcher, see attached HAPA announcement. The HAPA meetings are also opportunities for good old Greek kefi and food at a local restaurant, (Dutch treat) at the conclusion our business and educational parts of the program.\n\nThe 2014 15th HAPA Annual meeting in NYC was a major success with a number of new members joining us, an outstanding presentation by our very own Past HAPA President, Professor Georgios Petrides on the Brain Stimulation and a very special dinner at a Greek restaurant. You can see pictures of our 2014 meeting on the HAPA website.\n\nFor over 16 years, HAPA has been providing a forum where the academic, clinical and research work by Hellenic psychiatrists from the US, Greece and the Hellenic Diaspora can be shared and featured. Our meetings are educational, inspirational and promote networking. All of this and more can only be accomplished with YOU joining us. We need you to help us complete work now in progress, which includes establishing the HAPA Excellence in Psychiatric Education Award and the HAPA Foundation.\n\nWe live in a globalized world community. Your participation is essential to keep HAPA growing and fulfilling vitally needed functions for the Hellenic community both here, in Greece and globally. HAPA aims to mobilize the hidden power of the Hellenic community, known to be low keyed and publicity avoidant. The goal is to advance HAPA's mission of linking Hellenic psychiatrists of the US with those from Greece and the Diaspora.\n\nHAPA is fully dues dependent for its existence. The Executive Committee members, on a volunteer basis with NO paid staff, do all the work. Membership fees are the same since our founding. Pay your HAPA membership dues for 2015 on the HAPA website, (General Members $52.00, and Members-in-Training $27.00). We need you to renew. If not already a member, you can apply on the website by filling out the application & paying your dues.\n\nJoin HAPA and become part of the growth of the only Hellenic psychiatric professional organization in the APA and the US. Contribute to HAPA and help us materialize our vision of HAPA as a link for the psychiatric community and as a resource for Hellenic communities in the US, Greece and Diaspora. YES together we can make a difference.\n\nSee you on Tuesday May 19th 2015 in Toronto, Canada at the HAPA meeting.\n\nMaria T. Lymberis, MD, HAPA Founder & President — maria@lymberis.com\n\nPhilip Candilis MD, HAPA President Elect — pcandilis@hotmail.com",
+        "el": ""
       },
       "image": "",
       "link": ""
@@ -1681,11 +2099,33 @@
         "el": "Η ιδρύτρια της HAPA τιμήθηκε με το Βραβείο Gary S. Nye 2014 για την υγεία και την ευημερία των ιατρών."
       },
       "body": {
-        "en": "Dr Maria Lymberis was presented with the 2014 Gary S. Nye Award for Physician Health and Well-Being, in recognition of her longstanding contribution to the health and well-being of physicians.",
-        "el": "Η Dr Μαρία Λυμπέρη τιμήθηκε με το Βραβείο Gary S. Nye 2014 για την υγεία και την ευημερία των ιατρών, σε αναγνώριση της μακρόχρονης συνεισφοράς της."
+        "en": "Dr. Lymberis was recently presented with the 2014 Gary S. Nye Award for Physician Health and Well-Being for her longstanding commitment to physician health in her local community and in the state of California, as well as her career-long contributions to medical ethics. The award was presented by the California Medical Association at the December 5th meeting in San Diego.",
+        "el": ""
       },
       "image": "",
       "link": ""
+    },
+    {
+      "id": "n2014-whba-summer-school",
+      "date": "2014-04-30",
+      "category": {
+        "en": "Events",
+        "el": "Εκδηλώσεις"
+      },
+      "title": {
+        "en": "WHBA 3rd Summer School in Medical & Biosciences Research & Management",
+        "el": "3ο Θερινό Σχολείο WHBA για την Έρευνα και τη Διοίκηση στις Ιατρικές και Βιοεπιστήμες"
+      },
+      "summary": {
+        "en": "The World Hellenic Biomedical Association organises its 3rd summer school in Oitilo, Mani, Greece, 17-25 May 2014.",
+        "el": "Η World Hellenic Biomedical Association διοργανώνει το 3ο θερινό της σχολείο στο Οίτυλο Μάνης, 17-25 Μαΐου 2014."
+      },
+      "body": {
+        "en": "May 17-25, 2014\n\nThe World Hellenic Biomedical Association is organizing the 3rd WHBA summer school on Medical & Biosciences Research & Management, in Greece, in Oitilo, Mani, Greece.\n\n3rd Summer School in Medical & Biosciences Research & Management\n\nMay 17 – 25, 2014 – Itilo-Mani, Laconia, Greece\n\nThe summer school is an annual educational activity of the WHBA, aimed at graduate and undergraduate students of medical and biosciences background, and at post-doctoral researchers and physicians in training (residents and clinical fellows).\n\nFor more information, please check their website: http://www.whba1990.org",
+        "el": ""
+      },
+      "image": "",
+      "link": "http://www.whba1990.org"
     },
     {
       "id": "n2014-hygeia-award",
@@ -1703,8 +2143,96 @@
         "el": "Η HAPA ανακοινώνει με υπερηφάνεια ότι ο Ταμίας της, Dr Arthur N. Papas, τιμήθηκε με το Βραβείο Υγεία 2014."
       },
       "body": {
-        "en": "HAPA is very proud to announce that our Treasurer, Dr Arthur N. Papas, was honoured with the 2014 Hygeia Award.",
-        "el": "Η HAPA ανακοινώνει με μεγάλη υπερηφάνεια ότι ο Ταμίας της, Dr Arthur N. Papas, τιμήθηκε με το Βραβείο Υγεία 2014."
+        "en": "HAPA is very proud to announce our Treasurer Dr. Arthur N. Pappas was honored with the 2014 Hygeia Award by the New England Hellenic Medical and Dental Society.\n\nThe Hygeia award is given to a healthcare professional who has had an exemplary career and has made considerable contributions to medicine or other allied health disciplines.\n\nDr. Papas is an adult psychiatrist in full time private practice with 45 years of experience treating patients, many of them Greek speaking, and teaching medical students and psychiatric residents. He has teaching appointments at Harvard Medical School and at Boston University School of Medicine, and has contributed to organized psychiatry by serving on several committees of the Massachusetts Psychiatric Society…\n\nFor more information visit http://www.nehmds.org/",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2014-meetings-in-greece",
+      "date": "2014-02-14",
+      "category": {
+        "en": "Events",
+        "el": "Εκδηλώσεις"
+      },
+      "title": {
+        "en": "Meetings in Greece in 2014",
+        "el": "Συνέδρια στην Ελλάδα το 2014"
+      },
+      "summary": {
+        "en": "Two notable meetings in Greece for 2014: the 22nd Panhellenic Congress of Psychiatry in Messinia, and the International Congress of the World Federation for Mental Health in Athens.",
+        "el": "Δύο σημαντικά συνέδρια στην Ελλάδα για το 2014: το 22ο Πανελλήνιο Συνέδριο Ψυχιατρικής στη Μεσσηνία και το Διεθνές Συνέδριο της World Federation for Mental Health στην Αθήνα."
+      },
+      "body": {
+        "en": "For 2014 there are two very notable and important meetings coming up:\n\nThe first is the 22nd Panhellenic Congress of Psychiatry. This is the major scientific event of the Hellenic Psychiatric Association that occurs every two years. This year it is May 29th to June 6th 2014. Thankfully there is no conflict with the APA Annual meeting of May 3d to 7th 2014. One can now easily plan to attend both. The meeting will be the Porto Navarino Hotel in Messinia. This is a magnificent hotel in a beautiful area of Greece. Do take part in the Congress, get to know the region and enjoy a first class holiday with your Greek colleagues, participate in the scientific program and most crucially support the scientific community of Greece during these difficult economic. HAPA hopes to participate, if interested contact hellenicpsych.org@gmail.com for details.\n\nThe second event features Professor George Christodoulou, a founding member of HAPA and the Honorary President of the Hellenic Psychiatric Association is known internationally for his involvement in the leadership WPA and as a superb organizer of numerous highly successful psychiatric meetings in the Middle East, Eastern Europe & the Balkans. As the incoming President of the World Federation for Mental Health, WFMH, he is now organizing the International Congress of the World Federation for Mental Health which will be held in Athens October 9th to 11th 2014 at the Aegli Zappeiou in collaboration with the Hellenic Psychiatric Association. HAPA is hoping to participate in this meeting as well. This is a very good time to visit Greece and in particular Athens as the weather is good and there are less tourists. If interested to participate contact hellenicpsych.org@gmail.com for further details.\n\nStay tuned for more event & details about the meetings become available.",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2013-past-meetings-greece",
+      "date": "2014-02-14",
+      "category": {
+        "en": "Events",
+        "el": "Εκδηλώσεις"
+      },
+      "title": {
+        "en": "Past Meetings in Greece, 2013",
+        "el": "Συνέδρια στην Ελλάδα, 2013"
+      },
+      "summary": {
+        "en": "APA President Jeffrey Lieberman visits Athens in July 2013 and speaks at Grand Rounds at the Eginition University Psychiatric Hospital.",
+        "el": "Ο Πρόεδρος της APA Jeffrey Lieberman επισκέπτεται την Αθήνα τον Ιούλιο του 2013 και μιλά στα Grand Rounds του Αιγινητείου Πανεπιστημιακού Ψυχιατρικού Νοσοκομείου."
+      },
+      "body": {
+        "en": "As usual there were many very successful meetings in Greece during 2013.\n\nHAPA was involved in the following meeting:\n\nIn July 2013, Jeffrey Lieberman, MD President of the APA visited Athens Greece. HAPA worked with Professor Christodoulou on this visit. Dr Lieberman was welcomed by Professor Christodoulou who introduced Dr Lieberman to the leadership and members of the Hellenic Psychiatric Association, HPA, as well as to the Department of Psychiatry. On July 2nd Dr Lieberman visited the Eginition University Psychiatric Hospital where he was the Grand Rounds speaker on \"Prevention of Mental Illness: An Idea Whose Time has Come\". In appreciation for his presentation the Department of Psychiatry gave him a statuette of a figure of the geometrical period of Ancient Greek art and Professor Christodoulou gave him a copy of the book on Prevention edited by George Christodoulou, Dusica Lecic and Vasilis Kontaxakis.",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2014-15th-meeting",
+      "date": "2013-12-10",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "H.A.P.A. 15th Annual Meeting in New York City",
+        "el": "15η Ετήσια Συνέλευση H.A.P.A. στη Νέα Υόρκη"
+      },
+      "summary": {
+        "en": "The 15th Annual HAPA Meeting at the Marriott Marquis, with a presentation on brain stimulation by George Petrides, MD, FAPA.",
+        "el": "Η 15η Ετήσια Συνέλευση της HAPA στο Marriott Marquis, με ομιλία για τη διέγερση του εγκεφάλου από τον George Petrides, MD, FAPA."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\n15th ANNUAL HAPA MEETING\n\nTuesday May 6th 2014\n\nNew York City, NY\n\nIN CONNECTION WITH THE APA 2014 ANNUAL MEETING\n\nAttend the HAPA 15th ANNUAL MEETING on 5/6/14\n\nTime: 6:00PM- 8:00PM\n\nMarriott Marquis Hotel\n\nHAPA is proud to feature a very timely special scientific presentation\n\nBrain stimulation: From ECT to Transcranial direct-current stimulation — New frontiers and challenges\n\nBy\n\nGeorge Petrides, MD, FAPA.\n\nPresident International Society for ECT and Neurostimulation\n\nAssociate Professor, Hofstra Northshore-LIJ School of Medicine\n\nHAPA's very own Past President.\n\nA Dutch treat dinner at a local restaurant at 8:30PM follows the conclusion of the meeting.\n\nTo attend both the meeting and the Dutch Treat Dinner you MUST pre-register by paying your HAPA 2014 dues of $52.00 for members and $25.00 for MITs. Note that the annual dues have remained constant since the founding of HAPA in 1999.\n\nTo register to attend, please complete this form then send in your payment.\n\nYou may also mail in your dues to:\n\nMaria T. Lymberis, MD, 1500 Montana Av, #201, Santa Monica, CA 90403\n\nMake your check payable to HAPA",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2013-greetings-update",
+      "date": "2013-12-10",
+      "category": {
+        "en": "Announcements",
+        "el": "Ανακοινώσεις"
+      },
+      "title": {
+        "en": "Greetings & Update from HAPA",
+        "el": "Ευχές και ενημέρωση από την HAPA"
+      },
+      "summary": {
+        "en": "Holiday greetings, a report on the successful 14th Annual Meeting in San Francisco, and plans for the HAPA Excellence in Psychiatric Education Award and the HAPA Foundation.",
+        "el": "Εορταστικές ευχές, απολογισμός της επιτυχημένης 14ης Ετήσιας Συνέλευσης στο Σαν Φρανσίσκο και σχέδια για το Βραβείο Αριστείας στην Ψυχιατρική Εκπαίδευση και το Ίδρυμα της HAPA."
+      },
+      "body": {
+        "en": "Greetings from the Executive Committee of HAPA\n\nAs 2013 is coming to a close we wish you & your family a HEALTHY & ENJOYABLE Holiday.\n\nWe also wish to invite you to the 2014 15th HAPA Annual meeting in NYC in connection with the APA Annual meeting and ask for your support by renewing your membership or by becoming a new member.\n\nThe 14th HAPA Annual meeting in San Francisco was a great success. The presentations were outstanding.\n\nThe first presentation was by Professor Cassimatis, President and CEO of ECFMG & Chair of the Board of FAIMER. His talk was timely and instructive. His message was that the US is still setting the standards for medical education & care for the world medical community. Presently here in the US, the crisis in health care is also a challenge for us to live up to our own standards. The hope is that the US leadership in education and research based medical care will continue.\n\nThe second presentation was by Iannis Zervas, MD Associate Professor of Psychiatry, Athens University School of Medicine. His presentation was very impressive. He detailed the results of 10 years work in addressing the mental health needs of women at the Eginition Psychiatric Clinic of the University Hospital in Athens, Greece. The level of research and care in his clinic was very high, effective and quite impressive. Hopefully his example will be implemented in all of Greece as the country's economic troubles are resolved. You can see both of these presentations at our website: www.hellenic-psych.org.\n\nFor over 15 years, HAPA has been providing a forum where the academic, clinical & research work by Hellenic psychiatrists from the US, Greece and the Hellenic Diaspora can be shared and featured. Our meetings are educational, inspirational and promote networking. Presently, HAPA is considering the establishment of the HAPA Excellence in Psychiatric Education Award that will recognize outstanding achievements by psychiatric trainees of Greek origin from the US, Greece or the Diaspora during their training in any of the many accredited programs here in the USA. The HAPA Award will recognize exceptional work in any of the following areas: patient care, research, teaching and education or community involvement. Such an award will further HAPA's mission of linking Hellenic psychiatrists of the US with those from Greece and the Diaspora. HAPA is also in the process of establishing the HAPA Foundation to raise much needed funding in support of its mission and is considering several other projects such as offering scholarships for medical education and postgraduate medical training as well as for the development of special programs in partnership with Greek communities to address mental health needs.\n\nNONE of these goals can be achieved without YOU. HAPA needs YOU to grow. HAPA's work has always been carried out by members of the Executive Committee on a volunteer basis with NO paid staff. There has been no fee increase since the founding of HAPA. HAPA is fully dues dependent for its existence. Pay your HAPA membership dues for 2014 on the HAPA website:\n\nhttp://www.hellenic-psych.org/membership/pay-dues\n\n(General Members $52.00, and Members-in-Training $27.00). We need you to renew. If not already a member, you can apply on the website by filling out the application & paying your dues.\n\nJoin us on Tuesday May 6th 2014 for the 15th HAPA Annual meeting in NYC. The HAPA meetings are also opportunities for good old Greek kefi and good food at a local restaurant, (Dutch treat) at the conclusion our business and educational parts of the program.\n\nJoin HAPA and become part of the growth of the only Hellenic psychiatric professional organization in the APA and the US. Contribute to HAPA and help us materialize our vision of HAPA as a link for the psychiatric community and as a resource for Hellenic communities in the US, Greece and Diaspora. YES together we can make a difference.\n\nSee you on May 6th in NYC,\n\nKatina Matthews-Ferrari, MD, HAPA President 2011-2014\n\nMaria T. Lymberis, MD, HAPA Founder & Past President",
+        "el": ""
       },
       "image": "",
       "link": ""
@@ -1770,6 +2298,28 @@
       },
       "body": {
         "en": "February 2013 — Greetings from HAPA\n\nThe HAPA executive committee invites you to join us on May 21st 2013 for the 14th annual meeting of HAPA at the San Francisco Marriott Marquis. This year HAPA features two very special presentations. One from Greece: “The Women's Mental Health Clinic at Eginition Hospital, Athens, Greece: the first ten years” by Iannis Zervas, MD, Associate Professor of Psychiatry, Athens University Medical School and Chief of the Women's Mental Health & Perinatal Psychiatry Clinic at Eginition Hospital. The other from the US: “Improving the quality of medical education worldwide: the contributions of ECFMG and FAIMER” by Emmanuel Cassimatis, MD, DFAPA, Professor of Psychiatry, F. Edward Hébert School of Medicine, USUHS; President and CEO, Educational Commission for Foreign Medical Graduates; Chair of the Board of Directors, Foundation for Advancement of International Medical Education and Research. Both are timely and relevant, addressing current central concerns.\n\nThe Hellenic American Psychiatric Association is the only Hellenic psychiatric group in the APA promoting communication and addressing vital issues of interest to Greek or Hellenophile psychiatrists living in the US, Greece and the Greek diaspora. The association meets annually on the Tuesday evening of the APA annual meeting at 6:00 PM. The executive committee meets monthly by teleconference. All HAPA business is done on a volunteer basis, mainly online. HAPA is in the process of establishing a foundation to fulfil its mission and advance its scientific and professional goals, including funding a postgraduate fellowship for aspiring psychiatrists to further their professional development in any clinical or research area of interest.\n\nThe business meeting follows the scientific presentation. A Dutch-treat dinner at a gourmet restaurant with local flavours wraps up the evening in a relaxed, enjoyable atmosphere. The annual meetings are exciting opportunities to see good friends, network, discover new friends and share cultural and professional experiences. Greek American psychiatrists need a home in the APA, and HAPA fulfils that need.\n\nMembership dues are $52.00 for general members and $27.00 for members-in-training.\n\nSee you in San Francisco.\nKatina Matthews-Ferrari, MD, HAPA President 2011–2014\nMaria T. Lymberis, MD, HAPA Founder & Past President",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2013-14th-meeting-sf",
+      "date": "2013-02-28",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "H.A.P.A. 14th Annual Meeting in San Francisco",
+        "el": "14η Ετήσια Συνέλευση H.A.P.A. στο Σαν Φρανσίσκο"
+      },
+      "summary": {
+        "en": "The 14th Annual HAPA Meeting at the SF Marriott Marquis, with two scientific presentations by Emmanuel Cassimatis, MD and Iannis Zervas, MD.",
+        "el": "Η 14η Ετήσια Συνέλευση της HAPA στο SF Marriott Marquis, με δύο επιστημονικές ομιλίες από τους Emmanuel Cassimatis, MD και Ιάννη Ζέρβα, MD."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION\n\n14th ANNUAL HAPA MEETING\n\nTuesday May 21st 2013, San Francisco, CA\n\nIN CONNECTION WITH THE APA 2013 ANNUAL MEETING\n\nAttend the HAPA 14th ANNUAL MEETING on 5/21/13\n\nTime: 6:00PM- 8:00PM\n\nPlace: SF Marriott Marquis\n\nHAPA is proud to feature two timely special scientific presentations\n\n\"Improving the quality of medical education worldwide: The contributions of ECFMG and FAIMER\"\n\nBy\n\nEmmanuel Cassimatis, MD, DLFAPA.\n\nPresident & CEO of the Educational Commission for Foreign Medical Graduates (ECFMG),\n\nChairman of the Board of the Foundation for the Advancement of International Medical Education (FAIMER),\n\nProfessor of Psychiatry, F. Edward Hébert School of Medicine, USUHS,\n\nHAPA's very own Past President.\n\n&\n\n\"The Women's Mental Health Clinic at Eginition Hospital, Athens, Greece: The first ten years\"\n\nBy\n\nIannis Zervas MD\n\nAssociate Professor of Psychiatry, Athens University Medical School,\n\nChief, Women's Mental Health & Perinatal Psychiatry Clinic, Eginition Hospital, Athens, Greece\n\nA Dutch treat dinner at a local restaurant at 8:30PM follows the conclusion of the meeting. You MUST pre-register to attend both the meeting and the Dutch treat Dinner by paying your HAPA 2013 dues of $52.00 for members and $25.00 for MITs. Note that the annual dues have remained constant since the founding of HAPA in 1999.\n\nTo register to attend, please complete this form then send in your payment.\n\nFor more information about HAPA and for a HAPA Membership Application: visit our website: www.hellenic-psych.org",
         "el": ""
       },
       "image": "",
@@ -2012,6 +2562,50 @@
       },
       "body": {
         "en": "Tuesday May 24th 2005 — Atlanta, Georgia\nIn connection with the APA 2005 Annual Meeting\n\nPlace: Embassy Suites, Atlanta, Georgia. Time: 6:30–10:00 PM.\n\nAs always this is a dinner meeting with both a scientific program and a business meeting. Our scientific program this year includes two very special presentations:\n\n“Border psychology: the case of Cyprus”\nLisa Aronson, M.S.W., J.D., Ph.D. — Director, Center for the Study of Mind and Human Interaction, University of Virginia, Charlottesville\n\n“The role of folate in depression”\nGeorge I. Papakostas, MD — Depression Clinical Research Program, Department of Psychiatry, Massachusetts General Hospital, Harvard Medical School\n\nThe annual business meeting follows the scientific presentations. The registration/dinner is covered by membership dues for HAPA members ($50 members; $25 members-in-training; $55 non-members). Register early and tell your friends too.\n\nHAPA ANNOUNCEMENT\n\nOur HAPA Treasurer Georgia Agallianos, PhD died in September 2004. HAPA is mourning the loss of a very valuable and dedicated member and officer. She will be missed very much.\n\nGeorgia fought cancer with courage and determination for many years. She was a strong and dedicated supporter of HAPA. She loved life. She had an active mind and a warm heart. She was a mother, a wife and an excellent psychologist. Georgia remained active and involved in life to the very end. She worked with enthusiasm and contributed greatly to our organization for many years.\n\nShe and her husband Dennis Agallianos, MD were among the founding members of HAPA. They took part in every HAPA meeting from 1999 onwards. In May 2004 Dr Georgia Agallianos accepted the post of HAPA Treasurer with her usual determination and optimism, hoping to continue her contributions and work for HAPA. She is survived by her husband Dr Dennis Agallianos and their adult children.",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2004-agallianos-memoriam",
+      "date": "2004-09-30",
+      "category": {
+        "en": "In memoriam",
+        "el": "Εις μνήμην"
+      },
+      "title": {
+        "en": "HAPA announcement — in memory of Georgia Agallianos, PhD",
+        "el": "Ανακοίνωση HAPA — εις μνήμην της Georgia Agallianos, PhD"
+      },
+      "summary": {
+        "en": "HAPA mourns its Treasurer Georgia Agallianos, PhD, a founding member of the association, who died in September 2004.",
+        "el": "Η HAPA θρηνεί την Ταμία της Georgia Agallianos, PhD, ιδρυτικό μέλος της εταιρείας, που έφυγε από τη ζωή τον Σεπτέμβριο του 2004."
+      },
+      "body": {
+        "en": "HAPA ANNOUNCEMENT\n\nOur HAPA Treasurer Georgia Agallianos, PhD died in September 2004. HAPA is mourning the loss of a very valuable and dedicated member and HAPA officer. She will be missed very much.\n\nGeorgia fought cancer with courage and determination for many years. She was a strong and dedicated supporter of HAPA. She loved life. She had an active mind and a warm heart.\n\nShe was a mother, wife and an excellent psychologist. Georgia remained active and involved in life to the very end. She worked with enthusiasm and contributed greatly to our organization for many years.\n\nShe and her husband Dennis Agallianos, MD were among the founding members of HAPA. They have been active participants in every HAPA meeting since 1999. In May 2004 Dr Georgia Agallianos accepted the post of HAPA Treasurer with her usual determination and optimism hoping to continue her contributions and work for HAPA.\n\nAfter a final fight with her cancer, she died in September 2004.\n\nShe is survived by her husband Dr Dennis Agallianos and their adult children.",
+        "el": ""
+      },
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "n2004-5th-meeting",
+      "date": "2004-05-04",
+      "category": {
+        "en": "Meetings",
+        "el": "Συνέδρια"
+      },
+      "title": {
+        "en": "H.A.P.A. 5th Annual Meeting in New York City",
+        "el": "5η Ετήσια Συνέλευση H.A.P.A. στη Νέα Υόρκη"
+      },
+      "summary": {
+        "en": "The 5th Annual HAPA Meeting at the Grand Hyatt, New York, with a presentation by George S. Alexopoulos, MD on cognitive impairment and depression.",
+        "el": "Η 5η Ετήσια Συνέλευση της HAPA στο Grand Hyatt της Νέας Υόρκης, με ομιλία του George S. Alexopoulos, MD για τη γνωσιακή έκπτωση και την κατάθλιψη."
+      },
+      "body": {
+        "en": "HELLENIC AMERICAN PSYCHIATRIC ASSOCIATION FIFTH ANNUAL MEETING 2004\n\nFifth ANNUAL HAPA MEETING\n\nTuesday May 4th 2004\n\nNew York City, NY\n\nIN CONNECTION WITH THE APA 2004 ANNUAL MEETING\n\nThe HAPA FIFTH ANNUAL MEETING 2004 is on Tuesday May 4TH 2004\n\nTIME: 7:00-10:00 PM.\n\nPLACE: GRAND HYATT, Alvin/Carnegie, Conference Level\n\nOur business meeting will include dinner followed by a \"VERY CUTTING EDGE\" scientific presentation by our very own Past HAPA officer\n\nGEORGE S. ALEXOPOULOS MD\n\nProfessor of Psychiatry\n\nDirector, Cornell Institute of Geriatric Psychiatry\n\nWeill Medical College of Cornell University\n\n\"WHAT CAN COGNITIVE IMPAIRMENT TEACH US ABOUT DEPRESSION\"\n\nThe registration/dinner is covered by membership dues for HAPA members ($50-member; $25 Member-in-Training; $55-non-members).\n\nREGISTER EARLY & TELL YOUR FRIENDS TOO.",
         "el": ""
       },
       "image": "",
