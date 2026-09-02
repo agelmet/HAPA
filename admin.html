@@ -89,6 +89,8 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}
 .bi{display:grid;grid-template-columns:1fr 1fr;gap:0 .8rem;margin-bottom:.95rem}
 .bi>label.f{margin-bottom:0}
+#minList textarea{min-height:120px}
+#minList [data-f="body"]{min-height:340px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.82rem;line-height:1.6}
 .bi .tagl{display:inline-flex;align-items:center;gap:.3rem}
 .tagl::before{content:"";width:14px;height:10px;border-radius:2px;background:var(--line-2);flex:none}
 .tagl.en::before{background:linear-gradient(#012169 34%,#C8102E 34% 66%,#012169 66%)}
@@ -306,7 +308,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     <section class="panel" data-panel="minutes">
       <div class="card">
         <h2>Meeting minutes</h2>
-        <p class="hint">Leave the link empty and the site shows “On request”.</p>
+        <p class="hint">Each set of minutes is stored in full and opens in a reader on the site. The Greek boxes may be left empty — the site then shows the English record with a short Greek note.</p>
 <div class="bi"><label class="f"><span class="tagl en">Section heading · EN</span><input type="text" data-k="archiveHeading.en"></label><label class="f"><span class="tagl el">Section heading · ΕΛ</span><input type="text" data-k="archiveHeading.el"></label></div><div class="bi"><label class="f"><span class="tagl en">Introduction · EN</span><textarea data-k="archiveIntro.en"></textarea></label><label class="f"><span class="tagl el">Introduction · ΕΛ</span><textarea data-k="archiveIntro.el"></textarea></label></div>
         <div id="minList"></div>
         <div class="addbar"><button class="btn primary" id="addMin" type="button">+ Add minutes</button></div>
@@ -636,8 +638,16 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     Ed.min = listEditor({
       mount:'minList', arr:function(){ return DATA.minutes; },
       title:function(x){ return tx(x.title); }, sub:function(x){ return x.date; },
-      fields:[{k:'title', l:'Title', bi:true}, {k:'date', l:'Date', t:'date'}, {k:'place', l:'Place', bi:true}, {k:'url', l:'Link (optional)'}],
-      blank:function(){ return {title:{en:'',el:''}, date:'', place:{en:'',el:''}, url:''}; }
+      fields:[
+        {k:'title', l:'Title', bi:true},
+        {k:'date', l:'Date', t:'date'},
+        {k:'n', l:'Which meeting (1st, 2nd, Inaugural…)'},
+        {k:'place', l:'Place', bi:true},
+        {k:'summary', l:'One-line summary (shown in the list)', t:'area', bi:true},
+        {k:'body', l:'The full minutes', t:'area', bi:true},
+        {k:'id', l:'Internal id (leave as generated)'}
+      ],
+      blank:function(){ return {id:'min'+Date.now(), title:{en:'',el:''}, date:'', n:'', place:{en:'',el:''}, summary:{en:'',el:''}, body:{en:'',el:''}}; }
     });
     Ed.ben = strEditor('benList', function(){ return DATA.membership.benefits; }, 'Member benefit');
     Ed.welcome = strEditor('welcomeList', function(){ return DATA.welcome.paragraphs; }, 'Paragraph');
