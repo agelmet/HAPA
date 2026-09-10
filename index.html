@@ -1075,11 +1075,13 @@ footer.site::before{content:"";position:absolute;right:-8%;bottom:-40%;width:min
   mobClose.addEventListener('click', closeMob);
   mob.querySelectorAll('[data-close]').forEach(function(a){ a.addEventListener('click', closeMob); });
 
-  if (!reduced) {
+  if (!reduced && !d.hidden) {
     var heroEls = [].slice.call(d.querySelectorAll('.hero .in'));
     heroEls.forEach(function(el){ el.classList.remove('in'); });
     void d.body.offsetWidth;
-    requestAnimationFrame(function(){ requestAnimationFrame(function(){ heroEls.forEach(function(el){ el.classList.add('in'); }); }); });
+    var heroDone = false, heroGo = function(){ if (heroDone) return; heroDone = true; heroEls.forEach(function(el){ el.classList.add('in'); }); };
+    requestAnimationFrame(function(){ requestAnimationFrame(heroGo); });
+    setTimeout(heroGo, 160); /* background tabs throttle rAF — never leave the hero hidden */
   }
 
   var io = null;
@@ -1190,7 +1192,7 @@ footer.site::before{content:"";position:absolute;right:-8%;bottom:-40%;width:min
     if (h1) {
       var txt = t(get(C, h1.getAttribute('data-lines'))) || h1.textContent;
       h1.innerHTML = '<span class="ln"><span>' + esc(txt) + '</span></span>';
-      if (!reduced){ h1.classList.remove('in'); void h1.offsetWidth; requestAnimationFrame(function(){ h1.classList.add('in'); }); }
+      if (!reduced && !d.hidden){ h1.classList.remove('in'); void h1.offsetWidth; var h1go=function(){ h1.classList.add('in'); }; requestAnimationFrame(h1go); setTimeout(h1go, 120); } else { h1.classList.add('in'); }
     }
 
     /* CTAs */
