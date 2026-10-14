@@ -1,6 +1,6 @@
 {
   "_readme": "Every word on the HAPA website. Bilingual fields are objects: {\"en\": \"...\", \"el\": \"...\"}. Edit through admin.html.",
-  "updated": "2026-09-02",
+  "updated": "2026-10-14",
   "schema": 2,
   "site": {
     "name": "Hellenic American Psychiatric Association",
@@ -222,7 +222,7 @@
       },
       "email": "philip.candilis@dc.gov",
       "web": "",
-      "photo": "assets/philip-candilis-md.webp"
+      "photo": ""
     },
     {
       "role": {
@@ -290,6 +290,23 @@
         "el": "Πούντα Γκόρντα, Φλόριντα"
       },
       "email": "",
+      "web": ""
+    },
+    {
+      "role": {
+        "en": "Special Advisor to the Board for International Affairs",
+        "el": "Ειδικός Σύμβουλος του ΔΣ για τις Διεθνείς Σχέσεις"
+      },
+      "name": "Nikos Chalarakis, MD, MBA, PhD",
+      "title": {
+        "en": "Psychiatrist; Secretary General, MITOS – Civil Society for Mental Health and Social Interventions",
+        "el": "Ψυχίατρος· Γενικός Γραμματέας της ΜΙΤΟΣ – Εταιρείας Ψυχικής Υγείας και Κοινωνικών Παρεμβάσεων"
+      },
+      "place": {
+        "en": "",
+        "el": ""
+      },
+      "email": "chalarakis@yahoo.gr",
       "web": ""
     },
     {
@@ -375,23 +392,6 @@
         "el": "Σάντα Μόνικα, Καλιφόρνια"
       },
       "email": "maria@lymberis.com",
-      "web": ""
-    },
-    {
-      "role": {
-        "en": "Past President",
-        "el": "Τέως Πρόεδρος"
-      },
-      "name": "Philip J. Candilis, MD, DFAPA",
-      "title": {
-        "en": "President 2018–2021",
-        "el": "Πρόεδρος 2018–2021"
-      },
-      "place": {
-        "en": "Washington, DC",
-        "el": "Ουάσιγκτον, ΗΠΑ"
-      },
-      "email": "philip.candilis@dc.gov",
       "web": ""
     }
   ],
@@ -592,8 +592,8 @@
       "el": "Συνδρομές & αιτήσεις"
     },
     "duesNote": {
-      "en": "Annual membership dues are arranged directly with the Membership Committee. Write to us and we will send you the membership form and the current dues for your category.",
-      "el": "Η ετήσια συνδρομή διευθετείται απευθείας με την Επιτροπή Μελών. Γράψτε μας και θα σας στείλουμε την αίτηση μέλους και το ύψος της συνδρομής για την κατηγορία σας."
+      "en": "Pay your annual dues online through PayPal, by credit card or with a PayPal account: general members $52, members in training $27.",
+      "el": "Πληρώστε την ετήσια συνδρομή σας ηλεκτρονικά μέσω PayPal, με κάρτα ή με λογαριασμό PayPal: τακτικά μέλη $52, ειδικευόμενοι $27."
     },
     "postalNote": {
       "en": "If you prefer to join by post, ask us for the sign-up form, complete it and send it with a cheque for your dues to the Chair of the Membership Committee. Forms may also be sent by fax.",
@@ -612,16 +612,21 @@
     "contactFax": "+1 (781) 431-8599",
     "contactEmail": "anpapas@comcast.net",
     "payLabel": {
-      "en": "Ask about dues",
-      "el": "Ερωτήσεις για τη συνδρομή"
+      "en": "Pay dues · General member",
+      "el": "Συνδρομή · Τακτικό μέλος"
+    },
+    "payLabel2": {
+      "en": "Pay dues · Member in training",
+      "el": "Συνδρομή · Ειδικευόμενος"
     },
     "formLabel": {
       "en": "Request the membership form",
       "el": "Ζητήστε την αίτηση μέλους"
     },
-    "payUrl": "",
-    "formUrl": "",
-    "donateUrl": ""
+    "payUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VUSQ2AR7NLZWW",
+    "payUrl2": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=33CVZ3BSNZF62",
+    "formUrl": "mailto:anpapas@comcast.net?subject=HAPA%20membership%20application",
+    "donateUrl": "https://www.paypal.com/donate/?hosted_button_id=6RHZMMSS2NYC6"
   },
   "support": {
     "heading": {
@@ -629,12 +634,12 @@
       "el": "Στηρίξτε τη HAPA"
     },
     "text": {
-      "en": "HAPA is organized exclusively for educational, scientific and charitable purposes in the public interest. Donations of any amount help fund the annual meeting, the newsletter, awards for outstanding contributions to Hellenic psychiatry, and our advocacy for the mental health of Greek communities. Write to us and we will tell you how to give.",
-      "el": "Η HAPA λειτουργεί αποκλειστικά για εκπαιδευτικούς, επιστημονικούς και κοινωφελείς σκοπούς προς το δημόσιο συμφέρον. Οι δωρεές, όποιο κι αν είναι το ύψος τους, στηρίζουν την ετήσια συνάντηση, το ενημερωτικό δελτίο, τα βραβεία για την εξαιρετική συνεισφορά στην ελληνική ψυχιατρική και τη διεκδίκηση της ψυχικής υγείας των ελληνικών κοινοτήτων. Γράψτε μας και θα σας ενημερώσουμε πώς μπορείτε να συνεισφέρετε."
+      "en": "HAPA is organized exclusively for educational, scientific and charitable purposes in the public interest. Donations of any amount help fund the annual meeting, the newsletter, awards for outstanding contributions to Hellenic psychiatry, and our advocacy for the mental health of Greek communities. You can give any amount securely through PayPal, by card or with a PayPal account.",
+      "el": "Η HAPA λειτουργεί αποκλειστικά για εκπαιδευτικούς, επιστημονικούς και κοινωφελείς σκοπούς προς το δημόσιο συμφέρον. Οι δωρεές, όποιο κι αν είναι το ύψος τους, στηρίζουν την ετήσια συνάντηση, το ενημερωτικό δελτίο, τα βραβεία για την εξαιρετική συνεισφορά στην ελληνική ψυχιατρική και τη διεκδίκηση της ψυχικής υγείας των ελληνικών κοινοτήτων. Μπορείτε να συνεισφέρετε όποιο ποσό θέλετε, με ασφάλεια μέσω PayPal, με κάρτα ή με λογαριασμό PayPal."
     },
     "cta": {
-      "en": "Write to us about donating",
-      "el": "Γράψτε μας για δωρεά"
+      "en": "Donate through PayPal",
+      "el": "Δωρεά μέσω PayPal"
     }
   },
   "archiveHeading": {
@@ -1161,7 +1166,7 @@
   "news": [
     {
       "id": "n2025-jaapl-candilis",
-      "date": "2026-03-01",
+      "date": "2026-03-17",
       "category": {
         "en": "Members & awards",
         "el": "Μέλη & διακρίσεις"

@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /index.backup
 Disallow: /admin.html
+
+Sitemap: https://hellenic-psych.org/sitemap.xml

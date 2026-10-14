@@ -52,8 +52,9 @@ The real protection is that changing the site requires the GitHub token.
 
 ## Notes
 
-- The site is in **preview indexing state**: `noindex,nofollow` plus `Disallow: /` in `robots.txt`.
-  Remove both, and update `sitemap.xml`, when the real domain goes live.
+- Google-safe from the start: `robots.txt` allows everything and `index,follow` is set; a small
+  script adds `noindex` only on preview addresses, so nothing needs flipping at launch.
+- Fonts and every file load from the site itself (GDPR); `privacy.html` explains what the site uses.
 - The contact form opens the visitor's own email client — no server, no third-party form service.
 - The hero photograph is a generated image of the Parthenon, used because the original site's
   banner was only 1000 × 200 px. Swap `assets/acropolis-parthenon-hero.webp` for a licensed

@@ -1,0 +1,16 @@
+{
+ "source": {
+  "kind": "file",
+  "ref": "assets/hapa-logo.webp"
+ },
+ "source_md5": "5eeeae62b67debd7d6dc701941af84c1",
+ "version": "031131e2",
+ "tile": null,
+ "crop": null,
+ "header": [
+  "file",
+  "assets/hapa-logo.webp",
+  "5eeeae62b67debd7d6dc701941af84c1"
+ ],
+ "made": "2026-10-14"
+}
