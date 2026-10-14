@@ -854,6 +854,125 @@ form.cform{box-shadow:var(--sh-3)}
   .amb .mz{transform:none!important}
   .cdot{display:none}
 }
+
+/* ==========================================================================
+   ROUND 3 — goals as icon cards, archive as an alternating timeline
+   ========================================================================== */
+/* ---------- goals ---------- */
+.goals{background:none;border:0;border-radius:0;overflow:visible;gap:1.1rem;box-shadow:none;perspective:1200px}
+.goal{position:relative;overflow:hidden;background:var(--white);border:1px solid var(--line);border-radius:22px;padding:clamp(1.4rem,2.4vw,1.9rem);gap:1rem;box-shadow:var(--sh-1);
+  transition:background .55s var(--ease),border-color .5s var(--ease),box-shadow .55s var(--ease),transform .7s var(--ease-out),opacity .6s var(--ease)}
+.goal::before{content:"";position:absolute;inset:0;background:linear-gradient(150deg,var(--navy-2),var(--navy) 70%);opacity:0;transition:opacity .55s var(--ease);z-index:0}
+.goal>*{position:relative;z-index:1}
+.goal:hover{background:var(--white)}
+.g-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+.g-ic{width:54px;height:54px;border-radius:16px;background:var(--sky-soft);display:grid;place-items:center;flex:none;transition:background .5s var(--ease),transform .6s var(--spring)}
+.g-ic svg{width:27px;height:27px;fill:none;stroke:var(--blue);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .5s}
+.goal .k{width:auto;height:auto;border-radius:0;background:none!important;color:transparent;-webkit-text-stroke:1.2px var(--line-2);font-family:var(--serif);font-size:4.2rem;font-weight:300;font-style:italic;line-height:.8;transform:none!important;transition:-webkit-text-stroke-color .5s,transform .7s var(--ease-out)!important}
+.goal p{font-size:.92rem;line-height:1.62;color:var(--ink-2);transition:color .5s}
+.g-bar{position:absolute!important;left:0;bottom:0;height:3px;width:100%;background:linear-gradient(90deg,var(--sky),var(--gold-2));transform:scaleX(0);transform-origin:0 50%;transition:transform .7s var(--ease-out)}
+@media(hover:hover){
+  .goal:hover{border-color:transparent;box-shadow:var(--sh-3);transform:translateY(-6px)}
+  .goal:hover::before{opacity:1}
+  .goal:hover p{color:rgba(221,229,241,.86)}
+  .goal:hover .g-ic{background:rgba(127,193,232,.16);transform:rotate(-6deg) scale(1.06)}
+  .goal:hover .g-ic svg{stroke:var(--sky-2)}
+  .goal:hover .k{-webkit-text-stroke-color:var(--gold-2);transform:translateY(-4px)!important}
+  .goal:hover .g-bar{transform:scaleX(1)}
+}
+.js .goal.rv{transform:translateY(46px) rotateX(10deg);transform-origin:50% 100%}
+.js .goal.rv.in{transform:none}
+.js .goal.rv .g-ic{transform:scale(.4) rotate(-20deg);transition:transform .8s var(--spring) .25s,background .5s var(--ease)}
+.js .goal.rv.in .g-ic{transform:none}
+.goal .g-ic svg *{stroke-dashoffset:0}
+.js .goal.rv .g-ic svg *{stroke-dashoffset:var(--len,80);transition:stroke-dashoffset 1.4s var(--ease) .45s}
+.js .goal.rv.in .g-ic svg *{stroke-dashoffset:0}
+
+/* ---------- archive timeline ---------- */
+.arch{padding-left:0;margin-top:clamp(2.4rem,4.5vw,3.6rem)}
+.arch::before{left:50%;margin-left:-1px;top:0;bottom:0;background:linear-gradient(180deg,var(--line),var(--line) 92%,transparent)}
+.arch .fill{left:50%;margin-left:-1px;top:0;width:2px;background:linear-gradient(180deg,var(--sky),var(--blue) 60%,var(--gold-2));box-shadow:0 0 12px rgba(127,193,232,.5)}
+.tl{position:relative;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(56px,7vw,110px);padding:6px 0}
+.tl+.tl{margin-top:-58px}
+.tl-L .tl-card{grid-column:1;grid-row:1}
+.tl-R .tl-card{grid-column:2;grid-row:1}
+.tl-year{grid-row:1;align-self:start;margin-top:14px;font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,1.6rem + 2.4vw,4.4rem);line-height:1;color:transparent;-webkit-text-stroke:1.2px var(--line-2);letter-spacing:-.02em;transition:color .8s var(--ease),-webkit-text-stroke-color .8s var(--ease),transform 1s var(--ease-out)}
+.tl-L .tl-year{grid-column:2;justify-self:start}
+.tl-R .tl-year{grid-column:1;justify-self:end}
+.tl.in .tl-year{-webkit-text-stroke-color:rgba(51,95,176,.55)}
+.tl-dot{position:absolute;left:50%;top:38px;width:15px;height:15px;margin-left:-7.5px;border-radius:50%;background:var(--marble);border:2px solid var(--line-2);z-index:2;transition:border-color .5s,background .5s,transform .6s var(--spring),box-shadow .5s}
+.tl.in .tl-dot{border-color:var(--blue);background:var(--white);box-shadow:0 0 0 6px rgba(127,193,232,.18)}
+.tl-card.arch-row{position:relative;display:grid;grid-template-columns:none;gap:.45rem;align-items:start;text-align:left;width:100%;min-height:132px;padding:clamp(1.2rem,2vw,1.55rem) clamp(1.2rem,2.2vw,1.7rem);
+  background:var(--white);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh-1);
+  transition:transform .6s var(--ease-out),box-shadow .5s var(--ease),border-color .5s var(--ease),background .5s}
+.tl-card.arch-row::before{display:none}
+.tl-card.arch-row:hover{padding-left:clamp(1.2rem,2.2vw,1.7rem);background:var(--white)}
+.tl-card::after{content:"";position:absolute;top:36px;width:14px;height:14px;background:inherit;border:inherit;border-width:0;transform:rotate(45deg)}
+.tl-L .tl-card::after{right:-7px;border-top:1px solid var(--line);border-right:1px solid var(--line)}
+.tl-R .tl-card::after{left:-7px;border-bottom:1px solid var(--line);border-left:1px solid var(--line)}
+.tl-meta{display:flex;align-items:center;gap:.6rem}
+.tl-card .yr{display:none}
+.tl-card .no{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--blue);background:var(--sky-soft);border-radius:999px;padding:.28rem .62rem}
+.tl-card .t{font-family:var(--serif);font-weight:500;font-size:1.12rem;line-height:1.3;color:var(--navy)}
+.tl-card .p{display:flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--ink-3)}
+.tl-card .p svg{width:14px;height:14px;fill:none;stroke:var(--blue);stroke-width:1.8;flex:none}
+.tl-card .s{font-size:.88rem;line-height:1.6;color:var(--ink-2);max-width:none}
+.tl-card .go{margin-top:.2rem;font-size:.76rem;font-weight:700;color:var(--navy);display:inline-flex;align-items:center;gap:.35rem}
+@media(hover:hover){
+  .tl-card.arch-row:hover{transform:translateY(-5px);box-shadow:var(--sh-3);border-color:var(--line-2)}
+  .tl:hover .tl-dot{transform:scale(1.35);background:var(--blue)}
+  .tl:hover .tl-year{color:rgba(51,95,176,.12)}
+}
+/* the newest meeting stands out */
+.tl.latest .tl-card{background:linear-gradient(150deg,var(--navy-2),var(--navy) 70%);border-color:transparent;box-shadow:var(--sh-3)}
+.tl.latest .tl-card::after{background:var(--navy-2);border-color:transparent}
+.tl.latest .tl-card .t{color:#fff}
+.tl.latest .tl-card .s{color:rgba(221,229,241,.8)}
+.tl.latest .tl-card .p{color:rgba(221,229,241,.6)}
+.tl.latest .tl-card .p svg{stroke:var(--sky)}
+.tl.latest .tl-card .no{background:rgba(127,193,232,.16);color:var(--sky-2)}
+.tl.latest .tl-card .go{color:var(--gold-2)}
+.tl.latest .tl-card.arch-row:hover{background:linear-gradient(150deg,var(--navy-2),var(--navy) 70%)}
+/* entrances: cards come in from their own side, the year settles */
+.js .tl.rv{opacity:1;transform:none}
+.js .tl .tl-card{opacity:0;transition:opacity .7s var(--ease),transform .9s var(--ease-out),box-shadow .5s var(--ease),border-color .5s}
+.js .tl-L .tl-card{transform:translateX(-50px)}
+.js .tl-R .tl-card{transform:translateX(50px)}
+.js .tl .tl-year{opacity:0;transform:scale(.85)}
+.js .tl .tl-dot{transform:scale(0)}
+.tl.in .tl-card,.tl.in .tl-year{opacity:1;transform:none}
+.js .tl.in .tl-dot{transform:none}
+.tl.in .tl-year{transition-delay:.15s}
+
+@media(max-width:900px){
+  .arch{padding-left:34px}
+  .arch::before,.arch .fill{left:10px;margin-left:0}
+  .tl{grid-template-columns:1fr;padding:0}
+  .tl+.tl{margin-top:1rem}
+  .tl-L .tl-card,.tl-R .tl-card{grid-column:1}
+  .tl-year{display:none}
+  .tl-dot{left:-31px;margin-left:0;top:30px}
+  .tl-card::after{display:none}
+  .tl-card .yr{display:inline;font-family:var(--serif);font-size:1.5rem;color:var(--blue);line-height:1}
+  .tl.latest .tl-card .yr{color:var(--sky-2)}
+  .js .tl-L .tl-card,.js .tl-R .tl-card{transform:translateX(30px)}
+}
+
+/* round 3b: the year lives in the card (no clashes with the neighbouring card) */
+.tl-year{display:none}
+.tl-card.arch-row{grid-template-columns:1fr}
+.tl-card .go{grid-column:auto!important}
+.tl-card .yr{display:inline;font-family:var(--serif);font-weight:300;font-size:2.3rem;line-height:.9;color:var(--blue);letter-spacing:-.02em}
+.tl.latest .tl-card .yr{color:var(--sky-2)}
+.tl-meta{gap:.8rem;margin-bottom:.15rem}
+@media(max-width:900px){.tl-card .yr{font-size:1.7rem}}
+.js .tl.in .tl-card,.js .tl.in .tl-year{opacity:1;transform:none}
+@media(hover:hover){.js .tl.in .tl-card.arch-row:hover{transform:translateY(-5px)}}
+@media(max-width:620px){.goal .k{font-size:3.4rem}}
+@media(prefers-reduced-motion:reduce){
+  .js .tl .tl-card,.js .tl .tl-year,.js .tl .tl-dot,.js .goal.rv .g-ic{opacity:1!important;transform:none!important}
+  .js .goal.rv .g-ic svg *{stroke-dashoffset:0!important}
+}
 </style>
 <style id="advon-lang-css">html[lang^="en"] .adv-l-el,html:not([lang^="en"]) .adv-l-en{display:none}</style>
 </head>
@@ -1519,11 +1638,25 @@ form.cform{box-shadow:var(--sh-3)}
     watch(box);
   }
 
+  var GOAL_ICONS = [
+    '<path d="M5 4h14M6.5 4v1.6c0 .8.6 1.4 1.4 1.4h8.2c.8 0 1.4-.6 1.4-1.4V4M8.5 7v11M12 7v11M15.5 7v11M5.5 18h13M4 21h16"/>',
+    '<circle cx="8.5" cy="12" r="5"/><circle cx="15.5" cy="12" r="5"/>',
+    '<path d="M3.5 10v4l10.5 4V6zM14 9.2a3.6 3.6 0 0 1 0 5.6M6.5 15.2 8 20h2.6l-1.1-4.2"/>',
+    '<path d="M3 5.8c2.6-1.1 6-1 9 1 3-2 6.4-2.1 9-1V19c-2.6-1.1-6-1-9 1-3-2-6.4-2.1-9-1zM12 6.8V20"/>',
+    '<circle cx="12" cy="9" r="5"/><path d="M9.2 13.4 7.6 21l4.4-2.4 4.4 2.4-1.6-7.6"/>',
+    '<path d="M12 3l7 3v5.6c0 4.4-3 7.5-7 9.4-4-1.9-7-5-7-9.4V6z"/><path d="M12 15.4s-3-1.8-3-4a1.7 1.7 0 0 1 3-1.1 1.7 1.7 0 0 1 3 1.1c0 2.2-3 4-3 4z"/>',
+    '<path d="M7 3h8l4 4v14H7zM15 3v4h4M10 12h6M10 15h6M10 18h4"/>',
+    '<path d="M12 4v16M7.5 20h9M5 7h14M7 7l-3 6a3 3 0 0 0 6 0zM17 7l-3 6a3 3 0 0 0 6 0z"/>'
+  ];
   function renderGoals(){
     var box = d.getElementById('goals'); if (!box || !C.goals) return;
     box.innerHTML = C.goals.map(function(g, i){
-      return '<article class="goal rv d' + Math.min(i % 4, 3) + '"><span class="k">' + esc(g.key) + '</span><p>' + esc(t(g.text)) + '</p></article>';
+      return '<article class="goal rv d' + Math.min(i % 4, 3) + '">' +
+        '<div class="g-top"><span class="g-ic"><svg viewBox="0 0 24 24" aria-hidden="true">' + (GOAL_ICONS[i % GOAL_ICONS.length]) + '</svg></span>' +
+        '<span class="k" aria-hidden="true">' + esc(g.key) + '</span></div>' +
+        '<p>' + esc(t(g.text)) + '</p><span class="g-bar" aria-hidden="true"></span></article>';
     }).join('');
+    box.querySelectorAll('.g-ic svg *').forEach(function(el){ try{ var L = Math.ceil(el.getTotalLength()); el.style.strokeDasharray = L; el.style.setProperty('--len', L); }catch(e){} });
     watch(box);
   }
 
@@ -1617,16 +1750,20 @@ form.cform{box-shadow:var(--sh-3)}
   function renderMinutes(){
     var box = d.getElementById('minutes'); if (!box || !C.minutes) return;
     var fill = '<span class="fill" id="archFill" aria-hidden="true"></span>';
+    var pin = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-10.7a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10.3" r="2.3"/></svg>';
+    var arrow = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     box.innerHTML = fill + C.minutes.map(function(m, i){
-      var yr = (m.date || '').slice(0,4);
-      return '<button class="arch-row rv d' + Math.min(i % 3, 3) + '" type="button" data-min="' + esc(m.id) + '">' +
-        '<span class="yr">' + esc(yr) + '</span>' +
-        '<span class="mid"><span class="t">' + esc(t(m.title)) + '</span>' +
-        '<span class="p"' + lat(t(m.place)) + '>' + esc(t(m.place)) + ' · ' + esc(fmtDate(m.date)) + '</span>' +
-        (t(m.summary) ? '<span class="s">' + esc(t(m.summary)) + '</span>' : '') +
-        '</span>' +
-        '<span class="go">' + esc(ui('open')) + ' <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>' +
-      '</button>';
+      var yr = (m.date || '').slice(0,4), side = (i % 2) ? 'R' : 'L';
+      return '<div class="tl tl-' + side + (i === 0 ? ' latest' : '') + ' rv">' +
+        '<span class="tl-dot" aria-hidden="true"></span>' +
+        '<span class="tl-year" aria-hidden="true">' + esc(yr) + '</span>' +
+        '<button class="tl-card arch-row" type="button" data-min="' + esc(m.id) + '">' +
+          '<span class="tl-meta"><span class="yr">' + esc(yr) + '</span>' + (parseInt(m.n,10) ? '<span class="no">№ ' + parseInt(m.n,10) + '</span>' : '') + '</span>' +
+          '<span class="t">' + esc(t(m.title)) + '</span>' +
+          '<span class="p"' + lat(t(m.place)) + '>' + pin + esc(t(m.place)) + ' · ' + esc(fmtDate(m.date)) + '</span>' +
+          (t(m.summary) ? '<span class="s">' + esc(t(m.summary)) + '</span>' : '') +
+          '<span class="go">' + esc(ui('open')) + ' ' + arrow + '</span>' +
+        '</button></div>';
     }).join('');
     archFill = d.getElementById('archFill');
     watch(box); onArch();
