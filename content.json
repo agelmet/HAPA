@@ -596,8 +596,8 @@
       "el": "Πληρώστε την ετήσια συνδρομή σας ηλεκτρονικά μέσω PayPal, με κάρτα ή με λογαριασμό PayPal: τακτικά μέλη $52, ειδικευόμενοι $27."
     },
     "postalNote": {
-      "en": "If you prefer to join by post, ask us for the sign-up form, complete it and send it with a cheque for your dues to the Chair of the Membership Committee. Forms may also be sent by fax.",
-      "el": "Αν προτιμάτε να εγγραφείτε ταχυδρομικά, ζητήστε μας την αίτηση, συμπληρώστε την και στείλτε την μαζί με επιταγή για τη συνδρομή στον Πρόεδρο της Επιτροπής Μελών. Οι αιτήσεις μπορούν επίσης να σταλούν με φαξ."
+      "en": "If you prefer to join by post, download the membership application, complete it and send it with a cheque for your dues to the Chair of the Membership Committee. Forms may also be sent by fax.",
+      "el": "Αν προτιμάτε να εγγραφείτε ταχυδρομικά, κατεβάστε την αίτηση μέλους, συμπληρώστε την και στείλτε την μαζί με επιταγή για τη συνδρομή στον Πρόεδρο της Επιτροπής Μελών. Οι αιτήσεις μπορούν επίσης να σταλούν με φαξ."
     },
     "contactLabel": {
       "en": "Membership committee",
@@ -620,12 +620,12 @@
       "el": "Συνδρομή · Ειδικευόμενος"
     },
     "formLabel": {
-      "en": "Request the membership form",
-      "el": "Ζητήστε την αίτηση μέλους"
+      "en": "Membership application (PDF)",
+      "el": "Αίτηση μέλους (PDF)"
     },
     "payUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VUSQ2AR7NLZWW",
     "payUrl2": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=33CVZ3BSNZF62",
-    "formUrl": "mailto:anpapas@comcast.net?subject=HAPA%20membership%20application",
+    "formUrl": "assets/docs/HAPA-Membership-Application.pdf",
     "donateUrl": "https://www.paypal.com/donate/?hosted_button_id=6RHZMMSS2NYC6"
   },
   "support": {
@@ -1106,27 +1106,27 @@
       "items": [
         {
           "label": "Hellenic Medical Society of New York",
-          "url": "http://hmsny.org/"
+          "url": ""
         },
         {
           "label": "New England Hellenic Medical & Dental Society",
-          "url": "http://www.nehmds.org/"
+          "url": "https://nehmds.org/"
         },
         {
           "label": "Hellenic Medical Society of Pennsylvania",
-          "url": "http://www.hmsphl.com/"
+          "url": "https://hmsphl.com/"
         },
         {
           "label": "Federation of Hellenic Medical Societies of North America",
-          "url": "http://www.hellenicmedical.com/"
+          "url": ""
         },
         {
           "label": "Hellenic American Medical and Dental Society of Southern California",
-          "url": "http://hamds.org/"
+          "url": "https://hamds.org/"
         },
         {
           "label": "Hellenic Bioscientific Association in the USA",
-          "url": "http://www.hba-usa.org/"
+          "url": "https://hbausa.org/"
         }
       ]
     },
@@ -1138,19 +1138,19 @@
       "items": [
         {
           "label": "Ελληνική Ψυχιατρική Εταιρεία — Hellenic Psychiatric Association",
-          "url": "http://psych.gr/"
+          "url": "https://psych.gr/"
         },
         {
           "label": "Hellenic Society of Child & Adolescent Psychiatry",
-          "url": "https://www.hscap.gr/"
+          "url": "https://hscap.gr/"
         },
         {
           "label": "Ένωση Επαγγελματιών Ψυχιάτρων Ελλάδας",
-          "url": "http://psychiatrists.gr/"
+          "url": "https://www.psychiatrists.gr/"
         },
         {
           "label": "«ΜΙΤΟΣ» Εταιρεία Ψυχικής Υγείας και Κοινωνικών Παρεμβάσεων",
-          "url": "http://mitosinstitute.gr/"
+          "url": "https://mitosinstitute.gr/"
         },
         {
           "label": "Obrela",
