@@ -72,10 +72,56 @@
       }
     }
   ],
+  "president": {
+    "heading": {
+      "en": "Welcome from the President",
+      "el": "Καλωσόρισμα του Προέδρου"
+    },
+    "name": "George J. Karampoutakis",
+    "nameEl": "Γεώργιος Ι. Καραμπουτάκης",
+    "credentials": "MD, PhD, MSc",
+    "roles": [
+      {
+        "en": "Psychiatrist – Forensic Court Panel",
+        "el": "Ψυχίατρος – Πραγματογνώμονας Δικαστηρίων"
+      },
+      {
+        "en": "President, Hellenic American Psychiatric Association",
+        "el": "Πρόεδρος της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας"
+      }
+    ],
+    "photo": "assets/hapa-president-karampoutakis-900.webp",
+    "paragraphs": [
+      {
+        "en": "Welcome to the official online home of the Hellenic American Psychiatric Association (HAPA).",
+        "el": "Καλώς ήρθατε στην επίσημη ιστοσελίδα της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας (HAPA)."
+      },
+      {
+        "en": "As President, it is my privilege to welcome you to our vibrant community of psychiatrists, mental health professionals, and scientists dedicated to advancing psychiatric knowledge and fostering strong cultural and professional ties between the United States and Greece.",
+        "el": "Ως Πρόεδρος, έχω την τιμή να σας καλωσορίσω στη ζωντανή μας κοινότητα ψυχιάτρων, επαγγελματιών ψυχικής υγείας και επιστημόνων, που έχουν αφιερωθεί στην πρόοδο της ψυχιατρικής γνώσης και στην ενίσχυση των πολιτιστικών και επαγγελματικών δεσμών ανάμεσα στις Ηνωμένες Πολιτείες και την Ελλάδα."
+      },
+      {
+        "en": "Our mission is rooted in the rich heritage of Hellenism and the universal principles of medicine. We are committed to promoting excellence in mental health care, supporting the professional growth of our members, and addressing the unique mental health needs of the Hellenic diaspora and the broader community.",
+        "el": "Η αποστολή μας έχει τις ρίζες της στην πλούσια κληρονομιά του Ελληνισμού και στις οικουμενικές αρχές της ιατρικής. Δεσμευόμαστε να προάγουμε την αριστεία στη φροντίδα της ψυχικής υγείας, να στηρίζουμε την επαγγελματική εξέλιξη των μελών μας και να ανταποκρινόμαστε στις ιδιαίτερες ανάγκες ψυχικής υγείας της ελληνικής διασποράς και της ευρύτερης κοινότητας."
+      },
+      {
+        "en": "Whether you are a practicing psychiatrist, a resident in training, a medical student, or a supporter of our mission, this platform is designed to connect you with valuable resources, educational opportunities, and a network of esteemed colleagues. Together, we strive to advocate for mental health awareness, eliminate stigma, and contribute to the evolution of psychiatric science.",
+        "el": "Είτε είστε ψυχίατρος που ασκεί το επάγγελμα, ειδικευόμενος, φοιτητής ιατρικής ή υποστηρικτής της αποστολής μας, η ιστοσελίδα αυτή δημιουργήθηκε για να σας φέρει σε επαφή με πολύτιμες πηγές, εκπαιδευτικές ευκαιρίες και ένα δίκτυο εκλεκτών συναδέλφων. Μαζί αγωνιζόμαστε για την ευαισθητοποίηση γύρω από την ψυχική υγεία, την εξάλειψη του στίγματος και τη συμβολή στην εξέλιξη της ψυχιατρικής επιστήμης."
+      },
+      {
+        "en": "Thank you for visiting. I invite you to explore our website, learn more about our upcoming initiatives, and join us in our commitment to healing, learning, and collaboration.",
+        "el": "Σας ευχαριστώ για την επίσκεψή σας. Σας προσκαλώ να εξερευνήσετε την ιστοσελίδα μας, να μάθετε περισσότερα για τις επερχόμενες δράσεις μας και να γίνετε μέρος της δέσμευσής μας για τη θεραπεία, τη μάθηση και τη συνεργασία."
+      }
+    ],
+    "signoff": {
+      "en": "Warmest regards,",
+      "el": "Με θερμούς χαιρετισμούς,"
+    }
+  },
   "welcome": {
     "heading": {
-      "en": "Welcome",
-      "el": "Καλωσόρισμα"
+      "en": "A welcome from our Founder",
+      "el": "Το καλωσόρισμα της Ιδρύτριας"
     },
     "author": "Maria T. Lymberis, MD",
     "authorEl": "Μαρία Τ. Λυμπέρη, MD",
@@ -2942,6 +2988,22 @@
     "minutesNote": {
       "en": "The association's minutes are kept in English, as the official record of its meetings.",
       "el": "Τα πρακτικά της εταιρείας τηρούνται στα αγγλικά, ως επίσημο αρχείο των συνεδριάσεών της."
+    },
+    "eyebrowPresident": {
+      "en": "From the President",
+      "el": "Από τον Πρόεδρο"
+    },
+    "presPhotoAlt": {
+      "en": "George J. Karampoutakis, President of HAPA",
+      "el": "Γεώργιος Ι. Καραμπουτάκης, Πρόεδρος της HAPA"
+    },
+    "presCaption": {
+      "en": "President of HAPA",
+      "el": "Πρόεδρος της HAPA"
+    },
+    "closeLabel": {
+      "en": "Close",
+      "el": "Κλείσιμο"
     }
   }
 }

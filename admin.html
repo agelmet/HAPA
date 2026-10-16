@@ -173,7 +173,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
 <div class="layout">
   <aside class="side" id="side" aria-label="Sections">
     <button data-p="news" class="active"><span class="num">01</span>News</button>
-    <button data-p="home"><span class="num">02</span>Home &amp; welcome</button>
+    <button data-p="home"><span class="num">02</span>Home &amp; welcome letters</button>
     <button data-p="about"><span class="num">03</span>Mission &amp; goals</button>
     <button data-p="officers"><span class="num">04</span>Officers</button>
     <button data-p="committees"><span class="num">05</span>Committees</button>
@@ -228,7 +228,26 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
       </div>
 
       <div class="card">
-        <h2>Welcome letter</h2>
+        <h2>President's welcome</h2>
+        <p class="hint">The President's letter at the top of the page, next to his photo.</p>
+<div class="bi"><label class="f"><span class="tagl en">Heading · EN</span><input type="text" data-k="president.heading.en"></label><label class="f"><span class="tagl el">Heading · ΕΛ</span><input type="text" data-k="president.heading.el"></label></div>
+        <div class="grid2">
+          <label class="f"><span>Name</span><input type="text" data-k="president.name"></label>
+          <label class="f"><span>Name (Greek spelling)</span><input type="text" data-k="president.nameEl"></label>
+          <label class="f"><span>Degrees (e.g. MD, PhD, MSc)</span><input type="text" data-k="president.credentials"></label>
+          <label class="f"><span>Photo file (e.g. assets/photo.webp)</span><input type="text" data-k="president.photo"></label>
+        </div>
+<div class="bi"><label class="f"><span class="tagl en">Closing · EN</span><input type="text" data-k="president.signoff.en"></label><label class="f"><span class="tagl el">Closing · ΕΛ</span><input type="text" data-k="president.signoff.el"></label></div>
+        <p class="hint" style="margin:0 0 .6rem">Titles under the signature — one box each.</p>
+        <div id="presRoleList"></div>
+        <div class="addbar"><button class="btn" id="addPresRole" type="button">+ Add a title</button></div>
+        <p class="hint" style="margin:1rem 0 .6rem">Paragraphs — one box each.</p>
+        <div id="presList"></div>
+        <div class="addbar"><button class="btn" id="addPres" type="button">+ Add a paragraph</button></div>
+      </div>
+
+      <div class="card">
+        <h2>Founder's welcome letter</h2>
 <div class="bi"><label class="f"><span class="tagl en">Heading · EN</span><input type="text" data-k="welcome.heading.en"></label><label class="f"><span class="tagl el">Heading · ΕΛ</span><input type="text" data-k="welcome.heading.el"></label></div>        <div class="grid2">
           <label class="f"><span>Author</span><input type="text" data-k="welcome.author"></label>
           <label class="f"><span>Author (Greek spelling)</span><input type="text" data-k="welcome.authorEl"></label>
@@ -652,6 +671,8 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     });
     Ed.ben = strEditor('benList', function(){ return DATA.membership.benefits; }, 'Member benefit');
     Ed.welcome = strEditor('welcomeList', function(){ return DATA.welcome.paragraphs; }, 'Paragraph');
+    Ed.pres = strEditor('presList', function(){ return DATA.president.paragraphs; }, 'Paragraph');
+    Ed.presRole = strEditor('presRoleList', function(){ return DATA.president.roles; }, 'Title');
 
     drawLinkGroups();
   }
@@ -700,7 +721,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
   });
 
   /* add buttons */
-  var adders = {addNews:'news', addStat:'stats', addGoal:'goals', addOfficer:'officers', addPast:'past', addCom:'com', addMin:'min', addBen:'ben', addWelcome:'welcome'};
+  var adders = {addNews:'news', addStat:'stats', addGoal:'goals', addOfficer:'officers', addPast:'past', addCom:'com', addMin:'min', addBen:'ben', addWelcome:'welcome', addPres:'pres', addPresRole:'presRole'};
   Object.keys(adders).forEach(function(id){
     d.getElementById(id).addEventListener('click', function(){ Ed[adders[id]].add(); });
   });
@@ -708,7 +729,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
   /* ---------------- load ---------------- */
   function drawAll(){
     bindFields();
-    ['news','stats','goals','officers','past','com','min','ben','welcome'].forEach(function(k){ Ed[k].draw(); });
+    ['news','stats','goals','officers','past','com','min','ben','welcome','pres','presRole'].forEach(function(k){ Ed[k].draw(); });
     drawLinkGroups();
   }
 
@@ -719,6 +740,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     C.officers = C.officers || []; C.pastOfficers = C.pastOfficers || [];
     C.committees = C.committees || []; C.minutes = C.minutes || []; C.linkGroups = C.linkGroups || [];
     C.welcome.paragraphs = C.welcome.paragraphs || [];
+    C.president = C.president || {}; C.president.paragraphs = C.president.paragraphs || []; C.president.roles = C.president.roles || [];
     C.membership.benefits = C.membership.benefits || [];
     C.ui = C.ui || {};
     C.schema = 2;
@@ -729,9 +751,16 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--blue);ba
     var draft = store.get(LS.draft, null);
     if (draft && !fresh) {
       try {
-        DATA = normalise(JSON.parse(draft));
+        var dj = JSON.parse(draft);
+        DATA = normalise(dj);
         buildEditors(); drawAll(); dirty(true);
         toast('Restored your unsaved draft');
+        fetch('content.json?v=' + Date.now()).then(function(r){ return r.ok ? r.json() : null; }).then(function(live){
+          if (!live) return; var added = false;
+          Object.keys(live).forEach(function(k){ if (dj[k] === undefined || (k === 'president' && !(dj.president && dj.president.paragraphs && dj.president.paragraphs.length))) { DATA[k] = live[k]; added = true; } });
+          if (live.ui) Object.keys(live.ui).forEach(function(k){ if (!DATA.ui[k]) { DATA.ui[k] = live.ui[k]; added = true; } });
+          if (added) { DATA = normalise(DATA); buildEditors(); drawAll(); dirty(true); }
+        }).catch(function(){});
         return;
       } catch(e){}
     }
